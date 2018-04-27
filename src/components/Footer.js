@@ -5,30 +5,47 @@ import Highlight from "react-highlight";
 import { Button } from "react-bootstrap";
 
 class Footer extends React.Component {
-  state = {};
+  state = {
+    hidden: false
+  };
 
-  handleRoute = (route) => {
-    this.props.history.push(`/${route}/`);
-  } 
+  handleScroll = event => {
+    let elementTarget = document.getElementById("footer_name");
+    if (
+      window.scrollY >
+      elementTarget.offsetTop + elementTarget.offsetHeight - 200
+    ) {
+      this.setState({
+        hidden: true
+      });
+    } else {
+      this.setState({
+        hidden: false
+      });
+    }
+  };
 
-  componentDidMount() {}
+  componentDidMount() {
+    window.addEventListener(
+      "scroll", this.handleScroll);
+  }
 
   componentDidUpdate() {}
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
 
   render() {
     return (
-        <div className="footer">
-          {" "}
-          Created in <b> 2018 </b> by &nbsp;
-          <br />
-          <b>
-            <p id="footer_name">
-              Nicholas Vincent-Hill &nbsp;
-            </p>
-          </b>
-        </div>
+      <div className={this.state.hidden ? "footer animated fadeOut" : "footer animated fadeIn"}>
+        {" "}
+        Created in <b> 2018 </b> by &nbsp;
+        <br />
+        <b>
+          <p id="footer_name">Nicholas Vincent-Hill &nbsp;</p>
+        </b>
+      </div>
     );
   }
 }

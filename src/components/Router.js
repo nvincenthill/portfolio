@@ -4,7 +4,7 @@ import App from "./App";
 import AboutMe from "./AboutMe";
 import NotFound from "./NotFound";
 import Projects from "./Projects";
-import { spring, AnimatedSwitch } from 'react-router-transition';
+import { spring, AnimatedSwitch, AnimatedRoute } from 'react-router-transition';
 
 function mapStyles(styles) {
   return {
