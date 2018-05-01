@@ -1,9 +1,8 @@
 import React from "react";
-import Typist from "react-typist";
-import Highlight from "react-highlight";
 import { Fade, Zoom, Flip } from "react-reveal";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
+import GithubCorner from "react-github-corner";
 
 class ProjectItem extends React.Component {
   state = {};
@@ -16,27 +15,30 @@ class ProjectItem extends React.Component {
 
   render() {
     return (
-        <Flip left>
-            <div className="project">
-              <a href="https://mealpanda.herokuapp.com/">
-              <img
-                className="project_image"
-                src="../images/mealpanda.png"
-                alt="Did not load"
-              />
-              <h2 className="project_title"> Meal Panda </h2>
-              </a>
-              <h3 className="project_description">
-                {" "}
-                Menu planner & <br /> grocery list generator{" "}
-              </h3>
-              <p> Built with <br /> React | Firebase | Jest | Node.js </p>
-              <a href="https://github.com/nvincenthill/mealpanda">
-                <Ionicon icon="logo-github" color="#202020" fontSize="3em" beat={false}/>
-              </a>
-              <a href="https://mealpanda.herokuapp.com/"><Ionicon icon="md-eye" color="#202020" fontSize="3em" beat={false}/></a>
-            </div>
-            </Flip>
+      <Flip left>
+        <div className="project">
+          <GithubCorner
+            className="corner"
+            href={this.props.github}
+            octoColor="#EEEEEE"
+            bannerColor="#222831"
+          />
+          <a href={this.props.url}>
+            <img
+              className="project_image"
+              src={this.props.imageSource}
+              alt="Did not load"
+            />
+            <h2 className="project_title"> {this.props.name} </h2>
+          </a>
+          <h3 className="project_description">
+            {this.props.description}
+          </h3>
+          <p>
+            {this.props.builtWith}
+          </p>
+        </div>
+      </Flip>
     );
   }
 }

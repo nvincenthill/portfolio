@@ -4,6 +4,7 @@ import App from "./App";
 import AboutMe from "./AboutMe";
 import NotFound from "./NotFound";
 import Projects from "./Projects";
+import Contact from "./Contact";
 // import { spring, AnimatedSwitch, AnimatedRoute } from "react-router-transition";
 
 const Router = () => (
@@ -17,6 +18,10 @@ const Router = () => (
       <Route
         path="/projects/"
         component={Projects}
+      />
+      <Route
+        path="/Contact/"
+        component={Contact}
       />
       <Route component={NotFound} />
       </Switch>

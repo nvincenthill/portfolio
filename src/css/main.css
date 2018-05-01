@@ -258,7 +258,7 @@ h2 {
 
 .project {
   background: var(--color4);
-  margin: 5vh 5vw;
+  margin: 2vh 2vw;
   text-align: center;
   padding: 5vh;
 /*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
@@ -282,6 +282,11 @@ h2 {
   margin-top: 2vh;
 }
 
+.project-array-container {
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
 .about-title {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -301,4 +306,15 @@ h2 {
   margin-left: 20vw;
   margin-right: 20vw;
   margin-bottom: 4vh;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.contact-container {
+  text-align: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  justify-content: center;
 }

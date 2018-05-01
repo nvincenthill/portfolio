@@ -54,15 +54,38 @@ class Projects extends React.Component {
         </Row>
         <Fade cascade>
           <Row>
-            <Col xs={12} sm={12} md={6} lg={4}>
-              <ProjectItem />
-            </Col>
-            <Col xs={12} sm={12} md={6} lg={4}>
-              <ProjectItem />
-            </Col>
-            <Col xs={12} sm={12} md={6} lg={4}>
-              <ProjectItem />
-            </Col>
+            <div className="project-array-container">
+              <Col xs={12} sm={12} md={6} lg={4}>
+                <ProjectItem
+                  name="Meal Panda"
+                  imageSource="../images/mealpanda.png"
+                  description="Menu planner & grocery list generator"
+                  builtWith="React | Firebase | Jest | Node.js"
+                  url="https://mealpanda.herokuapp.com/"
+                  github="https://github.com/nvincenthill/mealpanda"
+                />
+              </Col>
+              <Col xs={12} sm={12} md={6} lg={4}>
+                <ProjectItem
+                  name="TBD#2"
+                  imageSource="n/a"
+                  description="This project is coming soon!"
+                  builtWith="n/a"
+                  url="n/a"
+                  github="n/a"
+                />
+              </Col>
+              <Col xs={12} sm={12} md={6} lg={4}>
+                <ProjectItem
+                  name="My First Website"
+                  imageSource="n/a"
+                  description="Legacy billboard site and first milestone on my coding journey"
+                  builtWith="HTML5 | CSS | JS | p5.js"
+                  url="https://nvincenthill.github.io/"
+                  github="https://github.com/nvincenthill/nvincenthill.github.io"
+                />
+              </Col>
+            </div>
           </Row>
         </Fade>
       </React.Fragment>
