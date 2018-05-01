@@ -47,20 +47,35 @@ h1 {
   color: var(--color1);
   opacity: 0.95;
   font-family: var(--main-font), sans-serif;
-  text-shadow: -5% -5% 3px red;
-  font-size: 5rem;
+  font-size: 7vw;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  h1 {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  h1 {
+    font-size: 4vw;
+  }
 }
 
 .title_container {
   justify-content: center;
   text-align: center;
   background: white;
-  margin-top: 5vh;
+  margin-top: 4vh;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 2vh;
-  box-shadow: 0rem 0.5rem 0.5rem black;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 
 p {
@@ -105,16 +120,18 @@ h2 {
 }
 
 #title_name {
-  margin-top: 1rem;
+  margin-top: 2rem; 
+  margin-bottom: 2rem;
 }
 
 #title_desc {
-  margin-bottom: 2rem;
+  text-align: center;
+  justify-content: center;
 }
 
 #footer_name {
   font-family: var(--second-font), sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -123,9 +140,7 @@ h2 {
   background-color: var(--color1);
   color: white;
   text-align: center;
-  position: fixed;
-  top: 60vh;
-  left: 40%;
+  margin-top: 1vh;
   margin-bottom: 1vh;
 }
 
@@ -162,7 +177,7 @@ h2 {
 
 .title_image {
   width: 100%;
-  -webkit-filter: contrast(125%) grayscale(100%);
+  -webkit-filter: contrast(125%) saturate(110%);
   box-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 
@@ -182,7 +197,6 @@ h2 {
   text-align: center;
   padding: 5vh;
   box-shadow: 0.5rem 0.5rem 0.5rem black;
-  border-radius: 15%;
 }
 
 .project_image {
@@ -201,4 +215,17 @@ h2 {
 
 .project_description {
   margin-top: 2vh;
+}
+
+#carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    left: 15%;
+    z-index: 10;
+    color: var(--color1);
+    text-align: center;
+    opacity: .9;
+    font-family: var(--fourth-font), sans-serif;
+    text-shadow: none;
 }

@@ -43,7 +43,7 @@ class NavCard extends React.Component {
     return (
       <Fade>
         <Row className={this.state.hidden ? "nav_container" : "nav_container"}>
-          <Col xs={12} sm={6} md={3} lg={3}>
+          <Col xs={6} sm={6} md={6} lg={3}>
             <button
               className="nav_button"
               onClick={() => this.props.handleRoute("AboutMe")}
@@ -51,7 +51,7 @@ class NavCard extends React.Component {
               About
             </button>
           </Col>
-          <Col xs={12} sm={6} md={3} lg={3}>
+          <Col xs={6} sm={6} md={6} lg={3}>
             <button
               className="nav_button"
               onClick={() => this.props.handleRoute("Projects")}
@@ -59,14 +59,14 @@ class NavCard extends React.Component {
               Projects
             </button>
           </Col>
-          <Col xs={12} sm={6} md={3} lg={3}>
+          <Col xs={6} sm={6} md={6} lg={3}>
             <a href="/images/Nicholas W. Vincent-Hill Resume 04-15-2018.pdf"><button
               className="nav_button">
               Resume
             </button>
             </a>
           </Col>
-          <Col xs={12} sm={6} md={3} lg={3}>
+          <Col xs={6} sm={6} md={6} lg={3}>
             <button
               className="nav_button"
               onClick={() => this.props.handleRoute("Contact")}

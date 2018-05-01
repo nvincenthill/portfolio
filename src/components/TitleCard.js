@@ -19,13 +19,16 @@ class TitleCard extends React.Component {
   };
 
   handleScroll = event => {
-    console.log(window.scrollY, window.innerHeight, window.screenTop, window.screenY)
+    console.log(
+      window.scrollY,
+      window.innerHeight,
+      window.screenTop,
+      window.screenY
+    );
 
     let elementTarget = document.getElementById("title_name");
     // console.log(elementTarget.offsetTop, window.scrollY);
-    if (
-      window.scrollY > 0
-    ) {
+    if (window.scrollY > 0) {
       this.setState({
         hidden: true
       });
@@ -47,21 +50,27 @@ class TitleCard extends React.Component {
   render() {
     return (
       <React.Fragment>
-          <Row
-            className={
-              this.state.hidden
-                ? "title_container"
-                : "title_container"
-            }
-          >
-            <Col xs={12} sm={12} md={12} lg={12}>
-              <div id="title_name">
-                <h1>Nicholas Vincent-Hill</h1>
-              </div>
-              <h2 id="title_desc">Trader | Developer | Flâneur</h2>
-            </Col>
-          </Row>
-          </React.Fragment>
+        <Row
+          className={this.state.hidden ? "title_container" : "title_container"}
+        >
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <div id="title_name">
+              <h1>Nicholas Vincent-Hill</h1>
+            </div>
+            {/* <div id="title_desc">
+              <Col xs={12} sm={4} md={4} lg={4}>
+                <h2>Trader</h2>
+              </Col>
+              <Col xs={12} sm={4} md={4} lg={4}>
+                <h2>Developer</h2>
+              </Col>
+              <Col xs={12} sm={4} md={4} lg={4}>
+                <h2>Flâneur</h2>
+              </Col>
+            </div> */}
+          </Col>
+        </Row>
+      </React.Fragment>
     );
   }
 }

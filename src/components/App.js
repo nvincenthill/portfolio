@@ -2,10 +2,11 @@ import React from "react";
 import Typist from "react-typist";
 import "babel-polyfill";
 import Highlight from "react-highlight";
-import { Button } from "react-bootstrap";
+import { Button, Carousel } from "react-bootstrap";
 import Header from "./Header";
 import Footer from "./Footer";
 import TitleCard from "./TitleCard";
+import ImageCarousel from "./ImageCarousel";
 import NavCard from "./NavCard";
 import { Collapse } from "react-collapse";
 import { Fade, Zoom } from "react-reveal";
@@ -35,19 +36,10 @@ class App extends React.Component {
         {/* <Header /> */}
         <TitleCard />
         <NavCard handleRoute={this.handleRoute} />
-        {/* <Footer /> */}
         <Fade>
-          <div className="title_image_container">
-            <img
-              className="title_image"
-              src="../images/nick.jpeg"
-              alt="Did not load"
-            />
-            <p className="title_image_text">
-              Hello, I'm Nick. <br /> Welcome to my site.{" "}
-            </p>{" "}
-          </div>
+          <ImageCarousel />
         </Fade>
+        <Footer />
       </React.Fragment>
     );
   }
