@@ -1,7 +1,7 @@
 import React from "react";
 import Typist from "react-typist";
 import Highlight from "react-highlight";
-import { Fade, Zoom } from "react-reveal";
+import { Fade, Zoom, Flip } from "react-reveal";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
 
@@ -16,6 +16,7 @@ class ProjectItem extends React.Component {
 
   render() {
     return (
+        <Flip left>
             <div className="project">
               <a href="https://mealpanda.herokuapp.com/">
               <img
@@ -35,6 +36,7 @@ class ProjectItem extends React.Component {
               </a>
               <a href="https://mealpanda.herokuapp.com/"><Ionicon icon="md-eye" color="#202020" fontSize="3em" beat={false}/></a>
             </div>
+            </Flip>
     );
   }
 }

@@ -55,7 +55,9 @@ class TitleCard extends React.Component {
         >
           <Col xs={12} sm={12} md={12} lg={12}>
             <div id="title_name">
+            <Fade>
               <h1>Nicholas Vincent-Hill</h1>
+              </Fade>
             </div>
             {/* <div id="title_desc">
               <Col xs={12} sm={4} md={4} lg={4}>

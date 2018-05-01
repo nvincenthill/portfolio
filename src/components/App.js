@@ -14,6 +14,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 import P5Wrapper from "react-p5-wrapper";
 import sketch from "../sketch";
 import Ionicon from "react-ionicons";
+import GithubCorner from "react-github-corner";
 
 // import Footer from "./Footer";
 
@@ -34,12 +35,18 @@ class App extends React.Component {
     return (
       <React.Fragment>
         {/* <Header /> */}
+        <GithubCorner
+          className="corner"
+          href="https://github.com/nvincenthill/portfolio"
+          octoColor="#222831"
+          bannerColor="#EEEEEE"
+        />
         <TitleCard />
         <NavCard handleRoute={this.handleRoute} />
         <Fade>
           <ImageCarousel />
         </Fade>
-        <Footer />
+        {/* <Footer /> */}
       </React.Fragment>
     );
   }

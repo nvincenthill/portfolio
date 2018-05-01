@@ -17,33 +17,37 @@ class ImageCarousel extends React.Component {
 
   render() {
     return (
-        <div className="title_image_container">
+        <div className="carousel_container">
         <Carousel interval={10000} controls={false}>
           <Carousel.Item>
             <img alt="did not load" src="../images/nick.jpeg" />
-            <Carousel.Caption id="carousel-caption">
+            {/* <Carousel.Caption id="carousel-caption">
               <h3>Hi, I'm Nick!</h3>
               <p>
                 Welcome to my site.
               </p>
-            </Carousel.Caption>
+            </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
             <img alt="did not load" src="../images/nick.png" />
-            <Carousel.Caption>
+            {/* <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
+            </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
-            <img alt="did not load" src="../images/nick.jpeg" />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl
-                consectetur.
-              </p>
-            </Carousel.Caption>
+            <img alt="did not load" src="../images/nick2.png" />
+            {/* <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption> */}
+          </Carousel.Item>
+          <Carousel.Item>
+            <img alt="did not load" src="../images/nick2.jpg" />
+            {/* <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption> */}
           </Carousel.Item>
         </Carousel>
         </div>

@@ -6,7 +6,10 @@
   --third-font: "Source Sans Pro";
   --fourth-font: "Alegreya";
   --fifth-font: "Roboto+Condensed";
-  --color1: #202020;
+  --color1: #222831;
+  --color2: #393E46;
+  --color3: #00ADB5;
+  --color4: #EEEEEE;
 }
 
 /* Border box declaration */
@@ -44,7 +47,7 @@ body {
 }
 
 h1 {
-  color: var(--color1);
+  color: var(--color2);
   opacity: 0.95;
   font-family: var(--main-font), sans-serif;
   font-size: 7vw;
@@ -70,22 +73,42 @@ h1 {
 .title_container {
   justify-content: center;
   text-align: center;
-  background: white;
+  background: var(--color4);
   margin-top: 4vh;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 2vh;
-  box-shadow: 0.5rem 0.5rem 0.5rem black;
+/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .title_container {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+.corner {
+  display: none;
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .corner {
+    display: inline;
+  }
 }
 
 p {
   font-family: var(--third-font), sans-serif;
+  color: var(--color3);
   opacity: 0.9;
   font-size: 2rem;
 }
 
 h2 {
-  color: black;
+  color: var(--color4);
   font-family: var(--fifth-font), sans-serif;
   margin: 0;
   opacity: 0.9;
@@ -100,8 +123,8 @@ h2 {
   justify-content: center;
   text-align: center;
   margin-top: 2vh;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-bottom: 2vh;
   z-index: 5;
 }
@@ -116,11 +139,16 @@ h2 {
 }
 
 .nav_button:hover {
-  color: #727272;
+  color: var(--color3);
+}
+
+.nav_button:focus {
+  outline: none !important;
+  box-shadow: none;
 }
 
 #title_name {
-  margin-top: 2rem; 
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -140,8 +168,6 @@ h2 {
   background-color: var(--color1);
   color: white;
   text-align: center;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
 }
 
 .sketch_container {
@@ -161,42 +187,81 @@ h2 {
 
 .title_header {
   color: white;
-  /*  text-transform: uppercase;*/
   font-family: var(--fifth-font), sans-serif;
   font-weight: normal;
   text-align: center;
 }
 
-.title_image_container {
+.carousel_container {
   position: relative;
   text-align: center;
   margin-top: 2vh;
   margin-left: 10vw;
   margin-right: 10vw;
+  margin-bottom: 4vh;
+
+}
+
+/*.carousel-indicators li {
+  border: 1px solid var(--color1); 
+}
+
+.carousel-indicators .active {
+    background-color: var(--color1);
+}*/
+
+.carousel-indicators {
+  bottom: -6vh;
+}
+
+.carousel-inner {
+/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
+}
+
+.carousel {
+  /*  width:65%;
+  height:65%;*/
+  margin: auto;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  .carousel {
+/*    width: 65%;
+    height: 65%;*/
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .carousel {
+    width: 60%;
+    height: 60%;
+  }
 }
 
 .title_image {
   width: 100%;
   -webkit-filter: contrast(125%) saturate(110%);
-  box-shadow: 0.5rem 0.5rem 0.5rem black;
+/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
 }
 
 .title_image_text {
-    position: absolute;
-    top: 8%;
-    right: 8%;
-    color: var(--color1);
-    font-size: 3vw;
-    font-family: var(--third-font), sans-serif;
-    opacity: .9;
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  color: var(--color1);
+  font-size: 3vw;
+  font-family: var(--third-font), sans-serif;
+  opacity: 0.9;
 }
 
 .project {
-  background: white;
+  background: var(--color4);
   margin: 5vh 5vw;
   text-align: center;
   padding: 5vh;
-  box-shadow: 0.5rem 0.5rem 0.5rem black;
+/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
 }
 
 .project_image {
@@ -217,15 +282,23 @@ h2 {
   margin-top: 2vh;
 }
 
-#carousel-caption {
-    position: absolute;
-    right: 15%;
-    top: 10%;
-    left: 15%;
-    z-index: 10;
-    color: var(--color1);
-    text-align: center;
-    opacity: .9;
-    font-family: var(--fourth-font), sans-serif;
-    text-shadow: none;
+.about-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-tagline {
+  text-align: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 4vh;
+  font-family: var(--third-font), sans-serif;
+  font-size: 2.5em;
+}
+
+.about-description {
+  text-align: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 4vh;
 }
