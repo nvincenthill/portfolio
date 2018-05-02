@@ -23,12 +23,6 @@ class Contact extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <GithubCorner
-          className="corner"
-          href="https://github.com/nvincenthill/portfolio"
-          octoColor="#222831"
-          bannerColor="#EEEEEE"
-        />
         <Row
           className={this.state.hidden ? "title_container" : "title_container"}
         >
@@ -38,15 +32,6 @@ class Contact extends React.Component {
                 <h1 className="about-title">
                   {" "}
                   Contact{" "}
-                  <a>
-                    <Ionicon
-                      icon="md-arrow-round-back"
-                      color="#EEEEEE"
-                      fontSize="1em"
-                      beat={false}
-                      onClick={() => this.handleRoute("/")}
-                    />
-                  </a>
                 </h1>
               </Fade>
             </div>
@@ -61,6 +46,7 @@ class Contact extends React.Component {
                 fontSize="4em"
                 beat={false}
                 onClick={() => this.handleRoute("/")}
+                className="test"
               />
             </Col>
             <Col xs={12} sm={12} md={12} lg={1}>

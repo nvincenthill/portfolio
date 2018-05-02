@@ -5,6 +5,7 @@ import { Fade, Zoom, Flip } from "react-reveal";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
 import ProjectItem from "./ProjectItem";
+import HomeButton from "./HomeButton";
 import GithubCorner from "react-github-corner";
 
 class Projects extends React.Component {
@@ -23,35 +24,29 @@ class Projects extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <GithubCorner
-          className="corner"
-          href="https://github.com/nvincenthill/portfolio"
-          octoColor="#222831"
-          bannerColor="#EEEEEE"
-        />
-        <Row
-          className={this.state.hidden ? "title_container" : "title_container"}
-        >
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <div>
-              <Fade>
-                <h1 className="about-title">
-                  {" "}
-                  Projects{" "}
-                  <a>
-                    <Ionicon
-                      icon="md-arrow-round-back"
-                      color="#222831"
-                      fontSize="1em"
-                      beat={false}
-                      onClick={() => this.handleRoute("/")}
-                    />
-                  </a>
-                </h1>
-              </Fade>
-            </div>
+      <GithubCorner
+        className="corner"
+        href="https://github.com/nvincenthill/portfolio"
+        octoColor="#EEEEEE"
+        bannerColor="#222831"
+        size="90"
+      />
+        <Row className={"title_container"}>
+          <Col xs={2} sm={2} md={2} lg={2}>
+            <Fade>
+              <HomeButton />
+            </Fade>
+          </Col>
+          <Col xs={8} sm={8} md={8} lg={8}>
+            <Fade>
+              <h1 className="about-title"> Projects </h1>
+            </Fade>
+          </Col>
+          <Col xs={2} sm={2} md={2} lg={2}>
+
           </Col>
         </Row>
+
         <Fade cascade>
           <Row>
             <div className="project-array-container">
@@ -68,7 +63,7 @@ class Projects extends React.Component {
               <Col xs={12} sm={12} md={6} lg={4}>
                 <ProjectItem
                   name="TBD#2"
-                  imageSource="n/a"
+                  imageSource="../images/mealpanda.png"
                   description="This project is coming soon!"
                   builtWith="n/a"
                   url="n/a"
@@ -78,7 +73,7 @@ class Projects extends React.Component {
               <Col xs={12} sm={12} md={6} lg={4}>
                 <ProjectItem
                   name="My First Website"
-                  imageSource="n/a"
+                  imageSource="../images/mealpanda.png"
                   description="Legacy billboard site and first milestone on my coding journey"
                   builtWith="HTML5 | CSS | JS | p5.js"
                   url="https://nvincenthill.github.io/"

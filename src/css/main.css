@@ -71,32 +71,28 @@ h1 {
 }
 
 .title_container {
-  justify-content: center;
   text-align: center;
   background: var(--color4);
-  margin-top: 4vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  margin-bottom: 2vh;
-/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
+  box-shadow: -0.5rem 0.5rem 0.5rem black;
+  z-index: 2;
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .title_container {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-bottom: 2vh;
   }
 }
 
 .corner {
   display: none;
+  z-index: 3;
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .corner {
-    display: inline;
+    display: block;
   }
 }
 
@@ -215,7 +211,7 @@ h2 {
 }
 
 .carousel-inner {
-/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
+  box-shadow: -0.5rem 0.5rem 0.5rem black;
 }
 
 .carousel {
@@ -261,7 +257,7 @@ h2 {
   margin: 2vh 2vw;
   text-align: center;
   padding: 5vh;
-/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
+  box-shadow: -0.5rem 0.5rem 0.5rem black;
 }
 
 .project_image {
@@ -317,4 +313,25 @@ a:hover {
   margin-left: 10vw;
   margin-right: 10vw;
   justify-content: center;
+}
+
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  position: absolute;
+}
+
+.test {
+/*  position: fixed;*/
+}
+
+.home-button {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.home-button:hover {
+  color: red;
 }

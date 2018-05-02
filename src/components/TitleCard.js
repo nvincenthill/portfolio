@@ -10,7 +10,7 @@ import { Fade, Zoom } from "react-reveal";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import P5Wrapper from "react-p5-wrapper";
 import sketch from "../sketch";
-
+import GithubCorner from "react-github-corner";
 // import Footer from "./Footer";
 
 class TitleCard extends React.Component {
@@ -50,6 +50,12 @@ class TitleCard extends React.Component {
   render() {
     return (
       <React.Fragment>
+      <GithubCorner
+        className="corner"
+        href="https://github.com/nvincenthill/portfolio"
+        octoColor="#EEEEEE"
+        bannerColor="#222831"
+      />
         <Row
           className={this.state.hidden ? "title_container" : "title_container"}
         >

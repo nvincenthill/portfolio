@@ -35,17 +35,11 @@ class App extends React.Component {
     return (
       <React.Fragment>
         {/* <Header /> */}
-        <GithubCorner
-          className="corner"
-          href="https://github.com/nvincenthill/portfolio"
-          octoColor="#222831"
-          bannerColor="#EEEEEE"
-        />
+        <div className="test">
         <TitleCard />
         <NavCard handleRoute={this.handleRoute} />
-        <Fade>
           <ImageCarousel />
-        </Fade>
+          </div>
         {/* <Footer /> */}
       </React.Fragment>
     );

@@ -18,7 +18,7 @@ class ImageCarousel extends React.Component {
   render() {
     return (
         <div className="carousel_container">
-        <Carousel interval={10000} controls={false}>
+        <Carousel interval={10000} controls={true} indicators={false}>
           <Carousel.Item>
             <img alt="did not load" src="../images/nick.jpeg" />
             {/* <Carousel.Caption id="carousel-caption">
