@@ -50,7 +50,7 @@ h1 {
   color: var(--color2);
   opacity: 0.95;
   font-family: var(--main-font), sans-serif;
-  font-size: 7vw;
+  font-size: 8vw;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -59,22 +59,25 @@ h1 {
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   h1 {
-    font-size: 5vw;
+    font-size: 7vw;
   }
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   h1 {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }
 
 .title_container {
   text-align: center;
+  justify-content: center;
   background: var(--color4);
   box-shadow: -0.5rem 0.5rem 0.5rem black;
   z-index: 2;
+  padding: 1vh;
+  margin-bottom: 2vh;
 }
 
 @media screen and (min-width: 1081px) {
@@ -143,7 +146,7 @@ h2 {
   box-shadow: none;
 }
 
-#title_name {
+.title_name {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -212,6 +215,7 @@ h2 {
 
 .carousel-inner {
   box-shadow: -0.5rem 0.5rem 0.5rem black;
+  -webkit-filter: contrast(125%) saturate(110%);
 }
 
 .carousel {
@@ -234,12 +238,6 @@ h2 {
     width: 60%;
     height: 60%;
   }
-}
-
-.title_image {
-  width: 100%;
-  -webkit-filter: contrast(125%) saturate(110%);
-/*  box-shadow: 0.5rem 0.5rem 0.5rem black;*/
 }
 
 .title_image_text {
@@ -290,8 +288,8 @@ h2 {
 
 .about-tagline {
   text-align: center;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
   margin-bottom: 4vh;
   font-family: var(--third-font), sans-serif;
   font-size: 2.5em;
@@ -310,9 +308,37 @@ a:hover {
 
 .contact-container {
   text-align: center;
-  margin-left: 10vw;
-  margin-right: 10vw;
+/*  margin-left: 20vw;
+  margin-right: 20vw;*/
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   justify-content: center;
+}
+
+.contact-icon {
+  margin: 1vh;
+  transition: 0.25s ease-in-out;
+  cursor:pointer;
+}
+
+.contact-icon:hover {
+  transform: translateY(-10%) scale(1.05);
+  transition: 0.25s;
+  transition-timing-function: cubic-bezier(.18,1.49,.83,.97);
+}
+
+.contact-well-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-well {
+  display: inline-block;
+  text-align: center;
+  font-family: var(--third-font), sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .route-wrapper {
@@ -329,9 +355,14 @@ a:hover {
 
 .home-button {
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  transition: 0.25s ease-in-out;
 }
 
 .home-button:hover {
-  color: red;
+  transform: scale(1.25);
+  transition: 0.25s;
+  transition-timing-function: cubic-bezier(.18,1.49,.83,.97);
 }

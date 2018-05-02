@@ -50,17 +50,11 @@ class TitleCard extends React.Component {
   render() {
     return (
       <React.Fragment>
-      <GithubCorner
-        className="corner"
-        href="https://github.com/nvincenthill/portfolio"
-        octoColor="#EEEEEE"
-        bannerColor="#222831"
-      />
         <Row
           className={this.state.hidden ? "title_container" : "title_container"}
         >
           <Col xs={12} sm={12} md={12} lg={12}>
-            <div id="title_name">
+            <div className="title_name">
             <Fade>
               <h1>Nicholas Vincent-Hill</h1>
               </Fade>

@@ -24,13 +24,6 @@ class Projects extends React.Component {
   render() {
     return (
       <React.Fragment>
-      <GithubCorner
-        className="corner"
-        href="https://github.com/nvincenthill/portfolio"
-        octoColor="#EEEEEE"
-        bannerColor="#222831"
-        size="90"
-      />
         <Row className={"title_container"}>
           <Col xs={2} sm={2} md={2} lg={2}>
             <Fade>
@@ -39,11 +32,17 @@ class Projects extends React.Component {
           </Col>
           <Col xs={8} sm={8} md={8} lg={8}>
             <Fade>
-              <h1 className="about-title"> Projects </h1>
+              <h1 className="title-name"> Projects </h1>
             </Fade>
           </Col>
           <Col xs={2} sm={2} md={2} lg={2}>
-
+            <GithubCorner
+              className="corner"
+              href="https://github.com/nvincenthill/portfolio"
+              octoColor="#EEEEEE"
+              bannerColor="#222831"
+              size="90"
+            />
           </Col>
         </Row>
 
