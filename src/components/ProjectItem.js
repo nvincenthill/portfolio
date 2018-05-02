@@ -20,8 +20,8 @@ class ProjectItem extends React.Component {
           <GithubCorner
             className="corner"
             href={this.props.github}
-            octoColor="#EEEEEE"
-            bannerColor="#222831"
+            octoColor="#222831"
+            bannerColor="#EEEEEE"
           />
           <a href={this.props.url}>
             <img
@@ -34,7 +34,7 @@ class ProjectItem extends React.Component {
           <h3 className="project_description">
             {this.props.description}
           </h3>
-          <p>
+          <p className="project_tech">
             {this.props.builtWith}
           </p>
         </div>

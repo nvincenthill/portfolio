@@ -18,8 +18,8 @@ class HomeButton extends React.Component {
       <Link to="/">
         <Ionicon
           icon="md-home"
-          color="#222831"
-          fontSize="4em"
+          color="#EEEEEE"
+          fontSize="3em"
           beat={false}
           // onClick={() => this.handleRoute("/")}
           className="home-button"

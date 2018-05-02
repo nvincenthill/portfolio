@@ -51,7 +51,7 @@ class TitleCard extends React.Component {
     return (
       <React.Fragment>
         <Row
-          className={this.state.hidden ? "title_container" : "title_container"}
+          middle="xs" className={this.state.hidden ? "title_container" : "title_container"}
         >
           <Col xs={12} sm={12} md={12} lg={12}>
             <div className="title_name">

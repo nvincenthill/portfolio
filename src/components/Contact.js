@@ -148,7 +148,7 @@ class Contact extends React.Component {
             <Col xs={6} sm={3} md={4} lg={1}>
               <Ionicon
                 icon="logo-github"
-                color="#EEEEEE"
+                color="#222831"
                 fontSize={iconSize}
                 beat={false}
                 onClick={() => this.handleClick("Github")}

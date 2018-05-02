@@ -24,7 +24,7 @@ class Projects extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Row className={"title_container"}>
+        <Row middle="xs" className={"title_container"}>
           <Col xs={2} sm={2} md={2} lg={2}>
             <Fade>
               <HomeButton />
@@ -35,15 +35,7 @@ class Projects extends React.Component {
               <h1 className="title-name"> Projects </h1>
             </Fade>
           </Col>
-          <Col xs={2} sm={2} md={2} lg={2}>
-            <GithubCorner
-              className="corner"
-              href="https://github.com/nvincenthill/portfolio"
-              octoColor="#EEEEEE"
-              bannerColor="#222831"
-              size="90"
-            />
-          </Col>
+          <Col xs={2} sm={2} md={2} lg={2} />
         </Row>
 
         <Fade cascade>
@@ -61,8 +53,8 @@ class Projects extends React.Component {
               </Col>
               <Col xs={12} sm={12} md={6} lg={4}>
                 <ProjectItem
-                  name="TBD#2"
-                  imageSource="../images/mealpanda.png"
+                  name="The Next Big Thing"
+                  imageSource="../images/missing.png"
                   description="This project is coming soon!"
                   builtWith="n/a"
                   url="n/a"
@@ -72,11 +64,21 @@ class Projects extends React.Component {
               <Col xs={12} sm={12} md={6} lg={4}>
                 <ProjectItem
                   name="My First Website"
-                  imageSource="../images/mealpanda.png"
+                  imageSource="../images/myfirstwebsite.png"
                   description="Legacy billboard site and first milestone on my coding journey"
                   builtWith="HTML5 | CSS | JS | p5.js"
                   url="https://nvincenthill.github.io/"
                   github="https://github.com/nvincenthill/nvincenthill.github.io"
+                />
+              </Col>
+              <Col xs={12} sm={12} md={6} lg={4}>
+                <ProjectItem
+                  name="The Next Big Thing"
+                  imageSource="../images/missing.png"
+                  description="This project is coming soon!"
+                  builtWith="n/a"
+                  url="n/a"
+                  github="n/a"
                 />
               </Col>
             </div>

@@ -6,10 +6,11 @@
   --third-font: "Source Sans Pro";
   --fourth-font: "Alegreya";
   --fifth-font: "Roboto+Condensed";
-  --color1: #222831;
+  --sixth-font: "Lobster";
+  --color1: #EEEEEE;
   --color2: #393E46;
   --color3: #00ADB5;
-  --color4: #EEEEEE;
+  --color4: #222831;
 }
 
 /* Border box declaration */
@@ -47,10 +48,10 @@ body {
 }
 
 h1 {
-  color: var(--color2);
+  color: var(--color1);
   opacity: 0.95;
   font-family: var(--main-font), sans-serif;
-  font-size: 8vw;
+  font-size: 10vw;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -70,25 +71,37 @@ h1 {
   }
 }
 
+.title_name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#title_desc {
+  text-align: center;
+  justify-content: center;
+}
+
 .title_container {
   text-align: center;
   justify-content: center;
   background: var(--color4);
-  box-shadow: -0.5rem 0.5rem 0.5rem black;
+/*  box-shadow: 0rem 0.5rem 0.5rem black;*/
   z-index: 2;
   padding: 1vh;
   margin-bottom: 2vh;
+  min-height: 12vh;
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .title_container {
+    min-height: 15vh;
     margin-bottom: 2vh;
   }
 }
 
 .corner {
-  display: none;
+/*  display: none;*/
   z-index: 3;
 }
 
@@ -101,8 +114,8 @@ h1 {
 
 p {
   font-family: var(--third-font), sans-serif;
-  color: var(--color3);
-  opacity: 0.9;
+  color: var(--color4);
+  opacity: 0.8;
   font-size: 2rem;
 }
 
@@ -129,31 +142,23 @@ h2 {
 }
 
 .nav_button {
-  color: white;
+  color: var(--color4);
   background: var(--color1);
   border-width: 0;
   font-size: 2rem;
   font-family: var(--fifth-font), sans-serif;
   text-transform: uppercase;
+  transition: .25s ease-in-out;
 }
 
 .nav_button:hover {
-  color: var(--color3);
+  opacity: .5;
+  transition: .25s ease-in-out;
 }
 
 .nav_button:focus {
   outline: none !important;
   box-shadow: none;
-}
-
-.title_name {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-#title_desc {
-  text-align: center;
-  justify-content: center;
 }
 
 #footer_name {
@@ -214,7 +219,7 @@ h2 {
 }
 
 .carousel-inner {
-  box-shadow: -0.5rem 0.5rem 0.5rem black;
+/*  box-shadow: -0.5rem 0.5rem 0.5rem black;*/
   -webkit-filter: contrast(125%) saturate(110%);
 }
 
@@ -273,12 +278,82 @@ h2 {
 }
 
 .project_description {
+  color: var(--color1);
   margin-top: 2vh;
+}
+
+.project_tech {
+  color: var(--color3);
 }
 
 .project-array-container {
   margin-left: 8vw;
   margin-right: 8vw;
+}
+
+.about-headshot-container {
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.about-headshot {
+  height: 30vh;
+  border-radius: 50%;
+  transition: .5s ease-out;
+}
+
+.about-blurb {
+  display: none;
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .about-headshot {
+    height: 50vh;
+    border-radius: 50%;
+    transition: .5s ease-out;
+  }
+
+  .about-headshot:hover ~ .about-blurb{
+    transition: 1s ease-in-out;
+    opacity: 1;
+  }
+
+  .about-headshot-container:hover .about-headshot{
+    transition: .5s ease-out;
+    transform: translateX(-20vw);
+    opacity: 1;
+  }
+
+  .about-blurb {
+    display: inline;
+    transition: .25s ease-in-out;
+    pointer-events: none;
+    background: var(--color1);
+    position: absolute;
+    width: 45vw;
+    height: 40vh;
+    top: 9vh;
+    left: 36vw;
+    opacity: 0;
+    font-family: var(--second-font), sans-serif;
+    padding: 2vh;
+    text-align: left;
+  }
+}
+
+.Typist .Cursor {
+  display: inline-block;
+
+  &--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+    @keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+  }
 }
 
 .about-title {
@@ -290,9 +365,18 @@ h2 {
   text-align: center;
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-bottom: 4vh;
-  font-family: var(--third-font), sans-serif;
-  font-size: 2.5em;
+  margin-bottom: 2vh;
+  font-family: var(--main-font), sans-serif;
+  font-style: italic;
+  font-size: 2em;
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .about-tagline {
+    font-size: 3em;
+    margin-bottom: 4vh;
+  }
 }
 
 .about-description {
@@ -334,6 +418,8 @@ a:hover {
 }
 
 .contact-well {
+  background: var(--color4);
+  color: var(--color1);
   display: inline-block;
   text-align: center;
   font-family: var(--third-font), sans-serif;
@@ -355,9 +441,6 @@ a:hover {
 
 .home-button {
   justify-content: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
   transition: 0.25s ease-in-out;
 }
 
@@ -365,4 +448,26 @@ a:hover {
   transform: scale(1.25);
   transition: 0.25s;
   transition-timing-function: cubic-bezier(.18,1.49,.83,.97);
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  .home-button {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .home-button {
+    font-size: 2em;
+  }
+}
+
+pre {
+  background: #EEEEEE;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 2rem;
 }
