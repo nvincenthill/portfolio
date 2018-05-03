@@ -38,7 +38,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <div className={this.state.hidden ? "footer animated fadeOut" : "footer animated fadeIn"}>
+      <div className={"footer"}>
           <p id="footer_name">Copyright © 2018 Nicholas Vincent-Hill</p>
       </div>
     );

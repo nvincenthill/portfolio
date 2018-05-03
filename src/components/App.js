@@ -45,7 +45,7 @@ class App extends React.Component {
               <h2 className="about-tagline">
                 {" "}
                 I'm a developer <br /> building beautiful
-                web applications.{" "}
+                web applications{" "}
               </h2>
             </div>
           </Fade>
@@ -55,7 +55,7 @@ class App extends React.Component {
               <h2 className="about-tagline-mobile">
                 {" "}
                 I'm a developer <br /> building beautiful
-                web applications.{" "}
+                web applications{" "}
               </h2>
             </div>
           </Fade>

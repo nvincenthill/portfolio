@@ -211,13 +211,28 @@ h2 {
 }
 
 .footer {
+  display: none;
   position: fixed;
-  bottom: 4vh;
+  bottom: 2vh;
   font-family: Montserrat, sans-serif;
   background-color: var(--color1);
   color: var(--color4);
   text-align: center;
   width: 100%;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  .footer {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .footer {
+    display: inline;
+  }
 }
 
 .sketch_container {
@@ -341,7 +356,7 @@ h2 {
 }
 
 .about-headshot {
-  height: 30vh;
+  height: 35vh;
   border-radius: 50%;
   transition: 0.5s ease-out;
 }
@@ -620,7 +635,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-addition,
 .hljs-variable,
 .hljs-template-variable {
-  color: #e6db74;
+  color: #2ED902;
 }
 
 .hljs-comment,
