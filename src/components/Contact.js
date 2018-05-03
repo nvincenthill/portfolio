@@ -119,19 +119,38 @@ class Contact extends React.Component {
       <React.Fragment>
         <Row between="xs" middle="xs" className={"title_container"}>
           <Col xs={2} sm={2} md={2} lg={2}>
-            <Fade>
-              <HomeButton />
-            </Fade>
+            <Ionicon
+              icon="md-home"
+              color="#222831"
+              fontSize="3em"
+              beat={false}
+              className="home-button"
+            />
           </Col>
           <Col xs={8} sm={8} md={8} lg={8}>
             <Fade>
               <h1 className="title-name"> Contact </h1>
             </Fade>
           </Col>
-          <Col xs={2} sm={2} md={2} lg={2} />
+          <Col xs={2} sm={2} md={2} lg={2}>
+            <Fade>
+              <HomeButton />
+            </Fade>
+          </Col>>
         </Row>
         <Fade cascade>
           <Row className="contact-container">
+            <Col xs={6} sm={3} md={4} lg={1}>
+              <Ionicon
+                icon="logo-github"
+                color="#222831"
+                fontSize={iconSize}
+                beat={false}
+                onClick={() => this.handleClick("Github")}
+                className="contact-icon"
+              />
+            </Col>
+
             <Col xs={6} sm={3} md={4} lg={1}>
               <a>
                 <Ionicon
@@ -145,26 +164,7 @@ class Contact extends React.Component {
                 />
               </a>
             </Col>
-            <Col xs={6} sm={3} md={4} lg={1}>
-              <Ionicon
-                icon="logo-github"
-                color="#222831"
-                fontSize={iconSize}
-                beat={false}
-                onClick={() => this.handleClick("Github")}
-                className="contact-icon"
-              />
-            </Col>
-            <Col xs={6} sm={3} md={4} lg={1}>
-              <Ionicon
-                icon="ios-mail"
-                color="#D64A3A"
-                fontSize={iconSize}
-                beat={false}
-                onClick={() => this.handleClick("Email")}
-                className="contact-icon"
-              />
-            </Col>
+
             <Col xs={6} sm={3} md={4} lg={1}>
               <Ionicon
                 icon="ios-call"
@@ -192,6 +192,17 @@ class Contact extends React.Component {
                 fontSize={iconSize}
                 beat={false}
                 onClick={() => this.handleClick("Text")}
+                className="contact-icon"
+              />
+            </Col>
+
+            <Col xs={6} sm={3} md={4} lg={1}>
+              <Ionicon
+                icon="ios-mail"
+                color="#D64A3A"
+                fontSize={iconSize}
+                beat={false}
+                onClick={() => this.handleClick("Email")}
                 className="contact-icon"
               />
             </Col>

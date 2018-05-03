@@ -7,9 +7,9 @@
   --fourth-font: "Alegreya";
   --fifth-font: "Roboto+Condensed";
   --sixth-font: "Lobster";
-  --color1: #EEEEEE;
-  --color2: #393E46;
-  --color3: #00ADB5;
+  --color1: #eeeeee;
+  --color2: #393e46;
+  --color3: #00adb5;
   --color4: #222831;
 }
 
@@ -85,7 +85,7 @@ h1 {
   text-align: center;
   justify-content: center;
   background: var(--color4);
-/*  box-shadow: 0rem 0.5rem 0.5rem black;*/
+  /*  box-shadow: 0rem 0.5rem 0.5rem black;*/
   z-index: 2;
   padding: 1vh;
   margin-bottom: 0vh;
@@ -110,7 +110,7 @@ h1 {
   .corner {
     display: inline;
     top: 0;
-  } 
+  }
 }
 
 p {
@@ -133,25 +133,24 @@ h2 {
 }
 
 .nav_container {
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
-  margin-top: 1vh;
+  margin-top: 2vh;
   margin-left: 1vw;
   margin-right: 1vw;
   margin-bottom: 2vh;
   z-index: 5;
 }
 
-
 .nav_button {
   color: var(--color4);
   background: var(--color1);
   border-width: 0;
-  font-size: 1.25rem;
-  padding: 0;
+  font-size: 2rem;
+  padding: 2vh 0;
   font-family: var(--fifth-font), sans-serif;
   text-transform: uppercase;
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .nav-column {
@@ -174,7 +173,7 @@ h2 {
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .nav_container {
-/*    justify-content: center;*/
+    /*    justify-content: center;*/
     text-align: center;
     margin-top: 2vh;
     margin-left: 25%;
@@ -190,13 +189,13 @@ h2 {
     font-size: 2rem;
     font-family: var(--fifth-font), sans-serif;
     text-transform: uppercase;
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
   }
 }
 
 .nav_button:hover {
-  opacity: .5;
-  transition: .25s ease-in-out;
+  opacity: 0.5;
+  transition: 0.25s ease-in-out;
 }
 
 .nav_button:focus {
@@ -211,10 +210,13 @@ h2 {
 }
 
 .footer {
+  position: fixed;
+  bottom: 4vh;
   font-family: Montserrat, sans-serif;
   background-color: var(--color1);
   color: var(--color4);
   text-align: center;
+  width: 100%;
 }
 
 .sketch_container {
@@ -262,7 +264,7 @@ h2 {
 }
 
 .carousel-inner {
-/*  box-shadow: -0.5rem 0.5rem 0.5rem black;*/
+  /*  box-shadow: -0.5rem 0.5rem 0.5rem black;*/
   -webkit-filter: contrast(125%) saturate(110%);
 }
 
@@ -273,7 +275,7 @@ h2 {
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   .carousel {
-/*    width: 65%;
+    /*    width: 65%;
     height: 65%;*/
   }
 }
@@ -334,13 +336,13 @@ h2 {
 
 .about-headshot-container {
   text-align: center;
-  margin-bottom: 3vh;
+  margin-bottom: 4vh;
 }
 
 .about-headshot {
   height: 30vh;
   border-radius: 50%;
-  transition: .5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .about-blurb {
@@ -352,29 +354,29 @@ h2 {
   .about-headshot {
     height: 50vh;
     border-radius: 50%;
-    transition: .5s ease-out;
+    transition: 0.5s ease-out;
   }
 
-  .about-headshot:hover ~ .about-blurb{
-    transition: .25s ease-in-out;
+  .about-headshot:hover ~ .about-blurb {
+    transition: 0.25s ease-in-out;
     opacity: 1;
   }
 
-  .about-headshot-container:hover .about-headshot{
-    transition: .5s ease-out;
+  .about-headshot-container:hover .about-headshot {
+    transition: 0.5s ease-out;
     transform: translateX(-20vw);
     -webkit-filter: contrast(125%);
     opacity: 1;
   }
 
-  .about-headshot-container:hover .about-blurb{
-    transition: .5s ease-in-out;
+  .about-headshot-container:hover .about-blurb {
+    transition: 0.5s ease-in-out;
     opacity: 1;
   }
 
   .about-blurb {
     display: inline;
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     pointer-events: none;
     background: var(--color1);
     position: absolute;
@@ -396,9 +398,15 @@ h2 {
     opacity: 1;
     animation: blink 1s linear infinite;
     @keyframes blink {
-      0% { opacity:1; }
-      50% { opacity:0; }
-      100% { opacity:1; }
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 }
@@ -414,7 +422,7 @@ h2 {
   margin-right: 4vw;
   margin-bottom: 2vh;
   font-family: var(--main-font), sans-serif;
-/*  font-style: italic;*/
+  /*  font-style: italic;*/
   font-size: 2em;
 }
 
@@ -439,7 +447,7 @@ a:hover {
 
 .contact-container {
   text-align: center;
-/*  margin-left: 20vw;
+  /*  margin-left: 20vw;
   margin-right: 20vw;*/
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -449,13 +457,13 @@ a:hover {
 .contact-icon {
   margin: 1vh;
   transition: 0.25s ease-in-out;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .contact-icon:hover {
   transform: translateY(-10%) scale(1.05);
   transition: 0.25s;
-  transition-timing-function: cubic-bezier(.18,1.49,.83,.97);
+  transition-timing-function: cubic-bezier(0.18, 1.49, 0.83, 0.97);
 }
 
 .contact-well-container {
@@ -483,7 +491,7 @@ a:hover {
 }
 
 .test {
-/*  position: fixed;*/
+  /*  position: fixed;*/
 }
 
 .home-button {
@@ -494,7 +502,7 @@ a:hover {
 .home-button:hover {
   transform: scale(1.25);
   transition: 0.25s;
-  transition-timing-function: cubic-bezier(.18,1.49,.83,.97);
+  transition-timing-function: cubic-bezier(0.18, 1.49, 0.83, 0.97);
 }
 
 @media screen and (max-width: 1080px) and (min-width: 600px) {
@@ -512,7 +520,7 @@ a:hover {
 }
 
 pre {
-  background: #EEEEEE;
+  background: #eeeeee;
   border: none;
   padding: 0;
   border-radius: 0;
