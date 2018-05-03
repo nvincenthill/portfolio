@@ -38,15 +38,15 @@ class Projects extends React.Component {
           <Col xs={2} sm={2} md={2} lg={2} />
         </Row>
 
-        <Fade cascade>
+        <Fade>
           <Row>
             <div className="project-array-container">
               <Col xs={12} sm={12} md={6} lg={4}>
                 <ProjectItem
-                  name="Meal Panda"
-                  imageSource="../images/mealpanda.png"
+                  name="The Meal Panda"
+                  imageSource="../images/missing.png"
                   description="Menu planner & grocery list generator"
-                  builtWith="React | Firebase | Jest | Node.js"
+                  builtWith="React | CSS | Firebase | Jest | Node.js"
                   url="https://mealpanda.herokuapp.com/"
                   github="https://github.com/nvincenthill/mealpanda"
                 />
@@ -56,7 +56,7 @@ class Projects extends React.Component {
                   name="The Next Big Thing"
                   imageSource="../images/missing.png"
                   description="This project is coming soon!"
-                  builtWith="n/a"
+                  builtWith="MongoDB | Express | SASS | AngularJS | Node.js"
                   url="n/a"
                   github="n/a"
                 />
@@ -64,7 +64,7 @@ class Projects extends React.Component {
               <Col xs={12} sm={12} md={6} lg={4}>
                 <ProjectItem
                   name="My First Website"
-                  imageSource="../images/myfirstwebsite.png"
+                  imageSource="../images/missing.png"
                   description="Legacy billboard site and first milestone on my coding journey"
                   builtWith="HTML5 | CSS | JS | p5.js"
                   url="https://nvincenthill.github.io/"

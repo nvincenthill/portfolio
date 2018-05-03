@@ -140,7 +140,7 @@ class Contact extends React.Component {
         </Row>
         <Fade cascade>
           <Row className="contact-container">
-            <Col xs={6} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={4} lg={1}>
               <Ionicon
                 icon="logo-github"
                 color="#222831"
@@ -151,7 +151,7 @@ class Contact extends React.Component {
               />
             </Col>
 
-            <Col xs={6} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={4} lg={1}>
               <a>
                 <Ionicon
                   icon="logo-linkedin"
@@ -165,7 +165,7 @@ class Contact extends React.Component {
               </a>
             </Col>
 
-            <Col xs={6} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={4} lg={1}>
               <Ionicon
                 icon="ios-call"
                 color="#01E64E"
@@ -175,7 +175,7 @@ class Contact extends React.Component {
                 className="contact-icon"
               />
             </Col>
-            <Col xs={6} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={4} lg={1}>
               <Ionicon
                 icon="logo-skype"
                 color="#00AFF0"
@@ -185,7 +185,7 @@ class Contact extends React.Component {
                 className="contact-icon"
               />
             </Col>
-            <Col xs={6} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={4} lg={1}>
               <Ionicon
                 icon="ios-text"
                 color="#01E64E"
@@ -196,7 +196,7 @@ class Contact extends React.Component {
               />
             </Col>
 
-            <Col xs={6} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={4} lg={1}>
               <Ionicon
                 icon="ios-mail"
                 color="#D64A3A"

@@ -370,7 +370,8 @@ h2 {
   .about-headshot {
     height: 50vh;
     border-radius: 50%;
-    transition: 0.5s ease-out;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .about-headshot:hover ~ .about-blurb {
@@ -472,6 +473,7 @@ h2 {
   margin-left: 20vw;
   margin-right: 20vw;
   margin-bottom: 4vh;
+  margin-top: 2vh;
 }
 
 a:hover {

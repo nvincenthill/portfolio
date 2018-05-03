@@ -31,6 +31,15 @@ class ProjectItem extends React.Component {
           <p className="project_tech">
             {this.props.builtWith}
           </p>
+          <a href={this.props.github}>
+          <Ionicon
+            icon="logo-github"
+            color="#EEEEEE"
+            fontSize="4em"
+            beat={false}
+            // onClick={() => this.handleRoute("/")}
+          />
+          </a>
         </div>
       </Fade>
     );
