@@ -3,6 +3,7 @@ import Typist from "react-typist";
 import "babel-polyfill";
 import Highlight from "react-highlight";
 import { Button } from "react-bootstrap";
+import { Fade, Zoom, Slide, Flip } from "react-reveal";
 
 class Footer extends React.Component {
   state = {
@@ -38,9 +39,11 @@ class Footer extends React.Component {
 
   render() {
     return (
+      <Fade>
       <div className={"footer"}>
           <p id="footer_name">Copyright © 2018 Nicholas Vincent-Hill</p>
       </div>
+      </Fade>
     );
   }
 }

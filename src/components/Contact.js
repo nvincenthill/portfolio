@@ -9,6 +9,7 @@ import GithubCorner from "react-github-corner";
 import HomeButton from "./HomeButton";
 import { Collapse } from "react-collapse";
 import { Well, Tooltip, OverlayTrigger } from "react-bootstrap";
+import Footer from "./Footer";
 
 class Contact extends React.Component {
   state = {
@@ -48,7 +49,7 @@ class Contact extends React.Component {
       document.selection.empty();
     }
   }
-  
+
   handleClick(target) {
     if (target === "LinkedIn") {
       window.location.assign("https://www.linkedin.com/in/nvincenthill/");
@@ -145,6 +146,7 @@ class Contact extends React.Component {
     const iconSize = "6em";
 
     const copyIcon = (
+      <div className="contact-icon-copy-container">
       <Ionicon
         icon="ios-copy"
         color="#eeeeee"
@@ -154,6 +156,7 @@ class Contact extends React.Component {
         onClick={() => this.copy()}
         className="contact-icon-copy"
       />
+      </div>
     );
 
     const tooltip = (
@@ -272,6 +275,7 @@ class Contact extends React.Component {
             </div>
           </Collapse>
         </Fade>
+        <Footer />
       </React.Fragment>
     );
   }

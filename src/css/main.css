@@ -399,7 +399,7 @@ h2 {
     position: absolute;
     width: 50vw;
     height: 40vh;
-    top: 45vh;
+    top: 50vh;
     left: 36vw;
     opacity: 0;
     font-family: var(--second-font), sans-serif;
@@ -497,6 +497,22 @@ a:hover {
 
 .contact-icon-copy {
   margin-top: 1vh;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  .contact-icon-copy {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .contact-icon-copy {
+    display: inline;
+  }
 }
 
 .contact-icon:hover {

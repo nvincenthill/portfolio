@@ -6,6 +6,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
 import ProjectItem from "./ProjectItem";
 import HomeButton from "./HomeButton";
+import Footer from "./Footer";
 import GithubCorner from "react-github-corner";
 
 class Projects extends React.Component {
@@ -74,6 +75,7 @@ class Projects extends React.Component {
             </div>
           </Row>
         </Fade>
+        <Footer />
       </React.Fragment>
     );
   }

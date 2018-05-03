@@ -6,6 +6,7 @@ import { Fade, Zoom, Slide, Flip } from "react-reveal";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import GithubCorner from "react-github-corner";
 import HomeButton from "./HomeButton";
+import Footer from "./Footer";
 import RestartingTypist from "./RestartingTypist";
 
 class AboutMe extends React.Component {
@@ -71,6 +72,7 @@ class AboutMe extends React.Component {
             </div>
           </Col>
         </Row>
+        <Footer />
       </React.Fragment>
     );
   }

@@ -15,15 +15,28 @@ import sketch from "../sketch";
 import Ionicon from "react-ionicons";
 import GithubCorner from "react-github-corner";
 
-
 class App extends React.Component {
-  state = {};
+  state = {
+    adjective: 0,
+    verb: 0
+  };
 
   handleRoute = route => {
     this.props.history.push(`/${route}/`);
   };
 
-  componentDidMount() {}
+  changeVerb = () => {
+    this.setState({ verb: this.state.verb + 1})
+  };
+
+  changeAdjective = () => {
+    this.setState({ adjective: this.state.adjective + 1})
+  };
+
+  componentDidMount() {
+    setInterval(() => this.changeVerb(), 1500);
+    setInterval(() => this.changeAdjective(), 2000);
+  }
 
   componentDidUpdate() {}
 
@@ -35,30 +48,32 @@ class App extends React.Component {
       opacity: 0.5
     };
 
+    const verbs = ["designing", "building", "deploying", "maintaining"];
+    const adjectives = ["beautiful", "reponsive", "dynamic", "mobile-first", "amazing", "modern", "slick"];
+
     return (
       <React.Fragment>
         {/* <Header /> */}
-          <TitleCard />
-          <NavCard handleRoute={this.handleRoute} />
-          <Fade>
-            <div>
-              <h2 className="about-tagline">
-                {" "}
-                I'm a developer <br /> building beautiful
-                web applications{" "}
-              </h2>
-            </div>
-          </Fade>
-          <Blurb />
-          <Fade>
-            <div>
-              <h2 className="about-tagline-mobile">
-                {" "}
-                I'm a developer <br /> building beautiful
-                web applications{" "}
-              </h2>
-            </div>
-          </Fade>
+        <TitleCard />
+        <NavCard handleRoute={this.handleRoute} />
+        <Fade>
+          <div>
+            <h2 className="about-tagline">
+              I'm a developer <br /> <span> {verbs[this.state.verb % verbs.length]} </span> <br />
+              <span> {adjectives[this.state.adjective % adjectives.length]} </span>
+              web applications
+            </h2>
+          </div>
+        </Fade>
+        <Blurb />
+        <Fade>
+          <div>
+            <h2 className="about-tagline-mobile">
+              {" "}
+              I'm a developer <br /> building beautiful web applications{" "}
+            </h2>
+          </div>
+        </Fade>
         <Footer />
       </React.Fragment>
     );
