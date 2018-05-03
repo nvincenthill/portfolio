@@ -40,7 +40,7 @@ class App extends React.Component {
         <NavCard handleRoute={this.handleRoute} />
           <ImageCarousel />
           </div>
-        {/* <Footer /> */}
+        <Footer />
       </React.Fragment>
     );
   }

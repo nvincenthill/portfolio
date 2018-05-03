@@ -101,15 +101,16 @@ h1 {
 }
 
 .corner {
-/*  display: none;*/
+  display: none;
   z-index: 3;
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .corner {
-    display: block;
-  }
+    display: inline;
+    top: 0;
+  } 
 }
 
 p {
@@ -164,13 +165,13 @@ h2 {
 #footer_name {
   font-family: var(--second-font), sans-serif;
   font-size: 1.5rem;
-  color: white;
+  color: var(--color4);
 }
 
 .footer {
   font-family: Montserrat, sans-serif;
   background-color: var(--color1);
-  color: white;
+  color: var(--color4);
   text-align: center;
 }
 
@@ -200,10 +201,10 @@ h2 {
   position: relative;
   text-align: center;
   margin-top: 2vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 4vh;
-
+  width: 60%;
 }
 
 /*.carousel-indicators li {
@@ -224,8 +225,6 @@ h2 {
 }
 
 .carousel {
-  /*  width:65%;
-  height:65%;*/
   margin: auto;
 }
 

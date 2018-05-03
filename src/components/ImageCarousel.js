@@ -20,7 +20,7 @@ class ImageCarousel extends React.Component {
         <div className="carousel_container">
         <Carousel interval={0} controls={true} indicators={false}>
           <Carousel.Item>
-            <img alt="did not load" src="../images/nick.jpeg" />
+            <img alt="did not load" src="../images/missing.jpg" />
             {/* <Carousel.Caption id="carousel-caption">
               <h3>Hi, I'm Nick!</h3>
               <p>
@@ -29,14 +29,14 @@ class ImageCarousel extends React.Component {
             </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
-            <img alt="did not load" src="../images/nick.png" />
+            <img alt="did not load" src="../images/missing.jpg" />
             {/* <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </Carousel.Caption> */}
           </Carousel.Item>
           <Carousel.Item>
-            <img alt="did not load" src="../images/nick2.jpg" />
+            <img alt="did not load" src="../images/missing.jpg" />
             {/* <Carousel.Caption>
               <h3>Second slide label</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

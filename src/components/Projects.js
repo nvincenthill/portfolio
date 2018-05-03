@@ -71,16 +71,6 @@ class Projects extends React.Component {
                   github="https://github.com/nvincenthill/nvincenthill.github.io"
                 />
               </Col>
-              <Col xs={12} sm={12} md={6} lg={4}>
-                <ProjectItem
-                  name="The Next Big Thing"
-                  imageSource="../images/missing.png"
-                  description="This project is coming soon!"
-                  builtWith="n/a"
-                  url="n/a"
-                  github="n/a"
-                />
-              </Col>
             </div>
           </Row>
         </Fade>

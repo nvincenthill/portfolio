@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, Zoom, Flip } from "react-reveal";
+import { Fade, Zoom, Flip, Bounce } from "react-reveal";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
 import GithubCorner from "react-github-corner";
@@ -15,14 +15,8 @@ class ProjectItem extends React.Component {
 
   render() {
     return (
-      <Flip left>
+      <Fade>
         <div className="project">
-          <GithubCorner
-            className="corner"
-            href={this.props.github}
-            octoColor="#222831"
-            bannerColor="#EEEEEE"
-          />
           <a href={this.props.url}>
             <img
               className="project_image"
@@ -38,7 +32,7 @@ class ProjectItem extends React.Component {
             {this.props.builtWith}
           </p>
         </div>
-      </Flip>
+      </Fade>
     );
   }
 }

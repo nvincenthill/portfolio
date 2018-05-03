@@ -2,7 +2,7 @@ import React from "react";
 import Typist from "react-typist";
 import "babel-polyfill";
 import Highlight from "react-highlight";
-import { Fade, Zoom } from "react-reveal";
+import { Fade, Zoom, Slide, Flip } from "react-reveal";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import GithubCorner from "react-github-corner";
 import HomeButton from "./HomeButton";
@@ -49,13 +49,14 @@ class AboutMe extends React.Component {
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
             <div>
-              <Fade>
+              <Slide left>
                 <div className="about-headshot-container">
                   <img
                     className="about-headshot"
                     alt="did not load"
                     src="../images/headshot.png"
                   />
+
                   <div className="about-blurb">
                     <RestartingTypist
                       avgTypingDelay={20}
@@ -80,27 +81,31 @@ class AboutMe extends React.Component {
                     </RestartingTypist>
                   </div>
                 </div>
-                <h2 className="about-tagline">
-                  {" "}
-                  I'm an aspiring software engineer <br /> with a background in
-                  finance and securities trading.{" "}
-                </h2>
-                <p className="about-description">
-                  I started my career at a hedge fund as a trader; I've traded
-                  equities, options, commodities, credit, morgage-backed
-                  securities, and other derivatives.
-                </p>
-                <p className="about-description">
-                  <span style={style}>
+              </Slide>
+              <Zoom cascade>
+                <div>
+                  <h2 className="about-tagline">
                     {" "}
-                    ... but I never really enjoyed it.{" "}
-                  </span>
-                </p>
-                <p className="about-description">
-                  I've been coding for two years and am looking for a job as a
-                  front end developer.
-                </p>
-              </Fade>
+                    I'm an aspiring web developer <br /> with a background in
+                    finance and securities trading.{" "}
+                  </h2>
+                  <p className="about-description">
+                    I started my career at a hedge fund as a trader; I've traded
+                    equities, options, commodities, credit, morgage-backed
+                    securities, and other derivatives.
+                  </p>
+                  <p className="about-description">
+                    <span style={style}>
+                      {" "}
+                      ... but I never really enjoyed it.{" "}
+                    </span>
+                  </p>
+                  <p className="about-description">
+                    I've been coding for two years and am looking for a job as a
+                    front end developer.
+                  </p>
+                </div>
+              </Zoom>
             </div>
           </Col>
         </Row>
