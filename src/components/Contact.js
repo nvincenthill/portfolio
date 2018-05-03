@@ -8,18 +8,47 @@ import ProjectItem from "./ProjectItem";
 import GithubCorner from "react-github-corner";
 import HomeButton from "./HomeButton";
 import { Collapse } from "react-collapse";
-import { Well } from "react-bootstrap";
+import { Well, Tooltip, OverlayTrigger } from "react-bootstrap";
 
 class Contact extends React.Component {
   state = {
     wellHidden: true,
-    wellText: ""
+    wellText: "",
+    shake: false
   };
 
   handleRoute = route => {
     this.props.history.push(route);
   };
 
+  copy() {
+    const copyText = document.getElementById("contact-well-input");
+    copyText.select();
+    document.execCommand("Copy");
+    this.deselectAll();
+    this.setState({ shake: true });
+    setTimeout(() => {
+      this.setState({ shake: false });
+    }, 750);
+  }
+
+  deselectAll() {
+    var element = document.activeElement;
+    
+    if (element && /INPUT|TEXTAREA/i.test(element.tagName)) {
+      if ('selectionStart' in element) {
+        element.selectionEnd = element.selectionStart;
+      }
+      element.blur();
+    }
+
+    if (window.getSelection) { // All browsers, except IE <=8
+      window.getSelection().removeAllRanges();
+    } else if (document.selection) { // IE <=8
+      document.selection.empty();
+    }
+  }
+  
   handleClick(target) {
     if (target === "LinkedIn") {
       window.location.assign("https://www.linkedin.com/in/nvincenthill/");
@@ -115,6 +144,24 @@ class Contact extends React.Component {
   render() {
     const iconSize = "6em";
 
+    const copyIcon = (
+      <Ionicon
+        icon="ios-copy"
+        color="#eeeeee"
+        fontSize="3em"
+        beat={false}
+        shake={this.state.shake}
+        onClick={() => this.copy()}
+        className="contact-icon-copy"
+      />
+    );
+
+    const tooltip = (
+      <Tooltip id="tooltip">
+        <strong>Holy guacamole!</strong> Check this info.
+      </Tooltip>
+    );
+
     return (
       <React.Fragment>
         <Row between="xs" middle="xs" className={"title_container"}>
@@ -209,7 +256,19 @@ class Contact extends React.Component {
           </Row>
           <Collapse isOpened={!this.state.wellHidden}>
             <div className="contact-well-container">
-              <Well className="contact-well"> {this.state.wellText} </Well>
+              <Well className="contact-well">
+                <div>
+                  <input
+                    type="text"
+                    value={this.state.wellText}
+                    id="contact-well-input"
+                  />
+                  <br />
+                  {this.state.wellText === "Please don't text me"
+                    ? null
+                    : copyIcon}
+                </div>
+              </Well>
             </div>
           </Collapse>
         </Fade>

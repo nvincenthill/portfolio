@@ -495,6 +495,10 @@ a:hover {
   cursor: pointer;
 }
 
+.contact-icon-copy {
+  margin-top: 1vh;
+}
+
 .contact-icon:hover {
   transform: translateY(-10%) scale(1.05);
   transition: 0.25s;
@@ -514,7 +518,19 @@ a:hover {
   text-align: center;
   font-family: var(--third-font), sans-serif;
   font-size: 2rem;
+  padding: 1em;
   font-weight: bold;
+}
+
+#contact-well-input {
+  color: var(--color1);
+  background: var(--color4);
+  border-width: 0;
+  margin: 0 auto;
+  outline: none !important;
+  text-align: center;
+  width:100%;
+  text-decoration: none;
 }
 
 .route-wrapper {
@@ -561,6 +577,8 @@ pre {
   border-radius: 0;
   font-size: 2rem;
 }
+
+
 
 /*
 
@@ -645,3 +663,5 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-meta {
   color: #75715e;
 }
+
+
