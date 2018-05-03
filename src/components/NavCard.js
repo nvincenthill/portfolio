@@ -43,13 +43,13 @@ class NavCard extends React.Component {
     return (
       <Fade cascade>
       <div>
-        <Row around="xs" className={this.state.hidden ? "nav_container" : "nav_container"}>
+        <Row className={this.state.hidden ? "nav_container" : "nav_container"}>
           <Col className="nav-column" xs={3} sm={3} md={3} lg={3}>
             <button
               className="nav_button"
               onClick={() => this.props.handleRoute("AboutMe")}
             >
-              a
+              ABOUT
             </button>
           </Col>
           <Col className="nav-column" xs={3} sm={3} md={3} lg={3}>
@@ -57,13 +57,13 @@ class NavCard extends React.Component {
               className="nav_button"
               onClick={() => this.props.handleRoute("Projects")}
             >
-              b
+              PROJECTS
             </button>
           </Col>
           <Col className="nav-column" xs={3} sm={3} md={3} lg={3}>
             <a href="/images/Nicholas W. Vincent-Hill Resume 04-15-2018.pdf"><button
               className="nav_button">
-              c
+              RESUME
             </button>
             </a>
           </Col>
@@ -72,7 +72,7 @@ class NavCard extends React.Component {
               className="nav_button"
               onClick={() => this.props.handleRoute("Contact")}
             >
-              d
+              CONTACT
             </button>
           </Col>
         </Row>
