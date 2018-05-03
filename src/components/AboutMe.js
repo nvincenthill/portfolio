@@ -49,46 +49,8 @@ class AboutMe extends React.Component {
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
             <div>
-              <Slide left>
-                <div className="about-headshot-container">
-                  <img
-                    className="about-headshot"
-                    alt="did not load"
-                    src="../images/headshot.png"
-                  />
-
-                  <div className="about-blurb">
-                    <RestartingTypist
-                      avgTypingDelay={20}
-                      startDelay={500}
-                      cursor={cursor}
-                    >
-                      <Highlight language="javascript">
-                        {`let Nick = (function () {
-  let traits = {
-    skills: ['react', 'CSS', 'Git', 'JS'],
-    activities: ["hiking", "cooking food"`}{" "}
-                        <Typist.Backspace count={7} delay={500} />{" "}
-                        {`amazing meals"]
-  }
-  for (let i = 0; i < skills.length; i++) {
-    alert('Study ' + skills[i] + ' more!');
-  }
-  const objective = "Find a fufilling job";
-  return objective ? "Profit!" : "FizzBuzz?!"
-}`}
-                      </Highlight>
-                    </RestartingTypist>
-                  </div>
-                </div>
-              </Slide>
               <Zoom cascade>
                 <div>
-                  <h2 className="about-tagline">
-                    {" "}
-                    I'm an aspiring web developer <br /> with a background in
-                    finance and securities trading.{" "}
-                  </h2>
                   <p className="about-description">
                     I started my career at a hedge fund as a trader; I've traded
                     equities, options, commodities, credit, morgage-backed

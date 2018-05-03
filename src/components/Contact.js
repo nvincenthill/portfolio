@@ -136,7 +136,7 @@ class Contact extends React.Component {
             <Fade>
               <HomeButton />
             </Fade>
-          </Col>>
+          </Col>
         </Row>
         <Fade cascade>
           <Row className="contact-container">
