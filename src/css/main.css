@@ -88,7 +88,7 @@ h1 {
 /*  box-shadow: 0rem 0.5rem 0.5rem black;*/
   z-index: 2;
   padding: 1vh;
-  margin-bottom: 2vh;
+  margin-bottom: 0vh;
   min-height: 12vh;
 }
 
@@ -135,21 +135,63 @@ h2 {
 .nav_container {
   justify-content: center;
   text-align: center;
-  margin-top: 2vh;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-top: 1vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
   margin-bottom: 2vh;
   z-index: 5;
 }
+
 
 .nav_button {
   color: var(--color4);
   background: var(--color1);
   border-width: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 0;
   font-family: var(--fifth-font), sans-serif;
   text-transform: uppercase;
   transition: .25s ease-in-out;
+}
+
+.nav-column {
+  padding: 0;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  .nav_container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 2vh;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 2vh;
+    z-index: 5;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  .nav_container {
+/*    justify-content: center;*/
+    text-align: center;
+    margin-top: 2vh;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 4vh;
+    z-index: 5;
+  }
+
+  .nav_button {
+    color: var(--color4);
+    background: var(--color1);
+    border-width: 0;
+    font-size: 2rem;
+    font-family: var(--fifth-font), sans-serif;
+    text-transform: uppercase;
+    transition: .25s ease-in-out;
+  }
 }
 
 .nav_button:hover {
@@ -292,7 +334,7 @@ h2 {
 
 .about-headshot-container {
   text-align: center;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
 }
 
 .about-headshot {
@@ -314,13 +356,19 @@ h2 {
   }
 
   .about-headshot:hover ~ .about-blurb{
-    transition: 1s ease-in-out;
+    transition: .25s ease-in-out;
     opacity: 1;
   }
 
   .about-headshot-container:hover .about-headshot{
     transition: .5s ease-out;
     transform: translateX(-20vw);
+    -webkit-filter: contrast(125%);
+    opacity: 1;
+  }
+
+  .about-headshot-container:hover .about-blurb{
+    transition: .5s ease-in-out;
     opacity: 1;
   }
 
@@ -330,7 +378,7 @@ h2 {
     pointer-events: none;
     background: var(--color1);
     position: absolute;
-    width: 45vw;
+    width: 50vw;
     height: 40vh;
     top: 9vh;
     left: 36vw;
@@ -366,7 +414,7 @@ h2 {
   margin-right: 4vw;
   margin-bottom: 2vh;
   font-family: var(--main-font), sans-serif;
-  font-style: italic;
+/*  font-style: italic;*/
   font-size: 2em;
 }
 
