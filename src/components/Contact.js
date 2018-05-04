@@ -35,17 +35,19 @@ class Contact extends React.Component {
 
   deselectAll() {
     var element = document.activeElement;
-    
+
     if (element && /INPUT|TEXTAREA/i.test(element.tagName)) {
-      if ('selectionStart' in element) {
+      if ("selectionStart" in element) {
         element.selectionEnd = element.selectionStart;
       }
       element.blur();
     }
 
-    if (window.getSelection) { // All browsers, except IE <=8
+    if (window.getSelection) {
+      // All browsers, except IE <=8
       window.getSelection().removeAllRanges();
-    } else if (document.selection) { // IE <=8
+    } else if (document.selection) {
+      // IE <=8
       document.selection.empty();
     }
   }
@@ -147,15 +149,15 @@ class Contact extends React.Component {
 
     const copyIcon = (
       <div className="contact-icon-copy-container">
-      <Ionicon
-        icon="ios-copy"
-        color="#eeeeee"
-        fontSize="3em"
-        beat={false}
-        shake={this.state.shake}
-        onClick={() => this.copy()}
-        className="contact-icon-copy"
-      />
+        <Ionicon
+          icon="ios-copy"
+          color="#eeeeee"
+          fontSize="3em"
+          beat={false}
+          shake={this.state.shake}
+          onClick={() => this.copy()}
+          className="contact-icon-copy"
+        />
       </div>
     );
 
@@ -167,18 +169,7 @@ class Contact extends React.Component {
 
     return (
       <React.Fragment>
-
         <Row between="xs" middle="xs" className={"title_container"}>
-          <Col xs={2} sm={2} md={2} lg={2}>
-          <Fade>
-            <HomeButton />
-          </Fade>
-          </Col>
-          <Col xs={6} sm={6} md={6} lg={8}>
-            <Fade>
-              <h1 className="title-name"> Contact </h1>
-            </Fade>
-          </Col>
           <Col xs={2} sm={2} md={2} lg={2}>
             <Fade>
               <Ionicon
@@ -189,6 +180,16 @@ class Contact extends React.Component {
                 onClick={() => this.handleClick("Github")}
                 className="home-button"
               />
+            </Fade>
+          </Col>
+          <Col xs={6} sm={6} md={6} lg={8}>
+            <Fade>
+              <h1 className="title-name"> Contact </h1>
+            </Fade>
+          </Col>
+          <Col xs={2} sm={2} md={2} lg={2}>
+            <Fade>
+              <HomeButton />
             </Fade>
           </Col>
         </Row>

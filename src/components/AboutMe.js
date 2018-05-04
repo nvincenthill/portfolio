@@ -14,13 +14,11 @@ class AboutMe extends React.Component {
   state = {};
 
   changeColor = () => {
-    let html = document.getElementsByTagName('html')[0];
+    let html = document.getElementsByTagName("html")[0];
     // html.style.cssText = "--color1: black; --color4: #eeeeee;";
-  }
+  };
 
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   componentDidUpdate() {}
 
@@ -42,30 +40,30 @@ class AboutMe extends React.Component {
 
     return (
       <React.Fragment>
-      <Row between="xs" middle="xs" className={"title_container"}>
-        <Col xs={2} sm={2} md={2} lg={2}>
-        <Fade>
-          <HomeButton />
-        </Fade>
-        </Col>
-        <Col xs={6} sm={6} md={6} lg={8}>
-          <Fade>
-            <h1 className="title-name"> About Me </h1>
-          </Fade>
-        </Col>
-        <Col xs={2} sm={2} md={2} lg={2}>
-          <Fade>
-            <Ionicon
-              icon="md-person"
-              color="#EEEEEE"
-              fontSize="3em"
-              beat={false}
-              onClick={() => this.changeColor()}
-              className="home-button"
-            />
-          </Fade>
-        </Col>
-      </Row>
+        <Row between="xs" middle="xs" className={"title_container"}>
+          <Col xs={2} sm={2} md={2} lg={2}>
+            <Fade>
+              <Ionicon
+                icon="md-person"
+                color="#EEEEEE"
+                fontSize="3em"
+                beat={false}
+                onClick={() => this.changeColor()}
+                className="home-button"
+              />
+            </Fade>
+          </Col>
+          <Col xs={6} sm={6} md={6} lg={8}>
+            <Fade>
+              <h1 className="title-name"> About Me </h1>
+            </Fade>
+          </Col>
+          <Col xs={2} sm={2} md={2} lg={2}>
+            <Fade>
+              <HomeButton />
+            </Fade>
+          </Col>
+        </Row>
 
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
