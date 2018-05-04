@@ -66,7 +66,7 @@ class App extends React.Component {
           className="corner"
           octoColor="#222831"
           bannerColor="#EEEEEE"
-          size={80}
+          size={135}
         />
         <TitleCard />
         <NavCard handleRoute={this.handleRoute} />
