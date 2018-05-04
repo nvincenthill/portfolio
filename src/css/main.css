@@ -213,7 +213,7 @@ h2 {
 .footer {
   display: none;
   position: fixed;
-  bottom: 2vh;
+  bottom: 1vh;
   font-family: Montserrat, sans-serif;
   background-color: var(--color1);
   color: var(--color4);
@@ -365,10 +365,14 @@ h2 {
   display: none;
 }
 
+.about-blurb-code {
+  font-size: .70em;
+}
+
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .about-headshot {
-    height: 50vh;
+    height: 40vh;
     border-radius: 50%;
     transition: 0.5s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
