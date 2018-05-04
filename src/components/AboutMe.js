@@ -25,10 +25,6 @@ class AboutMe extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const style = {
-      color: "red",
-      opacity: 0.5
-    };
 
     const cursor = {
       show: false,
@@ -68,15 +64,15 @@ class AboutMe extends React.Component {
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
             <div>
-              <Zoom cascade>
+              <Fade cascade>
                 <div>
                   <p className="about-description">
-                    I started my career at a hedge fund as a trader; I've traded
+                    I started my career at a hedge fund as a trader - I've traded
                     equities, options, commodities, credit, morgage-backed
                     securities, and other derivatives.
                   </p>
                   <p className="about-description">
-                    <span style={style}>
+                    <span className="about-hook">
                       {" "}
                       ... but I never really enjoyed it.{" "}
                     </span>
@@ -86,7 +82,7 @@ class AboutMe extends React.Component {
                     front end developer.
                   </p>
                 </div>
-              </Zoom>
+              </Fade>
             </div>
           </Col>
         </Row>

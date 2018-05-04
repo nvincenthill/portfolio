@@ -1,7 +1,6 @@
 /* Variable declaration */
 
 :root {
-
 }
 
 /* Border box declaration */
@@ -106,18 +105,42 @@ h1 {
   z-index: 10;
 }
 
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  .corner {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .corner {
+    position: fixed;
     display: inline;
+    top: 0vh;
+    right: 0vw;
   }
 }
 
 p {
-  font-family: var(--third-font), sans-serif;
+  font-family: var(--fifth-font), sans-serif;
   color: var(--color4);
   opacity: 0.8;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  /* DESKTOP */
+  p {
+    font-size: 4rem;
+  }
 }
 
 h2 {
@@ -187,7 +210,7 @@ h2 {
     background: var(--color1);
     border-width: 0;
     font-size: 2.5rem;
-    padding: .5vh 0;
+    padding: 0.5vh 0;
     font-family: var(--fifth-font), sans-serif;
     text-transform: uppercase;
     transition: 0.25s ease-in-out;
@@ -366,7 +389,22 @@ h2 {
 }
 
 .about-blurb-code {
-  font-size: .70em;
+  font-size: 0.7em;
+}
+
+.about-hook {
+  color: red;
+  opacity: 0.5;
+  font-size: 1.5em;
+  font-family: var(--sixth-font), sans-serif;
+}
+
+.about-description {
+  text-align: center;
+  margin-left: 4vw;
+  margin-right: 6vw;
+  margin-bottom: 6vh;
+  margin-top: 2vh;
 }
 
 @media screen and (min-width: 1081px) {
@@ -386,7 +424,7 @@ h2 {
   .about-headshot-container:hover .about-headshot {
     transition: 0.5s ease-out;
     transform: translateX(-20vw);
-/*    -webkit-filter: contrast(125%);*/
+    /*    -webkit-filter: contrast(125%);*/
     opacity: 1;
   }
 
@@ -409,6 +447,14 @@ h2 {
     font-family: var(--second-font), sans-serif;
     padding: 2vh;
     text-align: left;
+  }
+
+  .about-description {
+    text-align: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 6vh;
+    margin-top: 2vh;
   }
 }
 
@@ -470,14 +516,6 @@ h2 {
     font-weight: bold;
     color: var(--color4);
   }
-}
-
-.about-description {
-  text-align: center;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  margin-bottom: 4vh;
-  margin-top: 2vh;
 }
 
 a:hover {
@@ -549,7 +587,7 @@ a:hover {
   margin: 0 auto;
   outline: none !important;
   text-align: center;
-  width:100%;
+  width: 100%;
   text-decoration: none;
 }
 
@@ -597,8 +635,6 @@ pre {
   border-radius: 0;
   font-size: 2rem;
 }
-
-
 
 /*
 
@@ -675,7 +711,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-addition,
 .hljs-variable,
 .hljs-template-variable {
-  color: #2ED902;
+  color: #2ed902;
 }
 
 .hljs-comment,
@@ -683,5 +719,3 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-meta {
   color: #75715e;
 }
-
-

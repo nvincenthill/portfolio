@@ -62,10 +62,11 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <GithubCorner
-          href="https://github.com/nvincenthill"
+          href="https://github.com/nvincenthill/portfolio"
           className="corner"
           octoColor="#222831"
           bannerColor="#EEEEEE"
+          size={80}
         />
         <TitleCard />
         <NavCard handleRoute={this.handleRoute} />
