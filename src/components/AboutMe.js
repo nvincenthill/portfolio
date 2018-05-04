@@ -78,8 +78,7 @@ class AboutMe extends React.Component {
                     </span>
                   </p>
                   <p className="about-description">
-                    I've been coding for two years and am looking for a job as a
-                    front end developer.
+                    I've looking for my next opportunity to add value and build something awesome.
                   </p>
                 </div>
               </Fade>
