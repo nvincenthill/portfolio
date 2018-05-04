@@ -8,11 +8,19 @@ import GithubCorner from "react-github-corner";
 import HomeButton from "./HomeButton";
 import Footer from "./Footer";
 import RestartingTypist from "./RestartingTypist";
+import Ionicon from "react-ionicons";
 
 class AboutMe extends React.Component {
   state = {};
 
-  componentDidMount() {}
+  changeColor = () => {
+    let html = document.getElementsByTagName('html')[0];
+    // html.style.cssText = "--color1: black; --color4: #eeeeee;";
+  }
+
+  componentDidMount() {
+
+  }
 
   componentDidUpdate() {}
 
@@ -42,16 +50,23 @@ class AboutMe extends React.Component {
         </Col>
         <Col xs={6} sm={6} md={6} lg={8}>
           <Fade>
-            <h1 className="title-name"> Contact </h1>
+            <h1 className="title-name"> About Me </h1>
           </Fade>
         </Col>
         <Col xs={2} sm={2} md={2} lg={2}>
           <Fade>
-            <HomeButton />
+            <Ionicon
+              icon="md-person"
+              color="#EEEEEE"
+              fontSize="3em"
+              beat={false}
+              onClick={() => this.changeColor()}
+              className="home-button"
+            />
           </Fade>
         </Col>
       </Row>
-        
+
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
             <div>

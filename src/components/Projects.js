@@ -25,19 +25,30 @@ class Projects extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Row middle="xs" className={"title_container"}>
-          <Col xs={2} sm={2} md={2} lg={2}>
-            <Fade>
-              <HomeButton />
-            </Fade>
-          </Col>
-          <Col xs={8} sm={8} md={8} lg={8}>
-            <Fade>
-              <h1 className="title-name"> Projects </h1>
-            </Fade>
-          </Col>
-          <Col xs={2} sm={2} md={2} lg={2} />
-        </Row>
+      <Row between="xs" middle="xs" className={"title_container"}>
+        <Col xs={2} sm={2} md={2} lg={2}>
+        <Fade>
+          <HomeButton />
+        </Fade>
+        </Col>
+        <Col xs={6} sm={6} md={6} lg={8}>
+          <Fade>
+            <h1 className="title-name"> Projects </h1>
+          </Fade>
+        </Col>
+        <Col xs={2} sm={2} md={2} lg={2}>
+          <Fade>
+            <Ionicon
+              icon="ios-folder"
+              color="#EEEEEE"
+              fontSize="3em"
+              beat={false}
+              onClick={() => this.handleClick("Github")}
+              className="home-button"
+            />
+          </Fade>
+        </Col>
+      </Row>
 
         <Fade>
           <Row>

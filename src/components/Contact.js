@@ -181,7 +181,14 @@ class Contact extends React.Component {
           </Col>
           <Col xs={2} sm={2} md={2} lg={2}>
             <Fade>
-              <HomeButton />
+              <Ionicon
+                icon="ios-contact"
+                color="#EEEEEE"
+                fontSize="3em"
+                beat={false}
+                onClick={() => this.handleClick("Github")}
+                className="home-button"
+              />
             </Fade>
           </Col>
         </Row>

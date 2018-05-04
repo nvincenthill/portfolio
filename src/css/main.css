@@ -1,6 +1,16 @@
 /* Variable declaration */
 
 :root {
+
+}
+
+/* Border box declaration */
+
+html {
+  @maintitle box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 62.5%;
   --main-font: "Roboto";
   --second-font: "Montserrat";
   --third-font: "Source Sans Pro";
@@ -11,15 +21,6 @@
   --color2: #393e46;
   --color3: #00adb5;
   --color4: #222831;
-}
-
-/* Border box declaration */
-
-html {
-  @maintitle box-sizing: border-box;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-size: 62.5%;
 }
 
 /* inherit border-box on all elements in the universe and before and after */
@@ -251,7 +252,7 @@ h2 {
 }
 
 .title_header {
-  color: white;
+  color: var(--color4);
   font-family: var(--fifth-font), sans-serif;
   font-weight: normal;
   text-align: center;
@@ -591,7 +592,7 @@ a:hover {
 }
 
 pre {
-  background: #eeeeee;
+  background: var(--color4);
   border: none;
   padding: 0;
   border-radius: 0;

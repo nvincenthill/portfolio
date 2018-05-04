@@ -69,8 +69,9 @@ class App extends React.Component {
         <Fade>
           <div>
             <h2 className="about-tagline-mobile">
-              {" "}
-              I'm a developer <br /> building beautiful web applications{" "}
+              I'm a developer <br /> <span> {verbs[this.state.verb % verbs.length]} </span> <br />
+              <span> {adjectives[this.state.adjective % adjectives.length]} </span>
+              web applications
             </h2>
           </div>
         </Fade>
