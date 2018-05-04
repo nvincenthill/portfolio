@@ -48,7 +48,7 @@ class AboutMe extends React.Component {
                 color="#EEEEEE"
                 fontSize="3em"
                 beat={false}
-                onClick={() => this.changeColor()}
+                // onClick={() => this.changeColor()}
                 className="home-button"
               />
             </Fade>

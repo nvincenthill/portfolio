@@ -33,7 +33,7 @@ class Projects extends React.Component {
                 color="#EEEEEE"
                 fontSize="3em"
                 beat={false}
-                onClick={() => this.handleClick("Github")}
+                // onClick={() => this.handleClick("Github")}
                 className="home-button"
               />
             </Fade>

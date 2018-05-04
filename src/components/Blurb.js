@@ -39,7 +39,7 @@ class Blurb extends React.Component {
                 <Highlight className="about-blurb-code" language="javascript">
 {`let Nick = function() {
     let aboutMe = {
-      skills: ["react", "CSS", "Git", "JS"],
+      skills: ["JS", "CSS", "Git", "react", "trading"],
       activities: ["hiking", "cooking food",`}
                   <Typist.Backspace count={7} delay={500} />
       {` amazing meals"]

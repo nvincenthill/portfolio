@@ -26,11 +26,11 @@ class App extends React.Component {
   };
 
   changeVerb = () => {
-    this.setState({ verb: this.state.verb + 1})
+    this.setState({ verb: this.state.verb + 1 });
   };
 
   changeAdjective = () => {
-    this.setState({ adjective: this.state.adjective + 1})
+    this.setState({ adjective: this.state.adjective + 1 });
   };
 
   componentDidMount() {
@@ -49,18 +49,35 @@ class App extends React.Component {
     };
 
     const verbs = ["designing", "building", "deploying", "maintaining"];
-    const adjectives = ["beautiful", "reponsive", "dynamic", "mobile-first", "amazing", "modern", "slick"];
+    const adjectives = [
+      "beautiful",
+      "reponsive",
+      "dynamic",
+      "mobile-first",
+      "amazing",
+      "modern",
+      "slick"
+    ];
 
     return (
       <React.Fragment>
-        {/* <Header /> */}
+        <GithubCorner
+          href="https://github.com/nvincenthill"
+          className="corner"
+          octoColor="#222831"
+          bannerColor="#EEEEEE"
+        />
         <TitleCard />
         <NavCard handleRoute={this.handleRoute} />
         <Fade>
           <div>
             <h2 className="about-tagline">
-              I'm a developer <br /> <span> {verbs[this.state.verb % verbs.length]} </span> <br />
-              <span> {adjectives[this.state.adjective % adjectives.length]} </span>
+              I'm a developer <br />{" "}
+              <span> {verbs[this.state.verb % verbs.length]} </span> <br />
+              <span>
+                {" "}
+                {adjectives[this.state.adjective % adjectives.length]}{" "}
+              </span>
               web applications
             </h2>
           </div>
@@ -69,8 +86,12 @@ class App extends React.Component {
         <Fade>
           <div>
             <h2 className="about-tagline-mobile">
-              I'm a developer <br /> <span> {verbs[this.state.verb % verbs.length]} </span> <br />
-              <span> {adjectives[this.state.adjective % adjectives.length]} </span>
+              I'm a developer <br />{" "}
+              <span> {verbs[this.state.verb % verbs.length]} </span> <br />
+              <span>
+                {" "}
+                {adjectives[this.state.adjective % adjectives.length]}{" "}
+              </span>
               web applications
             </h2>
           </div>

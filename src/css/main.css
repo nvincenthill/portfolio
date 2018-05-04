@@ -103,14 +103,13 @@ h1 {
 
 .corner {
   display: none;
-  z-index: 3;
+  z-index: 10;
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .corner {
     display: inline;
-    top: 0;
   }
 }
 
