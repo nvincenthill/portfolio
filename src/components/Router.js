@@ -6,7 +6,7 @@ import NotFound from "./NotFound";
 import Projects from "./Projects";
 import Contact from "./Contact";
 // import { spring, AnimatedSwitch, AnimatedRoute } from "react-router-transition";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 // we need to map the `scale` prop we define below
 // // to the transform style property

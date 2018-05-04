@@ -1,14 +1,10 @@
 import React from "react";
-import Typist from "react-typist";
-import Highlight from "react-highlight";
-import { Fade, Zoom, Flip } from "react-reveal";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Fade } from "react-reveal";
+import { Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
-import ProjectItem from "./ProjectItem";
-import GithubCorner from "react-github-corner";
 import HomeButton from "./HomeButton";
 import { Collapse } from "react-collapse";
-import { Well, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Well } from "react-bootstrap";
 import Footer from "./Footer";
 
 class Contact extends React.Component {
@@ -159,12 +155,6 @@ class Contact extends React.Component {
           className="contact-icon-copy"
         />
       </div>
-    );
-
-    const tooltip = (
-      <Tooltip id="tooltip">
-        <strong>Holy guacamole!</strong> Check this info.
-      </Tooltip>
     );
 
     return (

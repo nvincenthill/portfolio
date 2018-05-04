@@ -1,19 +1,18 @@
 import React from "react";
-import "babel-polyfill";
-import { Button, Carousel } from "react-bootstrap";
-import Header from "./Header";
-import Footer from "./Footer";
+import GithubCorner from "react-github-corner";
 import TitleCard from "./TitleCard";
-import ImageCarousel from "./ImageCarousel";
 import NavCard from "./NavCard";
 import Blurb from "./Blurb";
-import { Collapse } from "react-collapse";
-import { Fade, Zoom, Slide, Flip } from "react-reveal";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import P5Wrapper from "react-p5-wrapper";
-import sketch from "../sketch";
-import Ionicon from "react-ionicons";
-import GithubCorner from "react-github-corner";
+import Footer from "./Footer";
+
+import { Fade } from "react-reveal";
+import "babel-polyfill";
+
+// import { Button, Carousel } from "react-bootstrap";
+// import Header from "./Header";
+// import ImageCarousel from "./ImageCarousel";
+// import { Collapse } from "react-collapse";
+// import { Grid, Row, Col } from "react-flexbox-grid";
 
 class App extends React.Component {
   state = {
@@ -43,11 +42,6 @@ class App extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const style = {
-      color: "red",
-      opacity: 0.5
-    };
-
     const verbs = ["designing", "building", "deploying", "maintaining"];
     const adjectives = [
       "beautiful",

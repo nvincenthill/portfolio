@@ -1,17 +1,7 @@
 import React from "react";
-import Typist from "react-typist";
 import "babel-polyfill";
-import Highlight from "react-highlight";
-import { Button } from "react-bootstrap";
-import Header from "./Header";
-import Footer from "./Footer";
-import { Collapse } from "react-collapse";
-import { Fade, Zoom } from "react-reveal";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import P5Wrapper from "react-p5-wrapper";
-import sketch from "../sketch";
-import GithubCorner from "react-github-corner";
-// import Footer from "./Footer";
+import { Fade } from "react-reveal";
+import { Row, Col } from "react-flexbox-grid";
 
 class TitleCard extends React.Component {
   state = {
@@ -26,7 +16,7 @@ class TitleCard extends React.Component {
       window.screenY
     );
 
-    let elementTarget = document.getElementById("title_name");
+    // let elementTarget = document.getElementById("title_name");
     // console.log(elementTarget.offsetTop, window.scrollY);
     if (window.scrollY > 0) {
       this.setState({

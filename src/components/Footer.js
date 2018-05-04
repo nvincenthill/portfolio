@@ -1,9 +1,6 @@
 import React from "react";
-import Typist from "react-typist";
 import "babel-polyfill";
-import Highlight from "react-highlight";
-import { Button } from "react-bootstrap";
-import { Fade, Zoom, Slide, Flip } from "react-reveal";
+import { Fade } from "react-reveal";
 
 class Footer extends React.Component {
   state = {

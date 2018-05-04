@@ -1,21 +1,16 @@
 import React from "react";
-import Typist from "react-typist";
 import "babel-polyfill";
-import Highlight from "react-highlight";
-import { Fade, Zoom, Slide, Flip } from "react-reveal";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import GithubCorner from "react-github-corner";
+import { Fade } from "react-reveal";
+import { Row, Col } from "react-flexbox-grid";
 import HomeButton from "./HomeButton";
 import Footer from "./Footer";
-import RestartingTypist from "./RestartingTypist";
 import Ionicon from "react-ionicons";
 
 class AboutMe extends React.Component {
   state = {};
 
   changeColor = () => {
-    let html = document.getElementsByTagName("html")[0];
-    // html.style.cssText = "--color1: black; --color4: #eeeeee;";
+
   };
 
   componentDidMount() {}
@@ -25,14 +20,6 @@ class AboutMe extends React.Component {
   componentWillUnmount() {}
 
   render() {
-
-    const cursor = {
-      show: false,
-      blink: true,
-      element: "|",
-      hideWhenDone: true,
-      hideWhenDoneDelay: 500
-    };
 
     return (
       <React.Fragment>

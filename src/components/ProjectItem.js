@@ -1,8 +1,7 @@
 import React from "react";
-import { Fade, Zoom, Flip, Bounce } from "react-reveal";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Fade } from "react-reveal";
+// import { Grid, Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
-import GithubCorner from "react-github-corner";
 
 class ProjectItem extends React.Component {
   state = {};

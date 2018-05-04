@@ -1,10 +1,6 @@
 import React from "react";
-import Typist from "react-typist";
-import Highlight from "react-highlight";
-import { Fade, Zoom } from "react-reveal";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import Ionicon from "react-ionicons";
-import { Button, Carousel } from "react-bootstrap";
+// import { Fade } from "react-reveal";
+import { Carousel } from "react-bootstrap";
 
 class ImageCarousel extends React.Component {
   state = {};

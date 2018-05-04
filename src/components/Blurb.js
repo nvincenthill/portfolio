@@ -1,6 +1,6 @@
 import React from "react";
 import RestartingTypist from "./RestartingTypist";
-import { Fade, Zoom, Slide, Flip } from "react-reveal";
+import { Fade } from "react-reveal";
 import Typist from "react-typist";
 import Highlight from "react-highlight";
 

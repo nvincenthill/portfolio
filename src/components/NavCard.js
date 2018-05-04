@@ -1,13 +1,7 @@
 import React from "react";
 import "babel-polyfill";
-import Highlight from "react-highlight";
-import { Button } from "react-bootstrap";
-import Header from "./Header";
-import Footer from "./Footer";
-import { Collapse } from "react-collapse";
-import { Fade, Zoom } from "react-reveal";
-import { Grid, Row, Col } from "react-flexbox-grid";
-import sketch from "../sketch";
+import { Fade } from "react-reveal";
+import { Row, Col } from "react-flexbox-grid";
 
 class NavCard extends React.Component {
   state = {
