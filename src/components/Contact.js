@@ -167,17 +167,14 @@ class Contact extends React.Component {
 
     return (
       <React.Fragment>
+
         <Row between="xs" middle="xs" className={"title_container"}>
           <Col xs={2} sm={2} md={2} lg={2}>
-            <Ionicon
-              icon="md-home"
-              color="#222831"
-              fontSize="3em"
-              beat={false}
-              className="home-button"
-            />
+          <Fade>
+            <HomeButton />
+          </Fade>
           </Col>
-          <Col xs={8} sm={8} md={8} lg={8}>
+          <Col xs={6} sm={6} md={6} lg={8}>
             <Fade>
               <h1 className="title-name"> Contact </h1>
             </Fade>
@@ -188,6 +185,7 @@ class Contact extends React.Component {
             </Fade>
           </Col>
         </Row>
+
         <Fade cascade>
           <Row className="contact-container">
             <Col xs={4} sm={3} md={4} lg={1}>
