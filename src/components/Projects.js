@@ -86,7 +86,6 @@ class Projects extends React.Component {
             </div>
           </Row>
         </Fade>
-        <Footer />
       </React.Fragment>
     );
   }
