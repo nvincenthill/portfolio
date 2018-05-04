@@ -34,19 +34,24 @@ class AboutMe extends React.Component {
 
     return (
       <React.Fragment>
-        <Row between="xs" middle="xs" className={"title_container"}>
-          <Col xs={2} sm={2} md={2} lg={2}>
-            <Fade>
-              <HomeButton />
-            </Fade>
-          </Col>
-          <Col xs={8} sm={8} md={8} lg={8}>
-            <Fade>
-              <h1 className="title-name"> About Me </h1>
-            </Fade>
-          </Col>
-          <Col xs={2} sm={2} md={2} lg={2} />
-        </Row>
+      <Row between="xs" middle="xs" className={"title_container"}>
+        <Col xs={2} sm={2} md={2} lg={2}>
+        <Fade>
+          <HomeButton />
+        </Fade>
+        </Col>
+        <Col xs={6} sm={6} md={6} lg={8}>
+          <Fade>
+            <h1 className="title-name"> Contact </h1>
+          </Fade>
+        </Col>
+        <Col xs={2} sm={2} md={2} lg={2}>
+          <Fade>
+            <HomeButton />
+          </Fade>
+        </Col>
+      </Row>
+        
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
             <div>
