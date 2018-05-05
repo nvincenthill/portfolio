@@ -10,12 +10,13 @@ import MapContainer from "./MapContainer";
 
 class Contact extends React.Component {
   state = {
+    title: "Contact",
     wellHidden: true,
     wellText: "",
     shake: false,
-    icon: "ios-sunny",
-    mapType: "normal",
-    githubColor: "#222831",
+    icon: "ios-moon",
+    mapType: "night",
+    githubColor: "#EEEEEE",
     style: {
       night: [
         {
@@ -627,12 +628,14 @@ class Contact extends React.Component {
       if (this.state.wellHidden === true) {
         this.setState({
           wellText: "nvincenthill@gmail.com",
-          wellHidden: false
+          wellHidden: false,
+          title: "nvincenthill@gmail.com"
         });
       } else {
         if (this.state.wellText === "nvincenthill@gmail.com") {
           this.setState({
-            wellHidden: true
+            wellHidden: true,
+            title: "Contact"
           });
         } else {
           this.setState({
@@ -646,12 +649,14 @@ class Contact extends React.Component {
       if (this.state.wellHidden === true) {
         this.setState({
           wellText: "(541) 602-1878",
-          wellHidden: false
+          wellHidden: false,
+          title: "(541) 602-1878"
         });
       } else {
         if (this.state.wellText === "(541) 602-1878") {
           this.setState({
-            wellHidden: true
+            wellHidden: true,
+            title: "Contact"
           });
         } else {
           this.setState({
@@ -665,12 +670,14 @@ class Contact extends React.Component {
       if (this.state.wellHidden === true) {
         this.setState({
           wellText: "nvincenthill",
-          wellHidden: false
+          wellHidden: false,
+          title: "nvincenthill"
         });
       } else {
         if (this.state.wellText === "nvincenthill") {
           this.setState({
-            wellHidden: true
+            wellHidden: true,
+            title: "Contact"
           });
         } else {
           this.setState({
@@ -684,12 +691,14 @@ class Contact extends React.Component {
       if (this.state.wellHidden === true) {
         this.setState({
           wellText: "Please don't text me",
-          wellHidden: false
+          wellHidden: false,
+          title: ""
         });
       } else {
         if (this.state.wellText === "Please don't text me") {
           this.setState({
-            wellHidden: true
+            wellHidden: true,
+            title: "Contact"
           });
         } else {
           this.setState({
@@ -718,7 +727,7 @@ class Contact extends React.Component {
           beat={false}
           shake={this.state.shake}
           onClick={() => this.copy()}
-          className="contact-icon-copy"
+          // className="contact-icon-copy"
         />
       </div>
     );
@@ -728,6 +737,8 @@ class Contact extends React.Component {
 
     return (
       <React.Fragment>
+
+      
         <Row between="xs" middle="xs" className={"title_container"}>
           <Col xs={2} sm={2} md={2} lg={2}>
             <Fade>
@@ -743,7 +754,7 @@ class Contact extends React.Component {
           </Col>
           <Col xs={6} sm={6} md={6} lg={8}>
             <Fade>
-              <h1 className="title-name"> Contact </h1>
+              <h1 className="title-name"> {this.state.title} </h1>
             </Fade>
           </Col>
           <Col xs={2} sm={2} md={2} lg={2}>
@@ -752,7 +763,6 @@ class Contact extends React.Component {
             </Fade>
           </Col>
         </Row>
-
         <MapContainer style={this.state.style} mapType={this.state.mapType} />
 
         <Fade cascade>
@@ -825,6 +835,14 @@ class Contact extends React.Component {
             </Col>
           </Row>
         </Fade>
+
+        <Collapse isOpened={this.state.wellHidden}>
+        <div className="contact-popup">
+          <p> {this.state.wellText} </p>
+          {copyIcon}
+        </div>
+        </Collapse>
+
       </React.Fragment>
     );
   }

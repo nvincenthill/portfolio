@@ -6,7 +6,7 @@ export class MapContainer extends React.Component {
   render() {
     const style = {
           width: '100vw',
-          height: '40vh',
+          height: '50vh',
           position: "inline",
           align: "center"
         }
