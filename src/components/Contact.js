@@ -6,13 +6,579 @@ import HomeButton from "./HomeButton";
 import { Collapse } from "react-collapse";
 import { Well } from "react-bootstrap";
 import Footer from "./Footer";
+import MapContainer from "./MapContainer";
 
 class Contact extends React.Component {
   state = {
     wellHidden: true,
     wellText: "",
-    shake: false
+    shake: false,
+    icon: "ios-sunny",
+    mapType: "normal",
+    githubColor: "#222831",
+    style: {
+      night: [
+        {
+          featureType: "all",
+          elementType: "all",
+          stylers: [
+            {
+              visibility: "on"
+            }
+          ]
+        },
+        {
+          featureType: "all",
+          elementType: "labels",
+          stylers: [
+            {
+              visibility: "off"
+            },
+            {
+              saturation: "-100"
+            }
+          ]
+        },
+        {
+          featureType: "all",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              saturation: 36
+            },
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 40
+            },
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "all",
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              visibility: "off"
+            },
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: "all",
+          elementType: "labels.icon",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "administrative",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: "administrative",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 17
+            },
+            {
+              weight: 1.2
+            }
+          ]
+        },
+        {
+          featureType: "landscape",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: "landscape",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#4d6059"
+            }
+          ]
+        },
+        {
+          featureType: "landscape",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#4d6059"
+            }
+          ]
+        },
+        {
+          featureType: "landscape.natural",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#4d6059"
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry",
+          stylers: [
+            {
+              lightness: 21
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#4d6059"
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#4d6059"
+            }
+          ]
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [
+            {
+              visibility: "on"
+            },
+            {
+              color: "#7f8d89"
+            }
+          ]
+        },
+        {
+          featureType: "road",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#7f8d89"
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#7f8d89"
+            },
+            {
+              lightness: 17
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#7f8d89"
+            },
+            {
+              lightness: 29
+            },
+            {
+              weight: 0.2
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 18
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#7f8d89"
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#7f8d89"
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#7f8d89"
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#7f8d89"
+            }
+          ]
+        },
+        {
+          featureType: "transit",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#000000"
+            },
+            {
+              lightness: 19
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "all",
+          stylers: [
+            {
+              color: "#222831"
+            },
+            {
+              visibility: "on"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#222831"
+            },
+            {
+              lightness: 17
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#222831"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#24282b"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "labels",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "water",
+          elementType: "labels.icon",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        }
+      ],
+      normal: [
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#e9e9e9"
+            },
+            {
+              lightness: 17
+            },
+            {
+              featureType: "water",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  color: "#eeeeee"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          featureType: "landscape",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#f5f5f5"
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#ffffff"
+            },
+            {
+              lightness: 17
+            }
+          ]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#ffffff"
+            },
+            {
+              lightness: 29
+            },
+            {
+              weight: 0.2
+            }
+          ]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#ffffff"
+            },
+            {
+              lightness: 18
+            }
+          ]
+        },
+        {
+          featureType: "road.local",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#ffffff"
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#f5f5f5"
+            },
+            {
+              lightness: 21
+            }
+          ]
+        },
+        {
+          featureType: "poi.park",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#dedede"
+            },
+            {
+              lightness: 21
+            }
+          ]
+        },
+        {
+          elementType: "labels.text.stroke",
+          stylers: [
+            {
+              visibility: "on"
+            },
+            {
+              color: "#ffffff"
+            },
+            {
+              lightness: 16
+            }
+          ]
+        },
+        {
+          elementType: "labels.text.fill",
+          stylers: [
+            {
+              saturation: 36
+            },
+            {
+              color: "#222831"
+            }
+          ]
+        },
+        {
+          elementType: "labels.icon",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "transit",
+          elementType: "geometry",
+          stylers: [
+            {
+              color: "#f2f2f2"
+            },
+            {
+              lightness: 19
+            }
+          ]
+        },
+        {
+          featureType: "administrative",
+          elementType: "geometry.fill",
+          stylers: [
+            {
+              color: "#fefefe"
+            },
+            {
+              lightness: 20
+            }
+          ]
+        },
+        {
+          featureType: "administrative",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              color: "#fefefe"
+            },
+            {
+              lightness: 17
+            },
+            {
+              weight: 1.2
+            }
+          ]
+        }
+      ]
+    }
   };
+
+  changeMap(text) {
+    if (this.state.icon === "ios-sunny") {
+      this.setState({ icon: "ios-moon" });
+      this.setState({ mapType: "night" });
+      this.setState({ githubColor: "#EEEEEE" });
+
+    } else {
+      this.setState({ icon: "ios-sunny" });
+      this.setState({ mapType: "normal" });
+      this.setState({ githubColor: "#222831" });
+    }
+  }
 
   handleRoute = route => {
     this.props.history.push(route);
@@ -157,18 +723,21 @@ class Contact extends React.Component {
       </div>
     );
 
+    const lgSize = 12;
+    const mdSize = 12;
+
     return (
       <React.Fragment>
         <Row between="xs" middle="xs" className={"title_container"}>
           <Col xs={2} sm={2} md={2} lg={2}>
             <Fade>
               <Ionicon
-                icon="ios-contact"
+                icon={this.state.icon}
                 color="#EEEEEE"
                 fontSize="3em"
                 beat={false}
-                // onClick={() => this.handleClick("Github")}
-                className="home-button"
+                onClick={() => this.changeMap()}
+                className="contact-change-map-button"
               />
             </Fade>
           </Col>
@@ -184,12 +753,14 @@ class Contact extends React.Component {
           </Col>
         </Row>
 
+        <MapContainer style={this.state.style} mapType={this.state.mapType} />
+
         <Fade cascade>
           <Row className="contact-container">
-            <Col xs={4} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={mdSize} lg={lgSize}>
               <Ionicon
                 icon="logo-github"
-                color="#222831"
+                color={this.state.githubColor}
                 fontSize={iconSize}
                 beat={false}
                 onClick={() => this.handleClick("Github")}
@@ -197,7 +768,7 @@ class Contact extends React.Component {
               />
             </Col>
 
-            <Col xs={4} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={3} md={mdSize} lg={lgSize}>
               <a>
                 <Ionicon
                   icon="logo-linkedin"
@@ -211,7 +782,7 @@ class Contact extends React.Component {
               </a>
             </Col>
 
-            <Col xs={4} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
               <Ionicon
                 icon="ios-call"
                 color="#01E64E"
@@ -221,7 +792,7 @@ class Contact extends React.Component {
                 className="contact-icon"
               />
             </Col>
-            <Col xs={4} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
               <Ionicon
                 icon="logo-skype"
                 color="#00AFF0"
@@ -231,7 +802,7 @@ class Contact extends React.Component {
                 className="contact-icon"
               />
             </Col>
-            <Col xs={4} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
               <Ionicon
                 icon="ios-text"
                 color="#01E64E"
@@ -242,7 +813,7 @@ class Contact extends React.Component {
               />
             </Col>
 
-            <Col xs={4} sm={3} md={4} lg={1}>
+            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
               <Ionicon
                 icon="ios-mail"
                 color="#D64A3A"
@@ -253,25 +824,7 @@ class Contact extends React.Component {
               />
             </Col>
           </Row>
-          <Collapse isOpened={!this.state.wellHidden}>
-            <div className="contact-well-container">
-              <Well className="contact-well">
-                <div>
-                  <input
-                    type="text"
-                    value={this.state.wellText}
-                    id="contact-well-input"
-                  />
-                  <br />
-                  {this.state.wellText === "Please don't text me"
-                    ? null
-                    : copyIcon}
-                </div>
-              </Well>
-            </div>
-          </Collapse>
         </Fade>
-        <Footer />
       </React.Fragment>
     );
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import RestartingTypist from "./RestartingTypist";
+// import RestartingTypist from "./RestartingTypist";
 import { Fade } from "react-reveal";
 import Typist from "react-typist";
 import Highlight from "react-highlight";
@@ -30,11 +30,11 @@ class Blurb extends React.Component {
             />
 
             <div className="about-blurb">
-              <RestartingTypist
+              <Typist
                 avgTypingDelay={20}
                 stdTypingDelay={10}
                 startDelay={500}
-                cursor={cursor}
+                cursor={cursor} 
               >
                 <Highlight className="about-blurb-code" language="javascript">
 {`let Nick = function() {
@@ -51,7 +51,7 @@ class Blurb extends React.Component {
     return objective ? "Profit!" : "FizzBuzz?!";
   };`}<Typist.Backspace count={1} delay={5000} />
                 </Highlight>
-              </RestartingTypist>
+              </Typist>
             </div>
           </div>
         </Fade>
