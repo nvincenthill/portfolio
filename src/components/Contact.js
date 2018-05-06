@@ -15,7 +15,7 @@ class Contact extends React.Component {
     wellText: "",
     shake: false,
     icon: "ios-moon",
-    mapType: "night",
+    mapType: "normal",
     githubColor: "#EEEEEE",
     style: {
       night: [
@@ -300,7 +300,7 @@ class Contact extends React.Component {
           elementType: "all",
           stylers: [
             {
-              color: "#222831"
+              color: "blue"
             },
             {
               visibility: "on"
@@ -312,7 +312,7 @@ class Contact extends React.Component {
           elementType: "geometry",
           stylers: [
             {
-              color: "#222831"
+              color: "blue"
             },
             {
               lightness: 17
@@ -324,7 +324,7 @@ class Contact extends React.Component {
           elementType: "geometry.fill",
           stylers: [
             {
-              color: "#222831"
+              color: "blue"
             }
           ]
         },
@@ -389,7 +389,7 @@ class Contact extends React.Component {
           elementType: "geometry",
           stylers: [
             {
-              color: "#e9e9e9"
+              color: "#00adb5"
             },
             {
               lightness: 17
@@ -399,7 +399,7 @@ class Contact extends React.Component {
               elementType: "geometry.fill",
               stylers: [
                 {
-                  color: "#eeeeee"
+                  color: "#00adb5"
                 }
               ]
             }
@@ -573,7 +573,6 @@ class Contact extends React.Component {
       this.setState({ icon: "ios-moon" });
       this.setState({ mapType: "night" });
       this.setState({ githubColor: "#EEEEEE" });
-
     } else {
       this.setState({ icon: "ios-sunny" });
       this.setState({ mapType: "normal" });
@@ -625,90 +624,22 @@ class Contact extends React.Component {
     }
 
     if (target === "Email") {
-      if (this.state.wellHidden === true) {
-        this.setState({
-          wellText: "nvincenthill@gmail.com",
-          wellHidden: false,
-          title: "nvincenthill@gmail.com"
-        });
-      } else {
-        if (this.state.wellText === "nvincenthill@gmail.com") {
-          this.setState({
-            wellHidden: true,
-            title: "Contact"
-          });
-        } else {
-          this.setState({
-            wellText: "nvincenthill@gmail.com"
-          });
-        }
-      }
+
     }
 
     if (target === "Phone") {
-      if (this.state.wellHidden === true) {
-        this.setState({
-          wellText: "(541) 602-1878",
-          wellHidden: false,
-          title: "(541) 602-1878"
-        });
-      } else {
-        if (this.state.wellText === "(541) 602-1878") {
-          this.setState({
-            wellHidden: true,
-            title: "Contact"
-          });
-        } else {
-          this.setState({
-            wellText: "(541) 602-1878"
-          });
-        }
-      }
+
     }
 
     if (target === "Skype") {
-      if (this.state.wellHidden === true) {
-        this.setState({
-          wellText: "nvincenthill",
-          wellHidden: false,
-          title: "nvincenthill"
-        });
-      } else {
-        if (this.state.wellText === "nvincenthill") {
-          this.setState({
-            wellHidden: true,
-            title: "Contact"
-          });
-        } else {
-          this.setState({
-            wellText: "nvincenthill"
-          });
-        }
-      }
+
     }
 
     if (target === "Text") {
-      if (this.state.wellHidden === true) {
-        this.setState({
-          wellText: "Please don't text me",
-          wellHidden: false,
-          title: ""
-        });
-      } else {
-        if (this.state.wellText === "Please don't text me") {
-          this.setState({
-            wellHidden: true,
-            title: "Contact"
-          });
-        } else {
-          this.setState({
-            wellText: "Please don't text me"
-          });
-        }
-      }
+
     }
   }
-
+  
   componentDidMount() {}
 
   componentDidUpdate() {}
@@ -734,27 +665,94 @@ class Contact extends React.Component {
 
     const lgSize = 12;
     const mdSize = 12;
+    const xsSize = 12;
+    const githubIcon = (
+      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
+        <Ionicon
+          icon="logo-github"
+          color={"#222831"}
+          fontSize={iconSize}
+          beat={false}
+          onClick={() => this.handleClick("Github")}
+          className="contact-icon"
+        />
+      </Col>
+    );
+
+    const linkedInIcon = (
+      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
+        <a>
+          <Ionicon
+            icon="logo-linkedin"
+            color="#0077B5"
+            fontSize={iconSize}
+            beat={false}
+            shake={false}
+            onClick={() => this.handleClick("LinkedIn")}
+            className="contact-icon"
+          />
+        </a>
+      </Col>
+    );
+
+    const callIcon = (
+      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
+        <Ionicon
+          icon="ios-call"
+          color="#01E64E"
+          fontSize={iconSize}
+          beat={false}
+          onClick={() => this.handleClick("Phone")}
+          className="contact-icon"
+        />
+      </Col>
+    );
+
+    const skypeIcon = (
+      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
+        <Ionicon
+          icon="logo-skype"
+          color="#00AFF0"
+          fontSize={iconSize}
+          beat={false}
+          onClick={() => this.handleClick("Skype")}
+          className="contact-icon"
+        />
+      </Col>
+    );
+    const chatIcon = (
+      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
+        <Ionicon
+          icon="ios-text"
+          color="#01E64E"
+          fontSize={iconSize}
+          beat={false}
+          onClick={() => this.handleClick("Text")}
+          className="contact-icon"
+        />
+      </Col>
+    );
+
+    const mailIcon = (
+      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
+        <Ionicon
+          icon="ios-mail"
+          color="#D64A3A"
+          fontSize={iconSize}
+          beat={false}
+          onClick={() => this.handleClick("Email")}
+          className="contact-icon"
+        />
+      </Col>
+    );
 
     return (
       <React.Fragment>
-
-      
         <Row between="xs" middle="xs" className={"title_container"}>
-          <Col xs={2} sm={2} md={2} lg={2}>
-            <Fade>
-              <Ionicon
-                icon={this.state.icon}
-                color="#EEEEEE"
-                fontSize="3em"
-                beat={false}
-                onClick={() => this.changeMap()}
-                className="contact-change-map-button"
-              />
-            </Fade>
-          </Col>
+          <Col xs={2} sm={2} md={2} lg={2} />
           <Col xs={6} sm={6} md={6} lg={8}>
             <Fade>
-              <h1 className="title-name"> {this.state.title} </h1>
+              <h1 className="title-name">Contact</h1>
             </Fade>
           </Col>
           <Col xs={2} sm={2} md={2} lg={2}>
@@ -767,82 +765,14 @@ class Contact extends React.Component {
 
         <Fade cascade>
           <Row className="contact-container">
-            <Col xs={4} sm={3} md={mdSize} lg={lgSize}>
-              <Ionicon
-                icon="logo-github"
-                color={this.state.githubColor}
-                fontSize={iconSize}
-                beat={false}
-                onClick={() => this.handleClick("Github")}
-                className="contact-icon"
-              />
-            </Col>
-
-            <Col xs={4} sm={3} md={mdSize} lg={lgSize}>
-              <a>
-                <Ionicon
-                  icon="logo-linkedin"
-                  color="#0077B5"
-                  fontSize={iconSize}
-                  beat={false}
-                  shake={false}
-                  onClick={() => this.handleClick("LinkedIn")}
-                  className="contact-icon"
-                />
-              </a>
-            </Col>
-
-            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
-              <Ionicon
-                icon="ios-call"
-                color="#01E64E"
-                fontSize={iconSize}
-                beat={false}
-                onClick={() => this.handleClick("Phone")}
-                className="contact-icon"
-              />
-            </Col>
-            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
-              <Ionicon
-                icon="logo-skype"
-                color="#00AFF0"
-                fontSize={iconSize}
-                beat={false}
-                onClick={() => this.handleClick("Skype")}
-                className="contact-icon"
-              />
-            </Col>
-            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
-              <Ionicon
-                icon="ios-text"
-                color="#01E64E"
-                fontSize={iconSize}
-                beat={false}
-                onClick={() => this.handleClick("Text")}
-                className="contact-icon"
-              />
-            </Col>
-
-            <Col xs={4} sm={mdSize} md={mdSize} lg={lgSize}>
-              <Ionicon
-                icon="ios-mail"
-                color="#D64A3A"
-                fontSize={iconSize}
-                beat={false}
-                onClick={() => this.handleClick("Email")}
-                className="contact-icon"
-              />
-            </Col>
+            {githubIcon}
+            {linkedInIcon}
+            {callIcon}
+            {skypeIcon}
+            {chatIcon}
+            {mailIcon}
           </Row>
         </Fade>
-
-        <Collapse isOpened={this.state.wellHidden}>
-        <div className="contact-popup">
-          <p> {this.state.wellText} </p>
-          {copyIcon}
-        </div>
-        </Collapse>
-
       </React.Fragment>
     );
   }

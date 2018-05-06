@@ -17,7 +17,7 @@ import "babel-polyfill";
 class App extends React.Component {
   state = {
     adjective: 0,
-    verb: 0
+    verb: 0,
   };
 
   handleRoute = route => {
@@ -53,10 +53,13 @@ class App extends React.Component {
       "slick"
     ];
 
+    const verbClass = true ? "bounceIn animated" : "";
+
     return (
+
       <React.Fragment>
         <GithubCorner
-          href="https://github.com/nvincenthill/portfolio"
+          href="https://github.com/nvincenthill"
           className="corner"
           octoColor="#222831"
           bannerColor="#EEEEEE"
