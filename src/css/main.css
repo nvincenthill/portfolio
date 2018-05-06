@@ -342,7 +342,7 @@ h2 {
   margin: 2vh 2vw;
   text-align: center;
   padding: 5vh;
-  box-shadow: -0.5rem 0.5rem 0.5rem black;
+  box-shadow: 0rem 0.5rem 0.5rem black;
 }
 
 .project_image {
@@ -373,6 +373,14 @@ h2 {
   margin-left: 8vw;
   margin-right: 8vw;
   margin-top: 1vh;
+}
+
+.project-github-icon {
+  transition: 0.25s ease-in-out;
+}
+
+.project-github-icon-hover: {
+  transition: 0.25s ease-in-out;
 }
 
 .about-headshot-container {
