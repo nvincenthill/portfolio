@@ -236,7 +236,7 @@ class Contact extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const iconSize = "6em";
+    const iconSize = "4em";
 
     const copyIcon = (
       <div className="contact-icon-copy-container">
@@ -256,7 +256,6 @@ class Contact extends React.Component {
     const mdSize = 12;
     const xsSize = 12;
     const githubIcon = (
-      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
         <Ionicon
           icon="logo-github"
           color={"#222831"}
@@ -265,11 +264,9 @@ class Contact extends React.Component {
           onClick={() => this.handleClick("Github")}
           className="contact-icon"
         />
-      </Col>
     );
 
     const linkedInIcon = (
-      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
         <a>
           <Ionicon
             icon="logo-linkedin"
@@ -281,11 +278,9 @@ class Contact extends React.Component {
             className="contact-icon"
           />
         </a>
-      </Col>
     );
 
     const callIcon = (
-      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
         <Ionicon
           icon="ios-call"
           color="#01E64E"
@@ -294,11 +289,9 @@ class Contact extends React.Component {
           onClick={() => this.handleClick("Phone")}
           className="contact-icon"
         />
-      </Col>
     );
 
     const skypeIcon = (
-      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
         <Ionicon
           icon="logo-skype"
           color="#00AFF0"
@@ -307,10 +300,8 @@ class Contact extends React.Component {
           onClick={() => this.handleClick("Skype")}
           className="contact-icon"
         />
-      </Col>
     );
     const chatIcon = (
-      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
         <Ionicon
           icon="ios-text"
           color="#01E64E"
@@ -319,11 +310,9 @@ class Contact extends React.Component {
           onClick={() => this.handleClick("Text")}
           className="contact-icon"
         />
-      </Col>
     );
 
     const mailIcon = (
-      <Col xs={xsSize} sm={xsSize} md={mdSize} lg={lgSize}>
         <Ionicon
           icon="ios-mail"
           color="#D64A3A"
@@ -332,7 +321,6 @@ class Contact extends React.Component {
           onClick={() => this.handleClick("Email")}
           className="contact-icon"
         />
-      </Col>
     );
 
     const header = (
@@ -355,24 +343,34 @@ class Contact extends React.Component {
       <React.Fragment>
         {header}
         <Row className="contact-structure">
-          <Col xs={12} sm={12} md={3} lg={3}>
-            <Fade cascade>
-              <Row className="contact-container">
-                {githubIcon}
-                {linkedInIcon}
-                {callIcon}
-                {skypeIcon}
-                {chatIcon}
-                {mailIcon}
-              </Row>
-            </Fade>
-          </Col>
-          <Col xs={12} sm={12} md={9} lg={9}>
+          <Col xs={12} sm={12} md={12} lg={12}>
             <MapContainer
               style={this.state.style}
               mapType={this.state.mapType}
               onClick={null}
             />
+          </Col>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <Fade>
+              <Row className="contact-container">
+                <Col xs={12} sm={12} md={1} lg={1}>
+                  {githubIcon}
+                </Col>
+                {linkedInIcon}
+                <Col xs={12} sm={12} md={1} lg={1}>
+                  {callIcon}
+                </Col>
+                <Col xs={12} sm={12} md={1} lg={1}>
+                  {skypeIcon}
+                </Col>
+                <Col xs={12} sm={12} md={1} lg={1}>
+                  {chatIcon}
+                </Col>
+                <Col xs={12} sm={12} md={1} lg={1}>
+                  {mailIcon}
+                </Col>
+              </Row>
+            </Fade>
           </Col>
         </Row>
 

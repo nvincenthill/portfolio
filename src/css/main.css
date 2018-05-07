@@ -18,7 +18,7 @@ html {
   --sixth-font: "Lobster";
   --color1: #eeeeee;
   --color2: #393e46;
-  --color3: #00adb5;
+  --color3: #01AFF0;
   --color4: #222831;
 }
 
@@ -542,6 +542,41 @@ a:hover {
   justify-content: center;
 }
 
+.contact-greeting-container {
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  z-index: 15;
+  text-align: left;
+
+}
+
+.contact-greeting-heading {
+  font-family: var(--sixth-font), sans-serif;
+  font-size: 4em;
+  color: var(--color1);
+  opacity: .9;
+  margin-bottom: 2vh;
+}
+
+.contact-greeting-body {
+  font-family: var(--third-font), sans-serif;
+  font-size: 2em;
+  color: var(--color1);
+  opacity: .9;
+  line-height: 135%;
+}
+
+.contact-greeting-footer {
+  font-family: var(--sixth-font), sans-serif;
+  font-size: 4em;
+  color: var(--color1);
+  opacity: .9;
+  margin-top: 2vh;
+  margin-right: 2vw;
+  text-align: right;
+}
+
 .contact-icon {
   margin: 1vh;
   transition: 0.25s ease-in-out;
@@ -734,7 +769,7 @@ pre {
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .map-container {
-    display: inline;
+    display: block;
   }
 }
 
