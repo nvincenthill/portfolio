@@ -642,6 +642,7 @@ a:hover {
     left: 5vw;
     z-index: 15;
     text-align: left;
+    background: #01aff0;
   }
 
   .contact-greeting-heading {
@@ -654,7 +655,6 @@ a:hover {
   .contact-greeting-body {
     font-size: 1em;
     color: var(--color1);
-    background: #01aff0;
     opacity: .9;
     line-height: 135%;
 
