@@ -538,14 +538,14 @@ a:hover {
 
 .contact-container {
   text-align: center;
-  margin-top: 2vh;
+  margin-top: -8vh;
   margin-bottom: auto;
 }
 
 .contact-greeting-container {
-  position: absolute;
-  top: 5vh;
-  left: 5vw;
+  position: relative;
+  top: 2vh;
+  left: 4vw;
   z-index: 15;
   text-align: center;
 }
