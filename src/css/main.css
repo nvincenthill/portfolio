@@ -74,7 +74,6 @@ h1 {
 .title_name {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-left: 50%;
 }
 
 #title_desc {
@@ -86,7 +85,7 @@ h1 {
   text-align: center;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: var(--color4);
   /*  box-shadow: 0rem 0.5rem 0.5rem black;*/
@@ -100,7 +99,17 @@ h1 {
   /* DESKTOP */
   .title_container {
     min-height: 15vh;
+    text-align: center;
+    justify-content: center;
     /*    margin-bottom: 1vh;*/
+  }
+
+  .title_name {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 
@@ -591,7 +600,6 @@ a:hover {
 }
 
 .contact-icon-copy {
-  margin-top: 1vh;
   cursor: pointer;
   display: none;
 }
@@ -621,16 +629,16 @@ a:hover {
   }
 
   .contact-container {
-    text-align: left;
+    text-align: center;
     margin: 0;
     border-width: 0;
-    margin-left: 30vw;
-    margin-right: 30vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
   }
   
   .contact-greeting-container {
     position: absolute;
-    top: 5vh;
+    top: 30vh;
     left: 5vw;
     z-index: 15;
     text-align: left;
@@ -648,6 +656,7 @@ a:hover {
     color: var(--color1);
     opacity: .9;
     line-height: 135%;
+    background: #01aff0;
   }
 
   .contact-greeting-footer {
@@ -720,7 +729,8 @@ a:hover {
   color: var(--color1);
   background: var(--color4);
   border-width: 0;
-  margin: 2vh 0vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   outline: none !important;
   text-align: center;
   text-decoration: none;
@@ -730,11 +740,17 @@ a:hover {
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   .contact-container {
-    position: absolute;
+
+  }
+  
+  #contact-well-input {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
   }
 
   .contact-icon-copy {
     display: inline;
+    margin-bottom: 2vh;
   }
 }
 
@@ -754,7 +770,15 @@ a:hover {
   justify-content: center;
   transition: 0.25s ease-in-out;
   cursor: pointer;
-  margin-left: 4vw;
+  margin-right: 8vw;
+}
+
+.home-button {
+  justify-content: center;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+/*  margin-right: 4vw;*/
+  margin-left: 8vw;
 }
 
 .home-button:hover {
@@ -796,33 +820,33 @@ pre {
 }
 
 .map-container {
-  display: relative;
-  pointer-events: none;
+/*  display: relative;
+  pointer-events: none;*/
 }
 
 .map {
-  display: none;
+  /*display: none;*/
 }
 
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   .map-container {
-    display: block;
+
   }
 
   .map {
-    display: inline;
+    max-height: 50%;
   }
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .map-container {
-    display: block;
+    /*display: block;*/
   }
 
   .map {
-    display: inline;
+    /*display: inline;*/
   }
 }
 
@@ -851,12 +875,7 @@ pre {
   padding-right: 0;
 }
 
-.home-button {
-  justify-content: center;
-  transition: 0.25s ease-in-out;
-  cursor: pointer;
-  margin-right: 4vw;
-}
+
 
 /*
 

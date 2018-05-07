@@ -14,7 +14,7 @@ class Contact extends React.Component {
   state = {
     title: "Contact",
     wellHidden: true,
-    wellText: "",
+    wellText: "nvincenthill@gmail.com",
     shake: false,
     icon: "ios-moon",
     mapType: "normal",
@@ -219,15 +219,19 @@ class Contact extends React.Component {
     }
 
     if (target === "Email") {
+      this.setState({ wellText: "nvincenthill@gmail.com" });
     }
 
     if (target === "Phone") {
+      this.setState({ wellText: "(541) 602-1878" });
     }
 
     if (target === "Skype") {
+      this.setState({ wellText: "nvincenthill" });
     }
 
     if (target === "Text") {
+      this.setState({ wellText: "Please don't text me" });
     }
   }
 
@@ -245,11 +249,11 @@ class Contact extends React.Component {
         <Ionicon
           icon="ios-copy"
           color="#eeeeee"
-          fontSize="3em"
+          fontSize="2em"
           beat={false}
           shake={this.state.shake}
           onClick={() => this.copy()}
-          // className="contact-icon-copy"
+          className="contact-icon-copy"
         />
       </div>
     );
@@ -332,7 +336,7 @@ class Contact extends React.Component {
 
         <Header title="Contact" icon="ios-contact" />
 
-        {/* Mobile Phones and Tablets */}
+        {/* Mobile Phones */}
 
         <MediaQuery maxDeviceWidth={600} orientation="portrait">
           {/* Greeting Message */}
@@ -349,7 +353,7 @@ class Contact extends React.Component {
           {/* Contact Information */}
 
           <div className="contact-well">
-              <input id="contact-well-input" value="nvincenthill@gmail.com" />
+            <input id="contact-well-input" value="nvincenthill@gmail.com" />
           </div>
 
           {/* Contact Buttons */}
@@ -361,49 +365,66 @@ class Contact extends React.Component {
           </div>
         </MediaQuery>
 
+        {/* Tablets */}
+
+        <MediaQuery minDeviceWidth={601} orientation="portrait">
+          {/* Greeting Message */}
+          <MapContainer
+            style={this.state.style}
+            mapType={this.state.mapType}
+            onClick={null}
+          />
+          <div className="contact-greeting-container">
+            <h2 className="contact-greeting-heading">Hello! </h2>
+            <p className="contact-greeting-body">
+              {" "}
+              I'd love to talk to you! <br /> Please send me an email <br /> and
+              I'll get back to you <br /> as soon as possible.
+            </p>
+            <h2 className="contact-greeting-footer"> -Nick </h2>
+          </div>
+
+          {/* Contact Information */}
+
+          <div className="contact-well">
+            <input id="contact-well-input" value={this.state.wellText} />
+            {copyIcon}
+          </div>
+
+          {/* Contact Buttons */}
+
+          <div className="contact-container">
+            {githubIcon}
+            {linkedInIcon}
+            {callIcon}
+            {skypeIcon}
+            {chatIcon}
+            {mailIcon}
+          </div>
+        </MediaQuery>
+
         {/* Desktops */}
 
         <MediaQuery
           orientation="landscape"
-          minDeviceWidth={1224}
-          values={{ deviceWidth: 1600 }}
+          minDeviceWidth={1024}
         >
-          <Row className="contact-body">
-            <Col xs={12} sm={12} md={12} lg={12}>
-              <MapContainer
-                style={this.state.style}
-                mapType={this.state.mapType}
-                onClick={null}
-              />
-            </Col>
-          </Row>
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <Fade>
-              <Row between="xs" middle="xs" className="contact-container">
-                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-                  {githubIcon}
-                </Col>
-                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-                  {linkedInIcon}
-                </Col>
-                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-                  {callIcon}
-                </Col>
-                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-                  {skypeIcon}
-                </Col>
-                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-                  {chatIcon}
-                </Col>
-                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-                  {mailIcon}
-                </Col>
-              </Row>
-            </Fade>
-          </Col>
+          <MapContainer
+            style={this.state.style}
+            mapType={this.state.mapType}
+            onClick={null}
+          />
+
+          <Fade>
+            {githubIcon}
+            {linkedInIcon}
+            {callIcon}
+            {skypeIcon}
+            {chatIcon}
+            {mailIcon}
+          </Fade>
         </MediaQuery>
 
-        <Footer />
       </React.Fragment>
     );
   }

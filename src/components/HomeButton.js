@@ -1,5 +1,6 @@
 import React from "react";
 import Ionicon from "react-ionicons";
+import { Fade } from "react-reveal";
 import { Link } from 'react-router-dom'
 
 class HomeButton extends React.Component {
@@ -15,6 +16,7 @@ class HomeButton extends React.Component {
   componentWillUnmount() {}
   render() {
     return (
+      <Fade>
       <Link to="/">
         <Ionicon
           icon="md-home"
@@ -25,6 +27,7 @@ class HomeButton extends React.Component {
           className="home-button"
         />
       </Link>
+      </Fade>
     );
   }
 }
