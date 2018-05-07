@@ -534,12 +534,11 @@ a:hover {
 
 .contact-container {
   text-align: center;
-  /*  margin-left: 20vw;
-  margin-right: 20vw;*/
   margin-top: 2vh;
-  margin-bottom: 2vh;
-  margin-left: 2vw;
-  justify-content: center;
+  margin-bottom: auto;
+  margin-left: 30vh;
+  margin-right: 30vh;
+  /*justify-content: center;*/
 }
 
 .contact-greeting-container {
@@ -627,7 +626,7 @@ a:hover {
   }
 
   .contact-container {
-    text-align: left;
+    /*text-align: left;*/
     background: var(--color1);
   }
 }

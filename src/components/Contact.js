@@ -352,7 +352,7 @@ class Contact extends React.Component {
           </Col>
           <Col xs={12} sm={12} md={12} lg={12}>
             <Fade>
-              <Row className="contact-container">
+              <Row between="xs" middle="xs" className="contact-container">
                 <Col xs={12} sm={12} md={1} lg={1}>
                   {githubIcon}
                 </Col>
