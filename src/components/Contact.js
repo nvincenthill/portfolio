@@ -253,8 +253,8 @@ class Contact extends React.Component {
     );
 
     const lgSize = 12;
-    const mdSize = 12;
-    const xsSize = 12;
+    const mdSize = 6;
+    const xsSize = 4;
     const githubIcon = (
         <Ionicon
           icon="logo-github"
@@ -267,7 +267,6 @@ class Contact extends React.Component {
     );
 
     const linkedInIcon = (
-        <a>
           <Ionicon
             icon="logo-linkedin"
             color="#0077B5"
@@ -277,7 +276,6 @@ class Contact extends React.Component {
             onClick={() => this.handleClick("LinkedIn")}
             className="contact-icon"
           />
-        </a>
     );
 
     const callIcon = (
@@ -342,7 +340,7 @@ class Contact extends React.Component {
     return (
       <React.Fragment>
         {header}
-        <Row className="contact-structure">
+        <Row className="contact-body">
           <Col xs={12} sm={12} md={12} lg={12}>
             <MapContainer
               style={this.state.style}
@@ -353,20 +351,22 @@ class Contact extends React.Component {
           <Col xs={12} sm={12} md={12} lg={12}>
             <Fade>
               <Row between="xs" middle="xs" className="contact-container">
-                <Col xs={12} sm={12} md={1} lg={1}>
+                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
                   {githubIcon}
                 </Col>
+                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
                 {linkedInIcon}
-                <Col xs={12} sm={12} md={1} lg={1}>
+                </Col>
+                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
                   {callIcon}
                 </Col>
-                <Col xs={12} sm={12} md={1} lg={1}>
+                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
                   {skypeIcon}
                 </Col>
-                <Col xs={12} sm={12} md={1} lg={1}>
+                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
                   {chatIcon}
                 </Col>
-                <Col xs={12} sm={12} md={1} lg={1}>
+                <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
                   {mailIcon}
                 </Col>
               </Row>
