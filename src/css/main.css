@@ -630,7 +630,7 @@ a:hover {
 
   .contact-greeting-heading {
     font-family: var(--sixth-font), sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     color: var(--color1);
     opacity: .9;
     margin-bottom: 2vh;
@@ -638,7 +638,7 @@ a:hover {
 
   .contact-greeting-body {
     font-family: var(--third-font), sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     color: var(--color1);
     opacity: .9;
     line-height: 135%;
@@ -646,7 +646,7 @@ a:hover {
 
   .contact-greeting-footer {
     font-family: var(--sixth-font), sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     color: var(--color1);
     opacity: .9;
     margin-top: 2vh;
