@@ -337,7 +337,7 @@ class Contact extends React.Component {
         <MediaQuery maxDeviceWidth={600} orientation="portrait">
           {/* Greeting Message */}
           <div className="contact-greeting-container">
-          <h2 className="contact-greeting-heading">Greetings! </h2>
+            <h2 className="contact-greeting-heading">Hello! </h2>
             <p className="contact-greeting-body">
               {" "}
               I'd love to talk to you! <br /> Please send me an email <br /> and
@@ -351,23 +351,16 @@ class Contact extends React.Component {
           <Well className="contact-well">
             <div>
               <input id="contact-well-input" value="nvincenthill@gmail.com" />
-              {copyIcon}
             </div>
           </Well>
 
           {/* Contact Buttons */}
 
-          <Row between="xs" middle="xs" className="contact-container">
-            <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-              {githubIcon}
-            </Col>
-            <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-              {linkedInIcon}
-            </Col>
-            <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-              {mailIcon}
-            </Col>
-          </Row>
+          <div className="contact-container">
+            {githubIcon}
+            {linkedInIcon}
+            {mailIcon}
+          </div>
         </MediaQuery>
 
         {/* Desktops */}

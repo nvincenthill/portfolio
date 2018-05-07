@@ -6,7 +6,7 @@
 /* Border box declaration */
 
 html {
-  @maintitle box-sizing: border-box;
+/*  @maintitle box-sizing: border-box;*/
   overflow-y: scroll;
   overflow-x: hidden;
   font-size: 62.5%;
@@ -26,7 +26,7 @@ html {
 *,
 *:before,
 maintit *:after {
-  box-sizing: inherit;
+/*  box-sizing: inherit;*/
 }
 
 body {
@@ -74,6 +74,7 @@ h1 {
 .title_name {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: 50%;
 }
 
 #title_desc {
@@ -83,7 +84,10 @@ h1 {
 
 .title_container {
   text-align: center;
-  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   background: var(--color4);
   /*  box-shadow: 0rem 0.5rem 0.5rem black;*/
   z-index: 2;
@@ -551,8 +555,8 @@ a:hover {
 
 .contact-greeting-heading {
   font-family: var(--sixth-font), sans-serif;
-  margin-top: 2vh;
-  font-size: 4em;
+  margin-top: 4vh;
+  font-size: 3em;
   color: var(--color4);
   opacity: .9;
   margin-bottom: 2vh;
@@ -561,7 +565,7 @@ a:hover {
 
 .contact-greeting-body {
   font-family: var(--third-font), sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--color4);
   opacity: .9;
   line-height: 135%;
@@ -570,11 +574,11 @@ a:hover {
 
 .contact-greeting-footer {
   font-family: var(--sixth-font), sans-serif;
-  font-size: 4em;
+  font-size: 3em;
   color: var(--color4);
   opacity: .9;
   margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-bottom: 4vh;
   margin-right: 0vw;
   text-align: center;
   /*text-shadow: 0rem 0.25rem 0.25rem black;*/
@@ -709,6 +713,7 @@ a:hover {
   font-family: var(--third-font), sans-serif;
   font-size: 2rem;
   width: 100vw;
+  border-width: 0;
 }
 
 #contact-well-input {
@@ -719,7 +724,7 @@ a:hover {
   outline: none !important;
   text-align: center;
   text-decoration: none;
-  width: 100vw;
+  /*width: 100vw;*/
 }
 
 @media screen and (max-width: 1080px) and (min-width: 600px) {
@@ -749,16 +754,10 @@ a:hover {
   justify-content: center;
   transition: 0.25s ease-in-out;
   cursor: pointer;
-  display: none;
+  margin-left: 4vw;
 }
 
 .home-button:hover {
-  transform: scale(1.25);
-  transition: 0.25s;
-  transition-timing-function: cubic-bezier(0.18, 1.49, 0.83, 0.97);
-}
-
-.contact-change-map-button:hover {
   transform: scale(1.25);
   transition: 0.25s;
   transition-timing-function: cubic-bezier(0.18, 1.49, 0.83, 0.97);
@@ -856,6 +855,7 @@ pre {
   justify-content: center;
   transition: 0.25s ease-in-out;
   cursor: pointer;
+  margin-right: 4vw;
 }
 
 /*
