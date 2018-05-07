@@ -348,11 +348,9 @@ class Contact extends React.Component {
 
           {/* Contact Information */}
 
-          <Well className="contact-well">
-            <div>
+          <div className="contact-well">
               <input id="contact-well-input" value="nvincenthill@gmail.com" />
-            </div>
-          </Well>
+          </div>
 
           {/* Contact Buttons */}
 

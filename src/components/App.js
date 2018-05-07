@@ -4,6 +4,7 @@ import TitleCard from "./TitleCard";
 import NavCard from "./NavCard";
 import Blurb from "./Blurb";
 import Footer from "./Footer";
+import Header from "./Header";
 
 import { Fade } from "react-reveal";
 import "babel-polyfill";
@@ -65,7 +66,7 @@ class App extends React.Component {
           bannerColor="#EEEEEE"
           size={135}
         />
-        <TitleCard />
+        <Header title="Nicholas Vincent-Hill" icon="ios-contact" buttonsHidden="true" />
         <NavCard handleRoute={this.handleRoute} />
         <Fade>
           <div>
