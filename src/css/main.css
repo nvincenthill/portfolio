@@ -538,7 +538,7 @@ a:hover {
 
 .contact-container {
   text-align: center;
-  margin-top: -8vh;
+  margin-top: 2vh;
   margin-bottom: auto;
 }
 
@@ -579,6 +579,11 @@ a:hover {
   /*text-shadow: 0rem 0.25rem 0.25rem black;*/
 }
 
+.contact-icon-linkedin {
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+
 .contact-icon {
   margin: 1vh;
   transition: 0.25s ease-in-out;
@@ -601,7 +606,7 @@ a:hover {
   position: absolute;
   top: 75%;
   left: 50%;
-  margin-top: -10vh;
+  margin-top: 0vh;
   margin-left: -40vw;
   width: 80vw;
   height: 20vh;

@@ -264,7 +264,7 @@ class Contact extends React.Component {
           fontSize={iconSize}
           beat={false}
           onClick={() => this.handleClick("Github")}
-          className="contact-icon"
+          className="contact-icon-github"
         />
     );
 
@@ -276,7 +276,7 @@ class Contact extends React.Component {
             beat={false}
             shake={false}
             onClick={() => this.handleClick("LinkedIn")}
-            className="contact-icon"
+            className="contact-icon-linkedin"
           />
     );
 
@@ -287,7 +287,7 @@ class Contact extends React.Component {
           fontSize={iconSize}
           beat={false}
           onClick={() => this.handleClick("Phone")}
-          className="contact-icon"
+          className="contact-icon-call"
         />
     );
 
@@ -298,7 +298,7 @@ class Contact extends React.Component {
           fontSize={iconSize}
           beat={false}
           onClick={() => this.handleClick("Skype")}
-          className="contact-icon"
+          className="contact-icon-skype"
         />
     );
     const chatIcon = (
@@ -308,7 +308,7 @@ class Contact extends React.Component {
           fontSize={iconSize}
           beat={false}
           onClick={() => this.handleClick("Text")}
-          className="contact-icon"
+          className="contact-icon-text"
         />
     );
 
@@ -319,7 +319,7 @@ class Contact extends React.Component {
           fontSize={iconSize}
           beat={false}
           onClick={() => this.handleClick("Email")}
-          className="contact-icon"
+          className="contact-icon-mail"
         />
     );
 
