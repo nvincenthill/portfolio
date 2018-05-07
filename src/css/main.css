@@ -234,7 +234,7 @@ h2 {
 }
 
 .footer {
-  display: inline;
+  display: none;
   position: fixed;
   bottom: 2vh;
   font-family: Montserrat, sans-serif;
@@ -714,10 +714,9 @@ a:hover {
   color: var(--color1);
   background: var(--color4);
   border-width: 0;
-  margin: 2vh auto;
+  margin: 2vh 0;
   outline: none !important;
   text-align: center;
-  width: 100%;
   text-decoration: none;
 }
 

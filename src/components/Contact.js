@@ -337,7 +337,7 @@ class Contact extends React.Component {
         <MediaQuery maxDeviceWidth={1224} orientation="portrait">
           {/* Greeting Message */}
           <div className="contact-greeting-container">
-            <h2 className="contact-greeting-heading">Greetings! </h2>
+          <h2 className="contact-greeting-heading">Greetings! </h2>
             <p className="contact-greeting-body">
               {" "}
               I'd love to talk to you! <br /> Please send me an email <br /> and
