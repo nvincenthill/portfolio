@@ -18,11 +18,13 @@ Clone the repo, move to directory and perform the standard install:
 npm install
 ```
 
-To run locally (```npm run watch``` recompiles styling and animations):
+To run locally: 
 
 ```
 npm start || npm run watch
 ```
+
+(```npm run watch```) recompiles styling and animations)
 
 ## Running the tests
 
@@ -63,7 +65,7 @@ I make a concerted effort to use only unlicensed content - If I have included yo
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+I use [Git](https://git-scm.com/) for versioning.
 
 ## Authors
 
