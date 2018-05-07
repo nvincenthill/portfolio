@@ -556,7 +556,7 @@ a:hover {
   color: var(--color4);
   opacity: .9;
   margin-bottom: 2vh;
-  text-shadow: 0rem 0.25rem 0.25rem black;
+  /*text-shadow: 0rem 0.25rem 0.25rem black;*/
 }
 
 .contact-greeting-body {
@@ -576,7 +576,7 @@ a:hover {
   margin-top: 2vh;
   margin-right: 0vw;
   text-align: center;
-  text-shadow: 0rem 0.25rem 0.25rem black;
+  /*text-shadow: 0rem 0.25rem 0.25rem black;*/
 }
 
 .contact-icon {
@@ -640,6 +640,7 @@ a:hover {
 
   .contact-greeting-body {
     font-size: 1em;
+    color: var(--color1);
     opacity: .9;
     line-height: 135%;
   }
@@ -670,28 +671,28 @@ a:hover {
 
   .contact-greeting-container {
     position: absolute;
-    top: 5vh;
-    left: 5vw;
+    top: 4vh;
+    left: 4vw;
     z-index: 15;
     text-align: left;
   }
 
   .contact-greeting-heading {
-    font-size: 4em;
+    font-size: 3em;
     color: var(--color1);
     opacity: .9;
     margin-bottom: 2vh;
   }
 
   .contact-greeting-body {
-    font-size: 2em;
+    font-size: 1.5em;
     color: var(--color1);
     opacity: .9;
     line-height: 135%;
   }
 
   .contact-greeting-footer {
-    font-size: 4em;
+    font-size: 3em;
     color: var(--color1);
     opacity: .9;
     margin-top: 2vh;
@@ -800,9 +801,6 @@ pre {
 }
 
 .map-container {
-  /*margin-left: 2vw;*/
-  /*margin-top: 2vh;*/
-  max-height: 100vh;
   display: relative;
   pointer-events: none;
 }
@@ -844,6 +842,16 @@ pre {
 }
 
 .col-lg-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.col-sm-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.col-xs-4 {
   padding-left: 0;
   padding-right: 0;
 }
