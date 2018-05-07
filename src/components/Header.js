@@ -27,7 +27,7 @@ class Header extends React.Component {
             // onClick={() => this.handleRoute("/")}
             className="left-button"
           />
-          <Col xs={6} sm={5} md={5} lg={8}>
+          <Col xs={6} sm={6} md={6} lg={8}>
             <Fade>
               <h1 className="title-name">{this.props.title}</h1>
             </Fade>
