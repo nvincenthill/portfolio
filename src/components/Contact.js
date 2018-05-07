@@ -18,63 +18,84 @@ class Contact extends React.Component {
     mapType: "normal",
     githubColor: "#EEEEEE",
     style: {
-      night: [
+      normal: [
         {
-          featureType: "all",
-          elementType: "all",
-          stylers: [
-            {
-              visibility: "on"
-            }
-          ]
-        },
-        {
-          featureType: "all",
+          featureType: "administrative",
           elementType: "labels",
           stylers: [
             {
               visibility: "off"
-            },
-            {
-              saturation: "-100"
             }
           ]
         },
         {
-          featureType: "all",
-          elementType: "labels.text.fill",
+          featureType: "administrative.country",
+          elementType: "geometry.stroke",
           stylers: [
             {
-              saturation: 36
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "administrative.province",
+          elementType: "geometry.stroke",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "landscape",
+          elementType: "geometry",
+          stylers: [
+            {
+              visibility: "on"
             },
             {
-              color: "#000000"
-            },
-            {
-              lightness: 40
-            },
+              color: "#e3e3e3"
+            }
+          ]
+        },
+        {
+          featureType: "landscape.natural",
+          elementType: "labels",
+          stylers: [
             {
               visibility: "off"
             }
           ]
         },
         {
-          featureType: "all",
-          elementType: "labels.text.stroke",
+          featureType: "poi",
+          elementType: "all",
           stylers: [
             {
               visibility: "off"
-            },
-            {
-              color: "#000000"
-            },
-            {
-              lightness: 16
             }
           ]
         },
         {
-          featureType: "all",
+          featureType: "road",
+          elementType: "all",
+          stylers: [
+            {
+              color: "#cccccc"
+            }
+          ]
+        },
+        {
+          featureType: "road",
+          elementType: "labels",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "transit",
           elementType: "labels.icon",
           stylers: [
             {
@@ -83,263 +104,8 @@ class Contact extends React.Component {
           ]
         },
         {
-          featureType: "administrative",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#000000"
-            },
-            {
-              lightness: 20
-            }
-          ]
-        },
-        {
-          featureType: "administrative",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#000000"
-            },
-            {
-              lightness: 17
-            },
-            {
-              weight: 1.2
-            }
-          ]
-        },
-        {
-          featureType: "landscape",
+          featureType: "transit.line",
           elementType: "geometry",
-          stylers: [
-            {
-              color: "#000000"
-            },
-            {
-              lightness: 20
-            }
-          ]
-        },
-        {
-          featureType: "landscape",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#4d6059"
-            }
-          ]
-        },
-        {
-          featureType: "landscape",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#4d6059"
-            }
-          ]
-        },
-        {
-          featureType: "landscape.natural",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#4d6059"
-            }
-          ]
-        },
-        {
-          featureType: "poi",
-          elementType: "geometry",
-          stylers: [
-            {
-              lightness: 21
-            }
-          ]
-        },
-        {
-          featureType: "poi",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#4d6059"
-            }
-          ]
-        },
-        {
-          featureType: "poi",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#4d6059"
-            }
-          ]
-        },
-        {
-          featureType: "road",
-          elementType: "geometry",
-          stylers: [
-            {
-              visibility: "on"
-            },
-            {
-              color: "#7f8d89"
-            }
-          ]
-        },
-        {
-          featureType: "road",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#7f8d89"
-            }
-          ]
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#7f8d89"
-            },
-            {
-              lightness: 17
-            }
-          ]
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#7f8d89"
-            },
-            {
-              lightness: 29
-            },
-            {
-              weight: 0.2
-            }
-          ]
-        },
-        {
-          featureType: "road.arterial",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#000000"
-            },
-            {
-              lightness: 18
-            }
-          ]
-        },
-        {
-          featureType: "road.arterial",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#7f8d89"
-            }
-          ]
-        },
-        {
-          featureType: "road.arterial",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#7f8d89"
-            }
-          ]
-        },
-        {
-          featureType: "road.local",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#000000"
-            },
-            {
-              lightness: 16
-            }
-          ]
-        },
-        {
-          featureType: "road.local",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#7f8d89"
-            }
-          ]
-        },
-        {
-          featureType: "road.local",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#7f8d89"
-            }
-          ]
-        },
-        {
-          featureType: "transit",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#000000"
-            },
-            {
-              lightness: 19
-            }
-          ]
-        },
-        {
-          featureType: "water",
-          elementType: "all",
-          stylers: [
-            {
-              color: "blue"
-            },
-            {
-              visibility: "on"
-            }
-          ]
-        },
-        {
-          featureType: "water",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "blue"
-            },
-            {
-              lightness: 17
-            }
-          ]
-        },
-        {
-          featureType: "water",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "blue"
-            }
-          ]
-        },
-        {
-          featureType: "water",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#24282b"
-            }
-          ]
-        },
-        {
-          featureType: "water",
-          elementType: "labels",
           stylers: [
             {
               visibility: "off"
@@ -347,7 +113,7 @@ class Contact extends React.Component {
           ]
         },
         {
-          featureType: "water",
+          featureType: "transit.line",
           elementType: "labels.text",
           stylers: [
             {
@@ -356,8 +122,17 @@ class Contact extends React.Component {
           ]
         },
         {
-          featureType: "water",
-          elementType: "labels.text.fill",
+          featureType: "transit.station.airport",
+          elementType: "geometry",
+          stylers: [
+            {
+              visibility: "off"
+            }
+          ]
+        },
+        {
+          featureType: "transit.station.airport",
+          elementType: "labels",
           stylers: [
             {
               visibility: "off"
@@ -366,201 +141,19 @@ class Contact extends React.Component {
         },
         {
           featureType: "water",
-          elementType: "labels.text.stroke",
+          elementType: "geometry",
           stylers: [
             {
-              visibility: "off"
+              color: "#01AFF0"
             }
           ]
         },
         {
           featureType: "water",
-          elementType: "labels.icon",
+          elementType: "labels",
           stylers: [
             {
               visibility: "off"
-            }
-          ]
-        }
-      ],
-      normal: [
-        {
-          featureType: "water",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#00adb5"
-            },
-            {
-              lightness: 17
-            },
-            {
-              featureType: "water",
-              elementType: "geometry.fill",
-              stylers: [
-                {
-                  color: "#00adb5"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          featureType: "landscape",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#f5f5f5"
-            },
-            {
-              lightness: 20
-            }
-          ]
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#ffffff"
-            },
-            {
-              lightness: 17
-            }
-          ]
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#ffffff"
-            },
-            {
-              lightness: 29
-            },
-            {
-              weight: 0.2
-            }
-          ]
-        },
-        {
-          featureType: "road.arterial",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#ffffff"
-            },
-            {
-              lightness: 18
-            }
-          ]
-        },
-        {
-          featureType: "road.local",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#ffffff"
-            },
-            {
-              lightness: 16
-            }
-          ]
-        },
-        {
-          featureType: "poi",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#f5f5f5"
-            },
-            {
-              lightness: 21
-            }
-          ]
-        },
-        {
-          featureType: "poi.park",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#dedede"
-            },
-            {
-              lightness: 21
-            }
-          ]
-        },
-        {
-          elementType: "labels.text.stroke",
-          stylers: [
-            {
-              visibility: "on"
-            },
-            {
-              color: "#ffffff"
-            },
-            {
-              lightness: 16
-            }
-          ]
-        },
-        {
-          elementType: "labels.text.fill",
-          stylers: [
-            {
-              saturation: 36
-            },
-            {
-              color: "#222831"
-            }
-          ]
-        },
-        {
-          elementType: "labels.icon",
-          stylers: [
-            {
-              visibility: "off"
-            }
-          ]
-        },
-        {
-          featureType: "transit",
-          elementType: "geometry",
-          stylers: [
-            {
-              color: "#f2f2f2"
-            },
-            {
-              lightness: 19
-            }
-          ]
-        },
-        {
-          featureType: "administrative",
-          elementType: "geometry.fill",
-          stylers: [
-            {
-              color: "#fefefe"
-            },
-            {
-              lightness: 20
-            }
-          ]
-        },
-        {
-          featureType: "administrative",
-          elementType: "geometry.stroke",
-          stylers: [
-            {
-              color: "#fefefe"
-            },
-            {
-              lightness: 17
-            },
-            {
-              weight: 1.2
             }
           ]
         }
@@ -568,7 +161,7 @@ class Contact extends React.Component {
     }
   };
 
-  changeMap(text) {
+  changeMap() {
     if (this.state.icon === "ios-sunny") {
       this.setState({ icon: "ios-moon" });
       this.setState({ mapType: "night" });
@@ -624,19 +217,15 @@ class Contact extends React.Component {
     }
 
     if (target === "Email") {
-
     }
 
     if (target === "Phone") {
-
     }
 
     if (target === "Skype") {
-
     }
 
     if (target === "Text") {
-
     }
   }
 
@@ -760,30 +349,34 @@ class Contact extends React.Component {
           </Fade>
         </Col>
       </Row>
-      )
+    );
 
     return (
       <React.Fragment>
         {header}
         <Row className="contact-structure">
-        <Col xs={12} sm={12} md={3} lg={3}>
-          <Fade cascade>
-            <Row className="contact-container">
-              {githubIcon}
-              {linkedInIcon}
-              {callIcon}
-              {skypeIcon}
-              {chatIcon}
-              {mailIcon}
-            </Row>
-          </Fade>
-        </Col>
-        <Col xs={12} sm={12} md={9} lg={9}>
-          <MapContainer style={this.state.style} mapType={this.state.mapType} />
-        </Col>
+          <Col xs={12} sm={12} md={3} lg={3}>
+            <Fade cascade>
+              <Row className="contact-container">
+                {githubIcon}
+                {linkedInIcon}
+                {callIcon}
+                {skypeIcon}
+                {chatIcon}
+                {mailIcon}
+              </Row>
+            </Fade>
+          </Col>
+          <Col xs={12} sm={12} md={9} lg={9}>
+            <MapContainer
+              style={this.state.style}
+              mapType={this.state.mapType}
+              onClick={null}
+            />
+          </Col>
         </Row>
-        
-      <Footer />
+
+        <Footer />
       </React.Fragment>
     );
   }
