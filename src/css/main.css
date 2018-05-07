@@ -60,7 +60,7 @@ h1 {
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   h1 {
-    font-size: 7vw;
+    font-size: 5vw;
   }
 }
 
@@ -752,7 +752,7 @@ a:hover {
   }
 }
 
-.contact-change-map-button {
+.left-button {
   justify-content: center;
   transition: 0.25s ease-in-out;
   cursor: pointer;
@@ -777,7 +777,7 @@ a:hover {
     font-size: 1.5em;
   }
 
-  .contact-change-map-button {
+  .left-button {
     display: inline;
     font-size: 1.5em;
   }
@@ -789,7 +789,7 @@ a:hover {
     font-size: 2em;
   }
 
-  .contact-change-map-button {
+  .left-button {
     display: inline;
     font-size: 2em;
   }

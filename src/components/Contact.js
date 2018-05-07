@@ -6,6 +6,7 @@ import HomeButton from "./HomeButton";
 import { Collapse } from "react-collapse";
 import { Well } from "react-bootstrap";
 import Footer from "./Footer";
+import Header from "./Header";
 import MapContainer from "./MapContainer";
 
 class Contact extends React.Component {
@@ -321,25 +322,9 @@ class Contact extends React.Component {
         />
     );
 
-    const header = (
-      <Row between="xs" middle="xs" className={"title_container"}>
-        <Col xs={2} sm={2} md={2} lg={1} />
-        <Col xs={6} sm={5} md={5} lg={8}>
-          <Fade>
-            <h1 className="title-name">Contact</h1>
-          </Fade>
-        </Col>
-        <Col xs={2} sm={2} md={2} lg={1}>
-          <Fade>
-            <HomeButton />
-          </Fade>
-        </Col>
-      </Row>
-    );
-
     return (
       <React.Fragment>
-        {header}
+        <Header title="Contact" icon="ios-contact" />
         <Row className="contact-body">
           <Col xs={12} sm={12} md={12} lg={12}>
             <MapContainer
