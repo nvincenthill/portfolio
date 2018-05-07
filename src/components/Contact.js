@@ -8,6 +8,7 @@ import { Well } from "react-bootstrap";
 import Footer from "./Footer";
 import Header from "./Header";
 import MapContainer from "./MapContainer";
+import MediaQuery from "react-responsive";
 
 class Contact extends React.Component {
   state = {
@@ -258,82 +259,133 @@ class Contact extends React.Component {
     const xsSize = 2;
 
     const githubIcon = (
-        <Ionicon
-          icon="logo-github"
-          color={"#222831"}
-          fontSize={iconSize}
-          beat={false}
-          onClick={() => this.handleClick("Github")}
-          className="contact-icon-github"
-        />
+      <Ionicon
+        icon="logo-github"
+        color={"#222831"}
+        fontSize={iconSize}
+        beat={false}
+        onClick={() => this.handleClick("Github")}
+        className="contact-icon"
+      />
     );
 
     const linkedInIcon = (
-          <Ionicon
-            icon="logo-linkedin"
-            color="#0077B5"
-            fontSize={iconSize}
-            beat={false}
-            shake={false}
-            onClick={() => this.handleClick("LinkedIn")}
-            className="contact-icon-linkedin"
-          />
+      <Ionicon
+        icon="logo-linkedin"
+        color="#0077B5"
+        fontSize={iconSize}
+        beat={false}
+        shake={false}
+        onClick={() => this.handleClick("LinkedIn")}
+        className="contact-icon"
+      />
     );
 
     const callIcon = (
-        <Ionicon
-          icon="ios-call"
-          color="#01E64E"
-          fontSize={iconSize}
-          beat={false}
-          onClick={() => this.handleClick("Phone")}
-          className="contact-icon-call"
-        />
+      <Ionicon
+        icon="ios-call"
+        color="#01E64E"
+        fontSize={iconSize}
+        beat={false}
+        onClick={() => this.handleClick("Phone")}
+        className="contact-icon"
+      />
     );
 
     const skypeIcon = (
-        <Ionicon
-          icon="logo-skype"
-          color="#00AFF0"
-          fontSize={iconSize}
-          beat={false}
-          onClick={() => this.handleClick("Skype")}
-          className="contact-icon-skype"
-        />
+      <Ionicon
+        icon="logo-skype"
+        color="#00AFF0"
+        fontSize={iconSize}
+        beat={false}
+        onClick={() => this.handleClick("Skype")}
+        className="contact-icon"
+      />
     );
     const chatIcon = (
-        <Ionicon
-          icon="ios-text"
-          color="#01E64E"
-          fontSize={iconSize}
-          beat={false}
-          onClick={() => this.handleClick("Text")}
-          className="contact-icon-text"
-        />
+      <Ionicon
+        icon="ios-text"
+        color="#01E64E"
+        fontSize={iconSize}
+        beat={false}
+        onClick={() => this.handleClick("Text")}
+        className="contact-icon"
+      />
     );
 
     const mailIcon = (
+      <a href="mailto: nvincenthill@gmail.com">
         <Ionicon
           icon="ios-mail"
           color="#D64A3A"
           fontSize={iconSize}
           beat={false}
           onClick={() => this.handleClick("Email")}
-          className="contact-icon-mail"
+          className="contact-icon"
         />
+      </a>
     );
 
     return (
       <React.Fragment>
+        {/* Header Message */}
+
         <Header title="Contact" icon="ios-contact" />
-        <Row className="contact-body">
-          <Col xs={12} sm={12} md={12} lg={12}>
-            <MapContainer
-              style={this.state.style}
-              mapType={this.state.mapType}
-              onClick={null}
-            />
-          </Col>
+
+        {/* Mobile Phones and Tablets */}
+
+        <MediaQuery maxDeviceWidth={1224} orientation="portrait">
+          {/* Greeting Message */}
+          <div className="contact-greeting-container">
+            <h2 className="contact-greeting-heading">Greetings! </h2>
+            <p className="contact-greeting-body">
+              {" "}
+              I'd love to talk to you! <br /> Please send me an email <br /> and
+              I'll get back to you <br /> as soon as possible.
+            </p>
+            <h2 className="contact-greeting-footer"> -Nick </h2>
+          </div>
+
+          {/* Contact Information */}
+
+          <Well className="contact-well">
+            <div>
+              <input id="contact-well-input" value="nvincenthill@gmail.com" />
+              {copyIcon}
+            </div>
+          </Well>
+
+          {/* Contact Buttons */}
+
+          <Row between="xs" middle="xs" className="contact-container">
+            <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
+              {githubIcon}
+            </Col>
+            <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
+              {linkedInIcon}
+            </Col>
+            <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
+              {mailIcon}
+            </Col>
+          </Row>
+        </MediaQuery>
+
+        {/* Desktops */}
+
+        <MediaQuery
+          orientation="landscape"
+          minDeviceWidth={1224}
+          values={{ deviceWidth: 1600 }}
+        >
+          <Row className="contact-body">
+            <Col xs={12} sm={12} md={12} lg={12}>
+              <MapContainer
+                style={this.state.style}
+                mapType={this.state.mapType}
+                onClick={null}
+              />
+            </Col>
+          </Row>
           <Col xs={12} sm={12} md={12} lg={12}>
             <Fade>
               <Row between="xs" middle="xs" className="contact-container">
@@ -341,7 +393,7 @@ class Contact extends React.Component {
                   {githubIcon}
                 </Col>
                 <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
-                {linkedInIcon}
+                  {linkedInIcon}
                 </Col>
                 <Col xs={xsSize} sm={mdSize} md={1} lg={1}>
                   {callIcon}
@@ -358,7 +410,7 @@ class Contact extends React.Component {
               </Row>
             </Fade>
           </Col>
-        </Row>
+        </MediaQuery>
 
         <Footer />
       </React.Fragment>

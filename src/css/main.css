@@ -234,9 +234,9 @@ h2 {
 }
 
 .footer {
-  display: none;
+  display: inline;
   position: fixed;
-  bottom: 1vh;
+  bottom: 2vh;
   font-family: Montserrat, sans-serif;
   background-color: var(--color1);
   color: var(--color4);
@@ -543,15 +543,15 @@ a:hover {
 }
 
 .contact-greeting-container {
-  position: relative;
-  top: 2vh;
-  left: 4vw;
+/*  position: relative;*/
+  display: inline;
   z-index: 15;
   text-align: center;
 }
 
 .contact-greeting-heading {
   font-family: var(--sixth-font), sans-serif;
+  margin-top: 2vh;
   font-size: 4em;
   color: var(--color4);
   opacity: .9;
@@ -574,14 +574,10 @@ a:hover {
   color: var(--color4);
   opacity: .9;
   margin-top: 2vh;
+  margin-bottom: 2vh;
   margin-right: 0vw;
   text-align: center;
   /*text-shadow: 0rem 0.25rem 0.25rem black;*/
-}
-
-.contact-icon-linkedin {
-  transition: 0.25s ease-in-out;
-  cursor: pointer;
 }
 
 .contact-icon {
@@ -675,7 +671,7 @@ a:hover {
   }
 
   .contact-greeting-container {
-    position: absolute;
+
     top: 4vh;
     left: 4vw;
     z-index: 15;
@@ -709,24 +705,16 @@ a:hover {
 .contact-well {
   background: var(--color4);
   color: var(--color1);
-  display: inline;
   text-align: center;
   font-family: var(--third-font), sans-serif;
   font-size: 2rem;
-  padding: 1em;
-  font-weight: bold;
-  z-index: 20;
-  pointer-events: auto;
-  margin-left: 10vw;
-  border-width: 0;
-  margin-right: 10vw;
 }
 
 #contact-well-input {
   color: var(--color1);
   background: var(--color4);
   border-width: 0;
-  margin: 0 auto;
+  margin: 2vh auto;
   outline: none !important;
   text-align: center;
   width: 100%;
@@ -736,6 +724,7 @@ a:hover {
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   .contact-container {
+    position: absolute;
   }
 
   .contact-icon-copy {
@@ -746,6 +735,7 @@ a:hover {
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .contact-container {
+    position: absolute;
     margin-bottom: 0;
   }
 
