@@ -324,7 +324,7 @@ class Contact extends React.Component {
     const header = (
       <Row between="xs" middle="xs" className={"title_container"}>
         <Col xs={2} sm={2} md={2} lg={2} />
-        <Col xs={6} sm={6} md={6} lg={8}>
+        <Col xs={6} sm={5} md={5} lg={8}>
           <Fade>
             <h1 className="title-name">Contact</h1>
           </Fade>
