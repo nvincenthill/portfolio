@@ -405,25 +405,41 @@ class Contact extends React.Component {
 
         {/* Desktops */}
 
-        <MediaQuery
-          orientation="landscape"
-          minDeviceWidth={1024}
-        >
-          <MapContainer
-            style={this.state.style}
-            mapType={this.state.mapType}
-            onClick={null}
-          />
+        <MediaQuery minDeviceWidth={809}>
+                  {/* Greeting Message */}
+                  <MapContainer
+                    style={this.state.style}
+                    mapType={this.state.mapType}
+                    onClick={null}
+                  />
+                  <div className="contact-greeting-container">
+                    <h2 className="contact-greeting-heading">Hello! </h2>
+                    <p className="contact-greeting-body">
+                      {" "}
+                      I'd love to talk to you! <br /> Please send me an email <br /> and
+                      I'll get back to you <br /> as soon as possible.
+                    </p>
+                    <h2 className="contact-greeting-footer"> -Nick </h2>
+                  </div>
 
-          <Fade>
-            {githubIcon}
-            {linkedInIcon}
-            {callIcon}
-            {skypeIcon}
-            {chatIcon}
-            {mailIcon}
-          </Fade>
-        </MediaQuery>
+                  {/* Contact Information */}
+
+                  <div className="contact-well">
+                    <input id="contact-well-input" value={this.state.wellText} />
+                    {copyIcon}
+                  </div>
+
+                  {/* Contact Buttons */}
+
+                  <div className="contact-container">
+                    {githubIcon}
+                    {linkedInIcon}
+                    {callIcon}
+                    {skypeIcon}
+                    {chatIcon}
+                    {mailIcon}
+                  </div>
+                </MediaQuery>
 
       </React.Fragment>
     );

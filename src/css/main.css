@@ -6,7 +6,7 @@
 /* Border box declaration */
 
 html {
-/*  @maintitle box-sizing: border-box;*/
+  @maintitle box-sizing: border-box;
   overflow-y: scroll;
   overflow-x: hidden;
   font-size: 62.5%;
@@ -26,7 +26,7 @@ html {
 *,
 *:before,
 maintit *:after {
-/*  box-sizing: inherit;*/
+  box-sizing: inherit;
 }
 
 body {
@@ -638,7 +638,7 @@ a:hover {
   
   .contact-greeting-container {
     position: absolute;
-    top: 30vh;
+    bottom: 36vh;
     left: 5vw;
     z-index: 15;
     text-align: left;
@@ -654,18 +654,19 @@ a:hover {
   .contact-greeting-body {
     font-size: 1em;
     color: var(--color1);
+    background: #01aff0;
     opacity: .9;
     line-height: 135%;
-    background: #01aff0;
+
   }
 
   .contact-greeting-footer {
-    font-size: 3em;
+    font-size: 2em;
     color: var(--color1);
     opacity: .9;
     margin-top: 2vh;
     margin-right: 0vw;
-    text-align: center;
+    text-align: right;
   }
 
 }
@@ -684,33 +685,33 @@ a:hover {
   }
 
   .contact-greeting-container {
-
-    top: 4vh;
+    position: absolute;
+    bottom: 33vh;
     left: 4vw;
     z-index: 15;
     text-align: left;
   }
 
   .contact-greeting-heading {
-    font-size: 3em;
+    font-size: 4em;
     color: var(--color1);
     opacity: .9;
     margin-bottom: 2vh;
   }
 
   .contact-greeting-body {
-    font-size: 1.5em;
+    font-size: 2em;
     color: var(--color1);
     opacity: .9;
     line-height: 135%;
   }
 
   .contact-greeting-footer {
-    font-size: 3em;
+    font-size: 4em;
     color: var(--color1);
     opacity: .9;
     margin-top: 2vh;
-    margin-right: 4vw;
+/*    margin-right: 4vw;*/
     text-align: right;
   }
 }
@@ -757,12 +758,18 @@ a:hover {
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .contact-container {
-    position: absolute;
-    margin-bottom: 0;
+
+  }
+
+  #contact-well-input {
+    font-size: 1.5em;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
   }
 
   .contact-icon-copy {
     display: inline;
+    margin-bottom: 1vh;
   }
 }
 
@@ -820,8 +827,7 @@ pre {
 }
 
 .map-container {
-/*  display: relative;
-  pointer-events: none;*/
+  pointer-events: none;
 }
 
 .map {
@@ -846,7 +852,7 @@ pre {
   }
 
   .map {
-    /*display: inline;*/
+    max-height: 50%;
   }
 }
 
