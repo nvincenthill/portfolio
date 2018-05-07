@@ -1,6 +1,6 @@
-# Project Title
+# Portfolio Site
 
-One Paragraph of project description goes here
+This is a portfolio site to display my projects and provide my contact information and resume to potential clients and employers.
 
 ## Getting Started
 
@@ -8,20 +8,18 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+All dependencies are listed in the package.json.
 
 ```
-Give examples
+npm
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+The standard install:
 
 ```
-Give the example
+npm install
 ```
 
 And repeat
