@@ -556,6 +556,7 @@ a:hover {
   color: var(--color4);
   opacity: .9;
   margin-bottom: 2vh;
+  text-shadow: 0rem 0.25rem 0.25rem black;
 }
 
 .contact-greeting-body {
@@ -564,6 +565,7 @@ a:hover {
   color: var(--color4);
   opacity: .9;
   line-height: 135%;
+  /*text-shadow: 0rem 0.25rem 0.25rem black;*/
 }
 
 .contact-greeting-footer {
@@ -574,6 +576,7 @@ a:hover {
   margin-top: 2vh;
   margin-right: 0vw;
   text-align: center;
+  text-shadow: 0rem 0.25rem 0.25rem black;
 }
 
 .contact-icon {
@@ -629,7 +632,6 @@ a:hover {
   }
 
   .contact-greeting-heading {
-    font-family: var(--sixth-font), sans-serif;
     font-size: 3em;
     color: var(--color1);
     opacity: .9;
@@ -637,15 +639,12 @@ a:hover {
   }
 
   .contact-greeting-body {
-    font-family: var(--third-font), sans-serif;
     font-size: 1em;
-    color: var(--color1);
     opacity: .9;
     line-height: 135%;
   }
 
   .contact-greeting-footer {
-    font-family: var(--sixth-font), sans-serif;
     font-size: 3em;
     color: var(--color1);
     opacity: .9;
@@ -678,7 +677,6 @@ a:hover {
   }
 
   .contact-greeting-heading {
-    font-family: var(--sixth-font), sans-serif;
     font-size: 4em;
     color: var(--color1);
     opacity: .9;
@@ -686,7 +684,6 @@ a:hover {
   }
 
   .contact-greeting-body {
-    font-family: var(--third-font), sans-serif;
     font-size: 2em;
     color: var(--color1);
     opacity: .9;
@@ -694,7 +691,6 @@ a:hover {
   }
 
   .contact-greeting-footer {
-    font-family: var(--sixth-font), sans-serif;
     font-size: 4em;
     color: var(--color1);
     opacity: .9;
