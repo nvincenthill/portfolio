@@ -255,7 +255,8 @@ class Contact extends React.Component {
 
     const lgSize = 12;
     const mdSize = 6;
-    const xsSize = 12;
+    const xsSize = 6;
+    
     const githubIcon = (
         <Ionicon
           icon="logo-github"
