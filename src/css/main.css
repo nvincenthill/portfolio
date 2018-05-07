@@ -575,14 +575,25 @@ a:hover {
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   .contact-icon:hover {
-    transform: translateX(10%) scale(1.05);
+    transform: translateY(-10%) scale(1.05);
+  }
+
+  .contact-container {
+    text-align: left;
+    margin: 0;
+    border-width: 0;
   }
 }
 
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .contact-icon:hover {
-    transform: translateX(10%) scale(1.05);
+    transform: translateY(-10%) scale(1.05);
+  }
+
+  .contact-container {
+    text-align: left;
+    background: var(--color1);
   }
 }
 
@@ -644,6 +655,7 @@ a:hover {
 
 .col-lg-12 {
   padding-left: 0;
+  padding-right: 0;
 }
 
 .home-button {

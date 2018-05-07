@@ -21,7 +21,7 @@ class ProjectItem extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const btnClass = this.state.isHovered ? "pulse animated project-github-icon-hover" : "project-github-icon";
+    const btnClass = this.state.isHovered ? "bounce animated project-github-icon-hover" : "project-github-icon";
 
     return (
       <Fade>

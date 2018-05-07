@@ -639,7 +639,7 @@ class Contact extends React.Component {
 
     }
   }
-  
+
   componentDidMount() {}
 
   componentDidUpdate() {}
@@ -746,33 +746,44 @@ class Contact extends React.Component {
       </Col>
     );
 
+    const header = (
+      <Row between="xs" middle="xs" className={"title_container"}>
+        <Col xs={2} sm={2} md={2} lg={2} />
+        <Col xs={6} sm={6} md={6} lg={8}>
+          <Fade>
+            <h1 className="title-name">Contact</h1>
+          </Fade>
+        </Col>
+        <Col xs={2} sm={2} md={2} lg={2}>
+          <Fade>
+            <HomeButton />
+          </Fade>
+        </Col>
+      </Row>
+      )
+
     return (
       <React.Fragment>
-        <Row between="xs" middle="xs" className={"title_container"}>
-          <Col xs={2} sm={2} md={2} lg={2} />
-          <Col xs={6} sm={6} md={6} lg={8}>
-            <Fade>
-              <h1 className="title-name">Contact</h1>
-            </Fade>
-          </Col>
-          <Col xs={2} sm={2} md={2} lg={2}>
-            <Fade>
-              <HomeButton />
-            </Fade>
-          </Col>
+        {header}
+        <Row className="contact-structure">
+        <Col xs={12} sm={12} md={3} lg={3}>
+          <Fade cascade>
+            <Row className="contact-container">
+              {githubIcon}
+              {linkedInIcon}
+              {callIcon}
+              {skypeIcon}
+              {chatIcon}
+              {mailIcon}
+            </Row>
+          </Fade>
+        </Col>
+        <Col xs={12} sm={12} md={9} lg={9}>
+          <MapContainer style={this.state.style} mapType={this.state.mapType} />
+        </Col>
         </Row>
-        <MapContainer style={this.state.style} mapType={this.state.mapType} />
-
-        <Fade cascade>
-          <Row className="contact-container">
-            {githubIcon}
-            {linkedInIcon}
-            {callIcon}
-            {skypeIcon}
-            {chatIcon}
-            {mailIcon}
-          </Row>
-        </Fade>
+        
+      <Footer />
       </React.Fragment>
     );
   }
