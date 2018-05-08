@@ -69,7 +69,7 @@ I use [Git](https://git-scm.com/) for versioning.
 
 ## Authors
 
-* **Nicholas Vincent-Hill** - *Initial work* - [nvincenthill](https://github.com/nvincenthill)
+* **Nicholas Vincent-Hill** - [nvincenthill](https://github.com/nvincenthill)
 
 ## License
 

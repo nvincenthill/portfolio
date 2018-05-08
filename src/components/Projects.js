@@ -24,42 +24,42 @@ class Projects extends React.Component {
       <React.Fragment>
       <Header title="Projects" icon="ios-folder" />
 
-        <Fade>
-          <Row>
+
             <div className="project-array-container">
-              <Col xs={12} sm={12} md={6} lg={4}>
+            <Fade>
                 <ProjectItem
                   name="The Meal Panda"
-                  imageSource="../images/missing.png"
+                  imageSource="../images/mealpanda_showcase.png"
                   description="Menu planner & grocery list generator"
                   builtWith="React | CSS | Firebase | Jest | Node.js"
                   url="https://mealpanda.herokuapp.com/"
                   github="https://github.com/nvincenthill/mealpanda"
+                  iconAnimation="tada"
                 />
-              </Col>
-              <Col xs={12} sm={12} md={6} lg={4}>
+                </Fade>
+                <Fade>
                 <ProjectItem
                   name="The Next Big Thing"
-                  imageSource="../images/missing.png"
+                  imageSource="../images/empty_showcase.png"
                   description="This project is coming soon!"
                   builtWith="MongoDB | Express | SASS | AngularJS | Node.js"
                   url="n/a"
                   github="n/a"
+                  iconAnimation="bounce"
                 />
-              </Col>
-              <Col xs={12} sm={12} md={6} lg={4}>
+                </Fade>
+                <Fade>
                 <ProjectItem
                   name="My First Website"
-                  imageSource="../images/missing.png"
+                  imageSource="../images/empty_showcase.png"
                   description="Legacy billboard site and first milestone on my coding journey"
                   builtWith="HTML5 | CSS | JS | p5.js"
                   url="https://nvincenthill.github.io/"
                   github="https://github.com/nvincenthill/nvincenthill.github.io"
+                  iconAnimation="rubberBand"
                 />
-              </Col>
+                </Fade>
             </div>
-          </Row>
-        </Fade>
       </React.Fragment>
     );
   }
