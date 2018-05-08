@@ -85,7 +85,7 @@ h1 {
   text-align: center;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background: var(--color4);
   /*  box-shadow: 0rem 0.5rem 0.5rem black;*/
@@ -789,7 +789,7 @@ a:focus {
 
   .contact-greeting-container {
     position: absolute;
-    bottom: 33vh;
+    bottom: 38vh;
     left: 4vw;
     z-index: 15;
     text-align: left;

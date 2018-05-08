@@ -1,33 +1,33 @@
-import { Map, Marker } from "google-maps-react";
-import Ionicon from "react-ionicons";
+import {
+  Map
+  // Marker
+} from "google-maps-react";
+// import Ionicon from "react-ionicons";
 import React from "react";
 // import ReactDOM from "react-dom";
 
 export class GoogleMap extends React.Component {
-  state = {
-    
-  };
+  state = {};
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      mapType: nextProps.mapType,
+      mapType: nextProps.mapType
     });
   }
-
 
   render() {
     // const stylesOrange = ;
 
     // const styles = ;
-    const flag = (
-      <Ionicon
-        icon="ios-flag"
-        color="#EEEEEE"
-        fontSize="3em"
-        beat={false}
-        // onClick={() => this.changeMap()}
-        className="map-flag"
-      />)
+    // const flag = (
+    //   <Ionicon
+    //     icon="ios-flag"
+    //     color="#EEEEEE"
+    //     fontSize="3em"
+    //     beat={false}
+    //     // onClick={() => this.changeMap()}
+    //     className="map-flag"
+    //   />)
 
     const map = (
       <Map
@@ -46,7 +46,7 @@ export class GoogleMap extends React.Component {
         streetViewControl={false}
         fullscreenControl={false}
         mapType={"terrain"}
-      ></Map>
+      />
     );
 
     return <div className="map-holder">{map}</div>;

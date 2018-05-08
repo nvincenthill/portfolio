@@ -1,11 +1,10 @@
 import React from "react";
-import { Fade } from "react-reveal";
-import { Row, Col } from "react-flexbox-grid";
+// import { Fade } from "react-reveal";
 import Ionicon from "react-ionicons";
-import HomeButton from "./HomeButton";
+// import HomeButton from "./HomeButton";
 import { Collapse } from "react-collapse";
-import { Well } from "react-bootstrap";
-import Footer from "./Footer";
+// import { Well } from "react-bootstrap";
+// import Footer from "./Footer";
 import Header from "./Header";
 import MapContainer from "./MapContainer";
 import MediaQuery from "react-responsive";
@@ -220,18 +219,22 @@ class Contact extends React.Component {
 
     if (target === "Email") {
       this.setState({ wellText: "nvincenthill@gmail.com" });
+      this.setState({ wellHidden: false });
     }
 
     if (target === "Phone") {
       this.setState({ wellText: "(541) 602-1878" });
+      this.setState({ wellHidden: false });
     }
 
     if (target === "Skype") {
       this.setState({ wellText: "nvincenthill" });
+      this.setState({ wellHidden: false });
     }
 
     if (target === "Text") {
       this.setState({ wellText: "Please don't text me" });
+      this.setState({ wellHidden: false });
     }
   }
 
@@ -258,9 +261,9 @@ class Contact extends React.Component {
       </div>
     );
 
-    const lgSize = 12;
-    const mdSize = 6;
-    const xsSize = 2;
+    // const lgSize = 12;
+    // const mdSize = 6;
+    // const xsSize = 2;
 
     const githubIcon = (
       <Ionicon
@@ -352,9 +355,11 @@ class Contact extends React.Component {
 
           {/* Contact Information */}
 
-          <div className="contact-well">
-            <input id="contact-well-input" value="nvincenthill@gmail.com" />
-          </div>
+          <Collapse isOpened={!this.state.wellHidden}>
+            <div className="contact-well">
+              <input id="contact-well-input" value={this.state.wellText} />
+            </div>
+          </Collapse>
 
           {/* Contact Buttons */}
 
@@ -386,10 +391,12 @@ class Contact extends React.Component {
 
           {/* Contact Information */}
 
-          <div className="contact-well">
-            <input id="contact-well-input" value={this.state.wellText} />
-            {copyIcon}
-          </div>
+          <Collapse isOpened={!this.state.wellHidden}>
+            <div className="contact-well">
+              <input onChange={null} id="contact-well-input" value={this.state.wellText} />
+              {copyIcon}
+            </div>
+          </Collapse>
 
           {/* Contact Buttons */}
 
@@ -424,10 +431,12 @@ class Contact extends React.Component {
 
           {/* Contact Information */}
 
-          <div className="contact-well">
-            <input id="contact-well-input" value={this.state.wellText} />
-            {copyIcon}
-          </div>
+          <Collapse isOpened={!this.state.wellHidden}>
+            <div className="contact-well">
+              <input id="contact-well-input" value={this.state.wellText} />
+              {copyIcon}
+            </div>
+          </Collapse>
 
           {/* Contact Buttons */}
 

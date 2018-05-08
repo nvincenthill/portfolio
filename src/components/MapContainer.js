@@ -1,7 +1,7 @@
 import { GoogleApiWrapper } from "google-maps-react";
 import GoogleMap from "./GoogleMap";
 import React from "react";
-import { Fade } from "react-reveal";
+// import { Fade } from "react-reveal";
 export class MapContainer extends React.Component {
   render() {
     const style = {

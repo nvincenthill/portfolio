@@ -3,7 +3,6 @@ import "babel-polyfill";
 import Ionicon from "react-ionicons";
 import HomeButton from "./HomeButton";
 import { Fade } from "react-reveal";
-import { Row, Col } from "react-flexbox-grid";
 
 class Header extends React.Component {
   state = {};

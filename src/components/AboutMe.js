@@ -2,8 +2,8 @@ import React from "react";
 import "babel-polyfill";
 import { Fade } from "react-reveal";
 import { Row, Col } from "react-flexbox-grid";
-import HomeButton from "./HomeButton";
-import Footer from "./Footer";
+// import HomeButton from "./HomeButton";
+// import Footer from "./Footer";
 import Header from "./Header";
 import Ionicon from "react-ionicons";
 import { Link } from "react-router-dom";
@@ -56,15 +56,6 @@ class AboutMe extends React.Component {
 
                       <p className="about-contact"> Hire me! </p>
                     </Link>
-
-                    <i class="devicon-git-plain" />
-
-                    <i class="devicon-git-plain-wordmark" />
-
-                    <i class="devicon-git-plain colored" />
-
-                    <i class="devicon-git-plain-wordmark colored" />
-
                   </div>
                 </div>
               </Fade>

@@ -1,6 +1,5 @@
 import React from "react";
 import GithubCorner from "react-github-corner";
-import TitleCard from "./TitleCard";
 import NavCard from "./NavCard";
 import Blurb from "./Blurb";
 import Footer from "./Footer";
@@ -34,13 +33,16 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    setInterval(() => this.changeVerb(), 1500);
-    setInterval(() => this.changeAdjective(), 2000);
+    this.verbInterval = setInterval(() => this.changeVerb(), 1500);
+    this.adjectiveInterval =  setInterval(() => this.changeAdjective(), 2000);
   }
 
   componentDidUpdate() {}
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    clearInterval(this.verbInterval);
+    clearInterval(this.adjectiveInterval);
+  }
 
   render() {
     const verbs = ["designing", "building", "deploying", "maintaining"];
@@ -54,7 +56,7 @@ class App extends React.Component {
       "slick"
     ];
 
-    const verbClass = true ? "bounceIn animated" : "";
+    // const verbClass = true ? "bounceIn animated" : "";
 
     return (
 

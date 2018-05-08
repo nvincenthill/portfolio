@@ -1,9 +1,8 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import { Row, Col } from "react-flexbox-grid";
-import Ionicon from "react-ionicons";
+// import Ionicon from "react-ionicons";
 import ProjectItem from "./ProjectItem";
-import HomeButton from "./HomeButton";
+// import HomeButton from "./HomeButton";
 import Header from "./Header";
 
 class Projects extends React.Component {
