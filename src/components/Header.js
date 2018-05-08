@@ -19,7 +19,7 @@ class Header extends React.Component {
       <Fade>
         <Ionicon
           icon={this.props.icon}
-          color="#EEEEEE"
+          color="#222831"
           fontSize="2.5em"
           beat={false}
           // onClick={() => this.handleRoute("/")}

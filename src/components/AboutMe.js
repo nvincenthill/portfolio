@@ -54,8 +54,17 @@ class AboutMe extends React.Component {
                         className="about-contact-button"
                       />
 
-                    <p className="about-contact"> Contact </p>
-                  </Link>
+                      <p className="about-contact"> Hire me! </p>
+                    </Link>
+
+                    <i class="devicon-git-plain" />
+
+                    <i class="devicon-git-plain-wordmark" />
+
+                    <i class="devicon-git-plain colored" />
+
+                    <i class="devicon-git-plain-wordmark colored" />
+
                   </div>
                 </div>
               </Fade>

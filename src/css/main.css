@@ -1086,4 +1086,13 @@ a[href^="https://maps.google.com/maps"] {
   background: none !important;
 }
 
+.devicon {
+  max-width: 2em;
+  margin: 2vh 1vw;
+}
+
+.devicon path {
+/*  fill: #4691f6;*/
+}
+
 
