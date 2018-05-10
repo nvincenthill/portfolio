@@ -783,6 +783,7 @@ a:focus {
   .contact-container {
     /*text-align: left;*/
     background: var(--color1);
+    margin-top: 0.5vh;
     margin-left: 20vw;
     margin-right: 20vw;
   }

@@ -145,7 +145,7 @@ class Contact extends React.Component {
           elementType: "geometry",
           stylers: [
             {
-              color: "#01AFF0"
+              color: "#222831"
             }
           ]
         },
