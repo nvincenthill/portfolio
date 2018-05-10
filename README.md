@@ -21,14 +21,12 @@ npm install
 To run locally: 
 
 ```
-npm start || npm run watch
+npm start
 ```
-
-(```npm run watch```) recompiles styling and animations)
 
 ## Running the tests
 
-TODO: Add unit tests.
+TODO: Fix unit tests.
 
 <!-- ### Break down into end to end tests
 

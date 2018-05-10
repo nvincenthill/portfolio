@@ -789,7 +789,7 @@ a:focus {
 
   .contact-greeting-container {
     position: absolute;
-    bottom: 38vh;
+    bottom: 40vh;
     left: 4vw;
     z-index: 15;
     text-align: left;
