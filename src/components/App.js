@@ -18,24 +18,62 @@ class App extends React.Component {
   state = {
     adjective: 0,
     verb: 0,
+    adjectiveClass: "animated flipInY about-tagline-adjective",
+    verbClass: "animated flipInY about-tagline-verb"
   };
 
   handleRoute = route => {
     this.props.history.push(`/${route}/`);
   };
 
-  changeVerb = () => {
-    this.setState({ verb: this.state.verb + 1 });
-  };
+  // changeVerbState = () => {
+  //   this.setState({ verb: this.state.verb + 1 });
+  // };
 
-  changeAdjective = () => {
-    this.setState({ adjective: this.state.adjective + 1 });
-  };
+  // changeAdjectiveState = () => {
+  //   this.setState({ adjective: this.state.adjective + 1 });
+  // };
 
-  componentDidMount() {
-    this.verbInterval = setInterval(() => this.changeVerb(), 1500);
-    this.adjectiveInterval =  setInterval(() => this.changeAdjective(), 2000);
-  }
+  // changeVerbClassIntro = () => {
+  //   this.setState({ verbClass: "animated bounceInLeft about-tagline-verb" });
+  // };
+
+  // changeVerbClassExit = () => {
+  //   this.setState({ verbClass: "animated bounceOutDown about-tagline-verb" });
+  // };
+
+  // changeAdjectiveClassIntro = () => {
+  //   this.setState({ adjectiveClass: "animated bounceInRight about-tagline-adjective" });
+  // };
+
+  // changeAdjectiveClassExit = () => {
+  //   this.setState({ adjectiveClass: "animated bounceOutDown about-tagline-adjective" });
+  // };
+
+  // changeVerb = () => {
+  //   this.verbExit = setTimeout(() => this.changeVerbClassExit(), 500);
+  //   this.verbExit = setTimeout(() => this.changeVerbState(), 1000);
+  //   this.verbExit = setTimeout(() => this.changeVerbClassIntro(), 1000);
+  // };
+
+  // changeAdjective = () => {
+  //   this.verbExit = setTimeout(() => this.changeAdjectiveClassExit(), 500);
+  //   this.verbExit = setTimeout(() => this.changeAdjectiveState(), 1000);
+  //   this.verbExit = setTimeout(() => this.changeAdjectiveClassIntro(), 1000);
+  // };
+
+  // componentDidMount() {
+  //   this.changeVerb();
+  //   this.changeVerbInterval = setInterval(() => this.changeVerb(), 3000);;
+  //   this.changeAdjective();
+  //   this.changeAdjectiveInterval = setInterval(() => this.changeAdjective(), 3000);;
+
+  // this.verbInterval = setInterval(() => this.changeVerb(), 1500);
+  // this.adjectiveInterval = setInterval(() => this.changeAdjective(), 1500);
+
+  // this.verbClassInterval = setInterval(() => this.changeVerbClass(), 2000);
+  // this.adjectiveClassInterval = setInterval(() => this.changeAdjectiveClass(), 2000);
+  // };
 
   componentDidUpdate() {}
 
@@ -59,7 +97,6 @@ class App extends React.Component {
     // const verbClass = true ? "bounceIn animated" : "";
 
     return (
-
       <React.Fragment>
         <GithubCorner
           href="https://github.com/nvincenthill"
@@ -68,18 +105,17 @@ class App extends React.Component {
           bannerColor="#EEEEEE"
           size={135}
         />
-        <Header title="Nicholas Vincent-Hill" icon="ios-contact" buttonsHidden="true" />
+        <Header
+          title="Nicholas Vincent-Hill"
+          icon="ios-contact"
+          buttonsHidden="true"
+        />
         <NavCard handleRoute={this.handleRoute} />
         <Fade>
           <div>
             <h2 className="about-tagline">
-              I'm a developer <br />{" "}
-              <span> {verbs[this.state.verb % verbs.length]} </span> <br />
-              <span>
-                {" "}
-                {adjectives[this.state.adjective % adjectives.length]}{" "}
-              </span>
-              web applications
+              I'm a <span className="developer">developer</span> <br /> designing responsive<br />
+              mobile-first web applications
             </h2>
           </div>
         </Fade>
@@ -97,7 +133,6 @@ class App extends React.Component {
             </h2>
           </div>
         </Fade>
-        <Footer />
       </React.Fragment>
     );
   }

@@ -145,7 +145,7 @@ class Contact extends React.Component {
           elementType: "geometry",
           stylers: [
             {
-              color: "#222831"
+              color: "#013990"
             }
           ]
         },
@@ -347,10 +347,10 @@ class Contact extends React.Component {
             <h2 className="contact-greeting-heading">Hello! </h2>
             <p className="contact-greeting-body">
               {" "}
-              I'd love to talk to you! <br /> Please send me an email <br /> and
+              I'd love to talk to you! <br /> Contact me <br /> and
               I'll get back to you <br /> as soon as possible.
             </p>
-            <h2 className="contact-greeting-footer"> -Nick </h2>
+            <h2 className="contact-greeting-footer">Nick</h2>
           </div>
 
           {/* Contact Information */}
@@ -383,10 +383,10 @@ class Contact extends React.Component {
             <h2 className="contact-greeting-heading">Hello! </h2>
             <p className="contact-greeting-body">
               {" "}
-              I'd love to talk to you! <br /> Please send me an email <br /> and
+              I'd love to talk to you! <br /> Contact me <br /> and
               I'll get back to you <br /> as soon as possible.
             </p>
-            <h2 className="contact-greeting-footer"> -Nick </h2>
+            <h2 className="contact-greeting-footer">Nick</h2>
           </div>
 
           {/* Contact Information */}
@@ -423,10 +423,10 @@ class Contact extends React.Component {
             <h2 className="contact-greeting-heading">Hello! </h2>
             <p className="contact-greeting-body">
               {" "}
-              I'd love to talk to you! <br /> Please send me an email <br /> and
-              I'll get back to you <br /> as soon as possible.
+              I'd love to talk to you! <br /> Contact me and
+              I'll get back <br /> to you  as soon as possible.
             </p>
-            <h2 className="contact-greeting-footer"> -Nick </h2>
+            <h2 className="contact-greeting-footer">Nick</h2>
           </div>
 
           {/* Contact Information */}

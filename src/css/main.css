@@ -74,6 +74,7 @@ h1 {
 .title_name {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 #title_desc {
@@ -82,10 +83,8 @@ h1 {
 }
 
 .title_container {
-  text-align: center;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: var(--color4);
   /*  box-shadow: 0rem 0.5rem 0.5rem black;*/
@@ -95,21 +94,56 @@ h1 {
   min-height: 12vh;
 }
 
+.left-button {
+  justify-content: center;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  font-size: 4vw;
+  margin-left: 4vw;
+}
+
+.home-button {
+  justify-content: center;
+  margin-right: 4vw;
+  font-size: 4vw;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  transform: scale(1.25);
+  transition: 0.25s;
+  transition-timing-function: cubic-bezier(0.18, 1.49, 0.83, 0.97);
+}
+
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+  /* TABLET */
+  .home-button {
+    font-size: 2vw;
+  }
+
+  .left-button {
+    font-size: 2vw;
+  }
+}
+
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .title_container {
     min-height: 15vh;
     text-align: center;
-    justify-content: center;
-    /*    margin-bottom: 1vh;*/
   }
 
   .title_name {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+
+  }
+
+  .home-button {
+    font-size: 2vw;
+  }
+
+  .left-button {
+    font-size: 2vw;
   }
 }
 
@@ -491,7 +525,7 @@ h2 {
 }
 
 .about-hook {
-  color: red;
+  /*color: red;*/
   opacity: 0.5;
   font-size: 1.5em;
   font-family: var(--sixth-font), sans-serif;
@@ -562,7 +596,7 @@ h2 {
     position: absolute;
     width: 50vw;
     height: 40vh;
-    top: 50vh;
+    top: 57vh;
     left: 36vw;
     opacity: 0;
     font-family: var(--second-font), sans-serif;
@@ -630,6 +664,44 @@ h2 {
   .about-tagline {
     display: block;
     font-size: 3em;
+    margin-bottom: 4vh;
+    text-align: center;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-family: var(--fifth-font), sans-serif;
+    font-weight: bold;
+    line-height: 1.4;
+    color: var(--color4);
+  }
+
+  .about-tagline-adjective {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 1vh;
+    text-align: center;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-family: var(--fifth-font), sans-serif;
+    font-weight: bold;
+    color: var(--color4);
+  }
+
+  .about-tagline-verb {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 0vh;
+    margin-top: 0vh;
+    text-align: center;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-family: var(--fifth-font), sans-serif;
+    font-weight: bold;
+    color: var(--color4);
+  }
+
+  .about-tagline-footer {
+    display: block;
+    font-size: 2em;
     margin-bottom: 4vh;
     text-align: center;
     margin-left: 4vw;
@@ -745,7 +817,7 @@ a:focus {
     left: 5vw;
     z-index: 15;
     text-align: left;
-    background: #01aff0;
+    background: var(--color4);
   }
 
   .contact-greeting-heading {
@@ -816,7 +888,7 @@ a:focus {
     opacity: .9;
     margin-top: 2vh;
 /*    margin-right: 4vw;*/
-    text-align: right;
+    text-align: center;
   }
 }
 
@@ -874,51 +946,6 @@ a:focus {
   .contact-icon-copy {
     display: inline;
     margin-bottom: 1vh;
-  }
-}
-
-.left-button {
-  justify-content: center;
-  transition: 0.25s ease-in-out;
-/*  cursor: pointer;*/
-  margin-right: 8vw;
-}
-
-.home-button {
-  justify-content: center;
-  transition: 0.25s ease-in-out;
-  cursor: pointer;
-/*  margin-right: 4vw;*/
-  margin-left: 8vw;
-}
-
-.home-button:hover {
-  transform: scale(1.25);
-  transition: 0.25s;
-  transition-timing-function: cubic-bezier(0.18, 1.49, 0.83, 0.97);
-}
-
-@media screen and (max-width: 1080px) and (min-width: 600px) {
-  /* TABLET */
-  .home-button {
-    font-size: 1.5em;
-  }
-
-  .left-button {
-    display: inline;
-    font-size: 1.5em;
-  }
-}
-
-@media screen and (min-width: 1081px) {
-  /* DESKTOP */
-  .home-button {
-    font-size: 2em;
-  }
-
-  .left-button {
-    display: inline;
-    font-size: 2em;
   }
 }
 
