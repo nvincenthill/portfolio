@@ -817,7 +817,7 @@ a:focus {
     left: 5vw;
     z-index: 15;
     text-align: left;
-    background: var(--color4);
+    background: #013990;
   }
 
   .contact-greeting-heading {
