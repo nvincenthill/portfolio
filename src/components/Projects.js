@@ -21,7 +21,7 @@ class Projects extends React.Component {
   render() {
     return (
       <React.Fragment>
-      <Header title="Projects" icon="ios-folder" />
+      <Header title="Nick's Projects" icon="ios-folder" />
 
 
             <div className="project-array-container">
@@ -38,23 +38,23 @@ class Projects extends React.Component {
                 </Fade>
                 <Fade>
                 <ProjectItem
-                  name="The Next Big Thing"
-                  imageSource="../images/empty_showcase.png"
-                  description="This project is coming soon!"
+                  name="Nick's Bloomberg Terminal"
+                  imageSource="../images/shroomberg_showcase.png"
+                  description="A Yahoo finance/Bloomberg knockoff named 'Shroomberg'"
                   builtWith="MongoDB | Express | SASS | AngularJS | Node.js"
-                  url="n/a"
-                  github="n/a"
+                  url="https://shroomberg.herokuapp.com/"
+                  github="https://github.com/nvincenthill/stock-quote-app"
                   iconAnimation="bounce"
                 />
                 </Fade>
                 <Fade>
                 <ProjectItem
-                  name="My First Website"
+                  name="The Next Big Thing"
                   imageSource="../images/empty_showcase.png"
-                  description="Legacy billboard site and first milestone on my coding journey"
+                  description="This project is coming soon!"
                   builtWith="HTML5 | CSS | JS | p5.js"
-                  url="https://nvincenthill.github.io/"
-                  github="https://github.com/nvincenthill/nvincenthill.github.io"
+                  url="https://github.com/nvincenthill"
+                  github="https://github.com/nvincenthill"
                   iconAnimation="rubberBand"
                 />
                 </Fade>
