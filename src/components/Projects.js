@@ -41,7 +41,7 @@ class Projects extends React.Component {
                   name="Nick's Bloomberg Terminal"
                   imageSource="../images/shroomberg_showcase.png"
                   description="A Yahoo finance/Bloomberg knockoff named 'Shroomberg'"
-                  builtWith="MongoDB | Express | SASS | AngularJS | Node.js"
+                  builtWith="React | CSS | Firebase | Jest | Node.js"
                   url="https://shroomberg.herokuapp.com/"
                   github="https://github.com/nvincenthill/stock-quote-app"
                   iconAnimation="bounce"
@@ -49,12 +49,12 @@ class Projects extends React.Component {
                 </Fade>
                 <Fade>
                 <ProjectItem
-                  name="The Next Big Thing"
+                  name="Scrabblr"
                   imageSource="../images/empty_showcase.png"
-                  description="This project is coming soon!"
+                  description="A tile-based word game for the whole family"
                   builtWith="HTML5 | CSS | JS | p5.js"
-                  url="https://github.com/nvincenthill"
-                  github="https://github.com/nvincenthill"
+                  url="https://scrabblr.herokuapp.com/"
+                  github="https://github.com/nvincenthill/scrabblr"
                   iconAnimation="rubberBand"
                 />
                 </Fade>
