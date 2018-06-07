@@ -50,7 +50,7 @@ class Projects extends React.Component {
                 <Fade>
                 <ProjectItem
                   name="Scrabblr"
-                  imageSource="../images/empty_showcase.png"
+                  imageSource="../images/scrabblr_showcase.png"
                   description="A tile-based word game for the whole family"
                   builtWith="HTML5 | CSS | JS | p5.js"
                   url="https://scrabblr.herokuapp.com/"
