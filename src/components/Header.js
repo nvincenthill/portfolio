@@ -18,7 +18,7 @@ class Header extends React.Component {
       <Fade>
         <Ionicon
           icon={this.props.icon}
-          color="#222831"
+          color="#eeeeee"
           fontSize="2.5em"
           beat={false}
           // onClick={() => this.handleRoute("/")}
@@ -30,11 +30,11 @@ class Header extends React.Component {
     return (
       <React.Fragment>
         <div className="title_container">
-          {leftButton}
+          {this.props.buttonsHidden ? <span /> : leftButton}
           <Fade>
             <h1 className="title-name">{this.props.title}</h1>
           </Fade>
-            {this.props.buttonsHidden ? leftButton : <HomeButton />}
+            {this.props.buttonsHidden ? <span /> : <HomeButton />}
         </div>
       </React.Fragment>
     );

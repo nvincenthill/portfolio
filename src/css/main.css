@@ -172,7 +172,7 @@ h1 {
 @media screen and (min-width: 1081px) {
   /* DESKTOP */
   .corner {
-    position: fixed;
+    /*position: fixed;*/
     display: inline;
     top: 0vh;
     right: 0vw;
