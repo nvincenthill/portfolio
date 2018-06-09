@@ -1,13 +1,13 @@
 import React from "react";
-// import { Fade } from "react-reveal";
+
+// external components
 import Ionicon from "react-ionicons";
-// import HomeButton from "./HomeButton";
+import MediaQuery from "react-responsive";
 import { Collapse } from "react-collapse";
-// import { Well } from "react-bootstrap";
-// import Footer from "./Footer";
+
+// internal components
 import Header from "./Header";
 import MapContainer from "./MapContainer";
-import MediaQuery from "react-responsive";
 
 class Contact extends React.Component {
   state = {

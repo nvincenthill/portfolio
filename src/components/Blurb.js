@@ -1,5 +1,6 @@
 import React from "react";
-// import RestartingTypist from "./RestartingTypist";
+
+// external components
 import { Fade } from "react-reveal";
 import Typist from "react-typist";
 import Highlight from "react-highlight";

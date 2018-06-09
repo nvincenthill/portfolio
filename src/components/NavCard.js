@@ -1,4 +1,6 @@
 import React from "react";
+
+// external components
 import "babel-polyfill";
 import { Fade } from "react-reveal";
 import { Row, Col } from "react-flexbox-grid";

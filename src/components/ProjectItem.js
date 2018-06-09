@@ -1,8 +1,8 @@
 import React from "react";
+
+// external components
 import { Fade } from "react-reveal";
-// import { Grid, Row, Col } from "react-flexbox-grid";
 import Ionicon from "react-ionicons";
-// import GithubCorner from "react-github-corner";
 import MediaQuery from "react-responsive";
 
 class ProjectItem extends React.Component {

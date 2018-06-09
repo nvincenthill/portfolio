@@ -1,10 +1,7 @@
-import {
-  Map
-  // Marker
-} from "google-maps-react";
-// import Ionicon from "react-ionicons";
 import React from "react";
-// import ReactDOM from "react-dom";
+
+// external components
+import { Map } from "google-maps-react";
 
 export class GoogleMap extends React.Component {
   state = {};

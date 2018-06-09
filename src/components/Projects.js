@@ -1,8 +1,10 @@
 import React from "react";
+
+// external components
 import { Fade } from "react-reveal";
-// import Ionicon from "react-ionicons";
 import ProjectItem from "./ProjectItem";
-// import HomeButton from "./HomeButton";
+
+// internal components
 import Header from "./Header";
 
 class Projects extends React.Component {

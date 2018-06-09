@@ -1,5 +1,6 @@
 import React from "react";
-// import { Fade } from "react-reveal";
+
+// external components
 import { Carousel } from "react-bootstrap";
 
 class ImageCarousel extends React.Component {

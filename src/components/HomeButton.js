@@ -1,4 +1,6 @@
 import React from "react";
+
+// external components
 import Ionicon from "react-ionicons";
 import { Fade } from "react-reveal";
 import { Link } from 'react-router-dom'

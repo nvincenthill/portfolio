@@ -1,4 +1,6 @@
 import React from "react";
+
+// external components
 import "babel-polyfill";
 
 class NotFound extends React.Component {

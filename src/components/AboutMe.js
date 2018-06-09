@@ -1,9 +1,9 @@
 import React from "react";
+
+// external components
 import "babel-polyfill";
 import { Fade } from "react-reveal";
 import { Row, Col } from "react-flexbox-grid";
-// import HomeButton from "./HomeButton";
-// import Footer from "./Footer";
 import Header from "./Header";
 import Ionicon from "react-ionicons";
 import { Link } from "react-router-dom";

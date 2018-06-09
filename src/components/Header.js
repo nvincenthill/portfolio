@@ -1,4 +1,6 @@
 import React from "react";
+
+// external components
 import "babel-polyfill";
 import Ionicon from "react-ionicons";
 import HomeButton from "./HomeButton";

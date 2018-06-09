@@ -1,4 +1,6 @@
 import React from "react";
+
+// external components
 import Typist from "react-typist";
 
 class RestartingTypist extends React.Component {

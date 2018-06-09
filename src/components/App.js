@@ -1,10 +1,13 @@
 import React from "react";
+
+// internal components
 import GithubCorner from "react-github-corner";
 import NavCard from "./NavCard";
 import Blurb from "./Blurb";
 import Footer from "./Footer";
 import Header from "./Header";
 
+// external components
 import { Fade } from "react-reveal";
 import "babel-polyfill";
 
