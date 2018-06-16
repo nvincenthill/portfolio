@@ -23,7 +23,10 @@ class Projects extends React.Component {
   render() {
     return (
       <React.Fragment>
-      <Header title="Nick's Projects" icon="ios-folder" />
+      
+      {/* TODO build sort by tech and add react-flip-move list handling */}
+      
+      <Header title="Portfolio" icon="ios-folder" />
 
 
             <div className="project-array-container">
@@ -37,7 +40,7 @@ class Projects extends React.Component {
                   github="https://github.com/nvincenthill/mealpanda"
                   iconAnimation="tada"
                 />
-                </Fade>
+            </Fade>
                 <Fade>
                 <ProjectItem
                   name="Nick's Bloomberg Terminal"

@@ -71,6 +71,11 @@ h1 {
   }
 }
 
+.devicon {
+  max-width: 5vmin;
+  margin: 2vmin 1vw;
+}
+
 .title_name {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -426,7 +431,7 @@ h2 {
 .project_description {
   color: var(--color4);
   font-size: 1em;
-  margin-top: 2vh;
+  margin-top: 2vmin;
   opacity: .95;
 }
 
@@ -1112,15 +1117,6 @@ a[href^="https://maps.google.com/maps"] {
 }
 .gmnoprint div {
   background: none !important;
-}
-
-.devicon {
-  max-width: 2em;
-  margin: 2vh 1vw;
-}
-
-.devicon path {
-/*  fill: #4691f6;*/
 }
 
 
