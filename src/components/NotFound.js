@@ -14,7 +14,9 @@ class NotFound extends React.Component {
 
   render() {
     return (
-      <p>404 Not Found</p>
+      <div className="fourofour-container"> 
+        It's gonna have to be a 404 from me my dawg
+      </div>
     );
   }
 }

@@ -802,6 +802,10 @@ a:focus {
   color: var(--color1);
 }
 
+.fourofour-container {
+  color: red;
+}
+
 @media screen and (max-width: 1080px) and (min-width: 600px) {
   /* TABLET */
   .contact-icon:hover {
