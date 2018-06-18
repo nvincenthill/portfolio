@@ -35,23 +35,24 @@ class Blurb extends React.Component {
                 avgTypingDelay={20}
                 stdTypingDelay={10}
                 startDelay={500}
-                cursor={cursor} 
+                cursor={cursor}
               >
-                <Highlight className="about-blurb-code" language="javascript">
-{`let Nick = function() {
+                <pre>
+                  <code className="about-blurb-code">
+                    {`let Nick = function() {
     let aboutMe = {
       skills: ["JS", "CSS", "Git", "react", "trading"],
       activities: ["hiking", "cooking food",`}
-                  <Typist.Backspace count={7} delay={500} />
-      {` amazing meals"]
+                    {` amazing meals"]
     };
     for (let i = 0; i < this.aboutMe.skills.length; i++) {
       alert("Work harder and always keep learning!");
     }
     const objective = "Find a fufilling job";
     return objective ? "Profit!" : "FizzBuzz?!";
-  };`}<Typist.Backspace count={1} delay={5000} />
-                </Highlight>
+  };`}
+                  </code>
+                </pre>
               </Typist>
             </div>
           </div>
