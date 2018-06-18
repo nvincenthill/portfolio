@@ -78,7 +78,7 @@ class App extends React.Component {
   // this.adjectiveClassInterval = setInterval(() => this.changeAdjectiveClass(), 2000);
   // };
 
-  componentDidUpdate() {}
+  componentDidUpdate() { }
 
   componentWillUnmount() {
     clearInterval(this.verbInterval);
@@ -96,8 +96,6 @@ class App extends React.Component {
       "modern",
       "slick"
     ];
-
-    // const verbClass = true ? "bounceIn animated" : "";
 
     return (
       <React.Fragment>
