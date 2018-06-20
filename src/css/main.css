@@ -522,9 +522,11 @@ h2 {
 }
 
 .about-blurb-code {
-  font-size: 0.7em;
-  padding: 2em 2em 2em 2em;
+  font-size: 1em;
   color: var(--color1);
+
+  display: inline-block;
+  padding: 1rem;
 }
 
 .about-hook {

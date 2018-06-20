@@ -41,15 +41,14 @@ class Blurb extends React.Component {
                   <code className="about-blurb-code">
                     {`let Nick = function() {
     let aboutMe = {
-      skills: ["JS", "CSS", "Git", "react", "trading"],
-      activities: ["hiking", "cooking food",`}
-                    {` amazing meals"]
+      skills: ['JS', 'CSS', 'Git', 'react', 'trading'],
+      activities: ['hiking', 'cooking food','amazing meals']
     };
     for (let i = 0; i < this.aboutMe.skills.length; i++) {
-      alert("Work harder and always keep learning!");
+      alert('Work harder and always keep learning!');
     }
-    const objective = "Find a fufilling job";
-    return objective ? "Profit!" : "FizzBuzz?!";
+    const objective = 'Find a fufilling job';
+    return objective ? 'Profit!' : 'FizzBuzz?!';
   };`}
                   </code>
                 </pre>

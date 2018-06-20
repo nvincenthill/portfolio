@@ -78,7 +78,7 @@ class App extends React.Component {
   // this.adjectiveClassInterval = setInterval(() => this.changeAdjectiveClass(), 2000);
   // };
 
-  componentDidUpdate() { }
+  componentDidUpdate() {}
 
   componentWillUnmount() {
     clearInterval(this.verbInterval);
@@ -115,7 +115,8 @@ class App extends React.Component {
         <Fade>
           <div>
             <h2 className="about-tagline">
-              I'm a <span className="developer">developer</span> <br /> designing responsive<br />
+              I'm an <span className="developer">engineer</span> <br />{" "}
+              designing responsive<br />
               mobile-first web applications
             </h2>
           </div>
