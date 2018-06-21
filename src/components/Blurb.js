@@ -39,7 +39,8 @@ class Blurb extends React.Component {
               >
                 <pre>
                   <code className="about-blurb-code">
-                    {`let Nick = function() {
+                  
+  {`let Nick = function() {
     let aboutMe = {
       skills: ['JS', 'CSS', 'Git', 'react', 'trading'],
       activities: ['hiking', 'cooking food','amazing meals']
@@ -50,6 +51,7 @@ class Blurb extends React.Component {
     const objective = 'Find a fufilling job';
     return objective ? 'Profit!' : 'FizzBuzz?!';
   };`}
+  
                   </code>
                 </pre>
               </Typist>
