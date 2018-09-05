@@ -530,10 +530,10 @@ h2 {
 }
 
 .about-hook {
-  /*color: red;*/
   opacity: 0.5;
   font-size: 1.5em;
   font-family: var(--sixth-font), sans-serif;
+  letter-spacing: 2px;
 }
 
 .about-description {
