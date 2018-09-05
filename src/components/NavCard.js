@@ -57,7 +57,7 @@ class NavCard extends React.Component {
             </button>
           </Col>
           <Col className="nav-column" xs={5} sm={3} md={3} lg={3}>
-            <a href="/images/Nicholas W. Vincent-Hill Resume 05-04-2018.pdf"><button
+            <a href="/images/currentResume.pdf"><button
               className="nav_button">
               RESUME
             </button>
